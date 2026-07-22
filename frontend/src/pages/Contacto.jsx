@@ -93,6 +93,8 @@ export default function Contacto() {
         <meta property="og:description" content="Atención de mostrador en Catamarca 3420, Santa Fe Capital. Consultas por WhatsApp y formulario online." />
         <meta property="og:url" content="https://sabamultiservice.com.ar/contacto" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

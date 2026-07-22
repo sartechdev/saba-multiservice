@@ -395,6 +395,8 @@ export const Catalogo = () => {
         <meta property="og:description" content="Repuestos de línea blanca para técnicos y particulares, controles remotos y accesorios en Santa Fe Capital." />
         <meta property="og:url" content="https://sabamultiservice.com.ar/catalogo" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

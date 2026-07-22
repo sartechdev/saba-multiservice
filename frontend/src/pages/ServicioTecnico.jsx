@@ -75,6 +75,8 @@ export const ServicioTecnico = () => {
         <meta property="og:description" content="Reparación especializada de electrodomésticos y Smart TV con diagnóstico gratuito y garantía escrita." />
         <meta property="og:url" content="https://sabamultiservice.com.ar/servicio-tecnico" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

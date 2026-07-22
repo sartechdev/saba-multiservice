@@ -25,6 +25,8 @@ export default function Nosotros() {
         <meta property="og:description" content="Taller tradicional con tecnología digital y más de 25 años al servicio de Santa Fe en Catamarca 3420." />
         <meta property="og:url" content="https://sabamultiservice.com.ar/nosotros" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -242,6 +242,8 @@ export default function Home() {
         <meta property="og:description" content="Reparaciones especializadas con diagnóstico sin cargo y garantía escrita por 3 meses en Catamarca 3420, Santa Fe." />
         <meta property="og:url" content="https://sabamultiservice.com.ar/" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
