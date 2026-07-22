@@ -1,0 +1,47 @@
+:root {
+  /* Colores de marca */
+  --color-red-primary: #C41E2B;
+  --color-red-hover: #9E1720;
+  --color-red-dark: #9E1720;
+  --color-black: #1A1A1A;
+  --color-white: #FFFFFF;
+  --color-gray-light: #F5F5F4;
+  --color-gray-medium: #6B6B6B;
+  --color-success: #2F9E44;      /* WhatsApp, confirmaciones */
+  --color-gold: #C99A2E;          /* uso mínimo: badges de garantía/rating */
+
+  /* Estados de badges (Mi Cuenta / Admin) */
+  --status-nuevo: #6B6B6B;
+  --status-revision: #C99A2E;
+  --status-respondido: #2F9E44;
+  --status-cerrado: #1A1A1A;
+
+  /* Tipografía */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-size-base: 16px;
+
+  /* Espaciado */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 96px;
+
+  /* Bordes */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Sombras y transiciones (Premium UI) */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+  
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Máximo ancho contenedor */
+  --max-width-container: 1500px;
+}

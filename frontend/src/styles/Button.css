@@ -1,0 +1,79 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  min-height: 44px; /* WCAG touch target size */
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  user-select: none;
+  gap: var(--spacing-xs);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-black);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Variante: Primary (Rojo SABA) */
+.btn-primary {
+  background-color: var(--color-red-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-red-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Variante: Secondary (Outline) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-gray-light);
+}
+
+/* Variante: WhatsApp (Verde) */
+.btn-whatsapp {
+  background-color: var(--color-success);
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-whatsapp:hover:not(:disabled) {
+  background-color: #2b8a3e; /* darker green hover */
+  box-shadow: var(--shadow-md);
+}
+
+/* Variante: Danger (Rojo Advertencia) */
+.btn-danger {
+  background-color: #e03131;
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #c92a2a;
+  box-shadow: var(--shadow-md);
+}

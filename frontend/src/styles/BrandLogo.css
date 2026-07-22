@@ -1,0 +1,41 @@
+.brand-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  border: 1px solid #e5e5e0;
+  transition: all var(--transition-normal);
+  min-height: 80px;
+}
+
+.brand-logo-img {
+  max-width: 100px;
+  max-height: 48px;
+  object-fit: contain;
+  transition: filter var(--transition-normal);
+}
+
+/* Desktop: grayscale, color on hover */
+@media (hover: hover) {
+  .brand-logo-img {
+    filter: grayscale(100%) opacity(0.6);
+  }
+
+  .brand-logo-item:hover .brand-logo-img {
+    filter: grayscale(0%) opacity(1);
+  }
+
+  .brand-logo-item:hover {
+    border-color: #d6d6cf;
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+/* Mobile: always show color (no reliable hover) */
+@media (hover: none) {
+  .brand-logo-img {
+    filter: none;
+  }
+}

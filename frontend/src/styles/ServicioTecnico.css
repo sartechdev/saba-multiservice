@@ -1,0 +1,653 @@
+/* ==========================================================================
+   PÁGINA SERVICIO TÉCNICO (LANDING AGENCY-GRADE)
+   ========================================================================== */
+
+.service-landing-wrapper {
+  background-color: #fafaf8;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.service-hero {
+  position: relative;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 110px 0 90px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+}
+
+@media (min-width: 768px) {
+  .service-hero {
+    padding: 140px 0 110px;
+    min-height: 560px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .service-hero {
+    min-height: 620px;
+  }
+}
+
+.service-hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.service-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.95;
+}
+
+.service-hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    rgba(10, 10, 10, 0.94) 0%,
+    rgba(10, 10, 10, 0.82) 45%,
+    rgba(10, 10, 10, 0.45) 85%,
+    rgba(196, 30, 43, 0.3) 100%
+  ),
+  radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.service-hero-bg-glow {
+  position: absolute;
+  top: -20%;
+  right: -5%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(196, 30, 43, 0.3) 0%, transparent 70%);
+  filter: blur(85px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+}
+
+.service-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.service-badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #2F9E44;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #2F9E44;
+}
+
+.service-hero-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .service-hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+.service-hero-title span.highlight-red {
+  background: linear-gradient(135deg, #ff4d5a 0%, #c41e2b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-hero-desc {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+/* Botones de Acción del Hero de Servicio Técnico */
+.service-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.service-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--color-red-primary), var(--color-red-dark));
+  color: var(--color-white);
+  padding: 16px 28px;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+  box-shadow: 0 4px 18px rgba(196, 30, 43, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.service-btn-primary:hover {
+  background: linear-gradient(135deg, #d42230, #b51926);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 30, 43, 0.5);
+}
+
+.service-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(47, 158, 68, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  color: #6fdc8c;
+  padding: 16px 28px;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+  box-shadow: 0 4px 16px rgba(47, 158, 68, 0.25);
+  cursor: pointer;
+}
+
+.service-btn-secondary:hover {
+  background: rgba(47, 158, 68, 0.28);
+  border-color: rgba(74, 222, 128, 0.6);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(47, 158, 68, 0.4);
+}
+
+/* Grid de Tipos de Electrodomésticos */
+.service-types-section {
+  padding: 70px 0;
+  background-color: var(--color-white);
+  border-bottom: 1px solid #eeeeea;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 48px;
+}
+
+.section-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--color-red-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-black);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.section-subtext {
+  font-size: 1.0625rem;
+  color: var(--color-gray-medium);
+  line-height: 1.6;
+}
+
+.service-types-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .service-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-types-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.type-bento-card {
+  background: #fafaf8;
+  border: 1px solid #e6e6e0;
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition-normal);
+}
+
+.type-bento-card:hover {
+  background: var(--color-white);
+  border-color: var(--color-red-primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+
+.type-icon-box {
+  width: 54px;
+  height: 54px;
+  background-color: #1a1a1a;
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: background-color var(--transition-fast);
+}
+
+.type-bento-card:hover .type-icon-box {
+  background-color: var(--color-red-primary);
+}
+
+.type-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-black);
+}
+
+.type-card-desc {
+  font-size: 0.9375rem;
+  color: var(--color-gray-medium);
+  line-height: 1.55;
+}
+
+/* Bloque Explicativo Política Sin Cargo y Garantía */
+.policy-explain-section {
+  padding: 70px 0;
+  background: linear-gradient(180deg, #fafaf8 0%, #f3f3f0 100%);
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .policy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.policy-card {
+  background: var(--color-white);
+  border: 1px solid #e0e0da;
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition-normal);
+}
+
+.policy-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(196, 30, 43, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.policy-icon {
+  font-size: 2.25rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.policy-content h3 {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+.policy-content p {
+  font-size: 0.95rem;
+  color: var(--color-gray-medium);
+  line-height: 1.65;
+}
+
+.guarantee-box {
+  width: 100%;
+  margin: 64px 0;
+}
+
+.guarantee-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .guarantee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── 4. PROCESO PRESENCIAL & ACCIÓN ── */
+.service-process-section {
+  padding: 80px 0 100px;
+  background-color: var(--color-white);
+  border-top: 1px solid #e8e8e2;
+}
+
+.service-process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .service-process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-process-card {
+  background: #fafaf8;
+  border: 1px solid #e5e5e0;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-process-card:hover {
+  transform: translateY(-5px);
+  background: var(--color-white);
+  border-color: rgba(196, 30, 43, 0.4);
+  box-shadow: var(--shadow-lg);
+}
+
+.process-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.process-step-num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-red-primary);
+  font-family: monospace;
+}
+
+.process-step-line {
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(196, 30, 43, 0.4) 0%, transparent 100%);
+}
+
+.process-step-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.process-step-desc {
+  font-size: 0.95rem;
+  color: var(--color-gray-medium);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Tarjetas duales de acción hacia Contacto y WhatsApp */
+.service-action-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 900px) {
+  .service-action-banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.service-action-card {
+  border-radius: calc(var(--radius-lg) + 4px);
+  padding: 38px 36px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.service-action-card.action-contact {
+  background: linear-gradient(135deg, #181818 0%, #0d0d0d 100%);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.service-action-card.action-wa {
+  background: linear-gradient(135deg, #0d381e 0%, #062211 100%);
+  color: var(--color-white);
+  border: 1px solid rgba(47, 158, 68, 0.35);
+  box-shadow: 0 12px 30px rgba(10, 60, 25, 0.25);
+}
+
+.service-action-card:hover {
+  transform: translateY(-4px);
+}
+
+.action-card-icon {
+  font-size: 2.75rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.action-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.action-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.action-contact .action-badge {
+  background: rgba(196, 30, 43, 0.25);
+  color: #ff6b76;
+}
+
+.action-wa .action-badge {
+  background: rgba(47, 158, 68, 0.25);
+  color: #69db7c;
+}
+
+.action-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.action-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  margin: 4px 0 12px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary-red {
+  background-color: var(--color-red-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 16px rgba(196, 30, 43, 0.4);
+}
+
+.btn-primary-red:hover {
+  background-color: var(--color-red-dark);
+  color: var(--color-white);
+  gap: 14px;
+}
+
+.btn-whatsapp {
+  background-color: #2F9E44;
+  color: var(--color-white);
+  box-shadow: 0 4px 16px rgba(47, 158, 68, 0.4);
+}
+
+.btn-whatsapp:hover {
+  background-color: #2b8a3e;
+  color: var(--color-white);
+  gap: 14px;
+}
+
+/* ── Banner de Informes para Seguros / Aseguradoras ── */
+.service-insurance-section {
+  padding: 70px 0;
+  background-color: #f4f4f0;
+  border-bottom: 1px solid #e0e0da;
+  border-top: 1px solid #e0e0da;
+}
+
+.insurance-highlight-banner {
+  background: var(--color-black);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--color-white);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 860px) {
+  .insurance-highlight-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.insurance-banner-info {
+  max-width: 720px;
+}
+
+.insurance-banner-info h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  color: var(--color-white);
+}
+
+.insurance-banner-info p {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.insurance-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--color-red-primary), var(--color-red-dark));
+  color: var(--color-white);
+  padding: 16px 28px;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+  box-shadow: 0 4px 18px rgba(196, 30, 43, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.insurance-banner-cta:hover {
+  background: linear-gradient(135deg, #d42230, #b51926);
+  color: var(--color-white);
+  gap: 16px;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 30, 43, 0.5);
+}

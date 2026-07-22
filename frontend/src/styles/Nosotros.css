@@ -1,0 +1,340 @@
+/* ── NOSOTROS PAGE STYLES ── */
+.about-landing-wrapper {
+  background-color: var(--color-white);
+  min-height: 85vh;
+}
+
+/* 1. HERO DE HISTORIA & GALERÍA (TOP SECTION OSCURA) */
+.about-history-hero {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 100px 0 110px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-hero-glow {
+  position: absolute;
+  top: -30%;
+  right: 15%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(196, 30, 43, 0.22) 0%, transparent 70%);
+  filter: blur(85px);
+  pointer-events: none;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1024px) {
+  .history-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+  }
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #ff6b76;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(196, 30, 43, 0.18);
+  border: 1px solid rgba(196, 30, 43, 0.35);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  width: fit-content;
+  margin-bottom: 4px;
+}
+
+.history-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .history-title {
+    font-size: 3.25rem;
+  }
+}
+
+.history-text {
+  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.history-text strong {
+  color: var(--color-white);
+}
+
+.placeholder-notice {
+  background: rgba(255, 193, 7, 0.12);
+  border-left: 4px solid var(--color-gold);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.85rem;
+  color: #ffca28;
+  font-weight: 600;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.history-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.gallery-real-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all var(--transition-normal);
+  display: block;
+}
+
+.gallery-real-card.large {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-real-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(196, 30, 43, 0.7);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-real-card:hover .gallery-card-img {
+  transform: scale(1.06);
+}
+
+.gallery-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 40%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  pointer-events: none;
+}
+
+.gallery-card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin: 0 0 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.gallery-card-subtitle {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+/* Credibility & Stats Section */
+.about-stats-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #fdfdfc 0%, #f4f4f0 100%);
+  border-bottom: 1px solid #e5e5e0;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about-stat-card {
+  background: var(--color-white);
+  border: 1px solid #e0e0da;
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: left;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(196, 30, 43, 0.4);
+}
+
+.stat-icon {
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.stat-number {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--color-red-primary);
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: monospace;
+}
+
+.stat-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.stat-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-medium);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Insurance Banner / Destacado Institucional */
+.insurance-highlight-banner {
+  margin-top: 48px;
+  background: var(--color-black);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: calc(var(--radius-lg) + 4px);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--color-white);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .insurance-highlight-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.insurance-banner-info {
+  max-width: 720px;
+}
+
+.insurance-badge {
+  display: inline-block;
+  background: rgba(196, 30, 43, 0.25);
+  color: #ff6b76;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.insurance-banner-info h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 10px;
+  color: var(--color-white);
+}
+
+.insurance-banner-info p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.insurance-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-red-primary);
+  color: var(--color-white);
+  padding: 16px 28px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 16px rgba(196, 30, 43, 0.4);
+}
+
+.insurance-banner-cta:hover {
+  background-color: var(--color-red-dark);
+  color: var(--color-white);
+  gap: 14px;
+}
+
+/* Reviews Section */
+.about-reviews-section {
+  padding: 90px 0 110px;
+  background-color: #fafaf8;
+  border-top: 1px solid #e8e8e2;
+}
+
+.about-reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .about-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

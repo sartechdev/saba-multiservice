@@ -1,0 +1,170 @@
+/* ── QUOTE STATUS CARD STYLES ── */
+.quote-status-card {
+  background: var(--color-white);
+  border: 1px solid #e0e0da;
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.quote-status-card:hover {
+  border-color: rgba(196, 30, 43, 0.35);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.quote-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f0f0eb;
+  padding-bottom: 14px;
+}
+
+.quote-card-type {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quote-card-brand {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gray-medium);
+  background: #f4f4f0;
+  padding: 3px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.quote-card-date {
+  font-size: 0.85rem;
+  color: var(--color-gray-medium);
+  font-weight: 500;
+}
+
+.quote-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quote-card-issue-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-gray-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.quote-card-issue-text {
+  font-size: 0.95rem;
+  color: var(--color-black);
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.quote-card-admin-response {
+  background: #fafaf8;
+  border: 1px solid #ebeeeb;
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.admin-response-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-response-sender {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.admin-response-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  background: #e8e8e4;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.admin-response-text {
+  font-size: 0.95rem;
+  color: #222222;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.quote-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px dashed #e5e5df;
+}
+
+/* Status Badges */
+.quote-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.quote-status-badge.status-nuevo {
+  background-color: rgba(107, 107, 107, 0.12);
+  color: var(--status-nuevo);
+  border: 1px solid rgba(107, 107, 107, 0.25);
+}
+
+.quote-status-badge.status-revision {
+  background-color: rgba(201, 154, 46, 0.14);
+  color: #a67c1e;
+  border: 1px solid rgba(201, 154, 46, 0.35);
+}
+
+.quote-status-badge.status-respondido {
+  background-color: rgba(47, 158, 68, 0.12);
+  color: var(--status-respondido);
+  border: 1px solid rgba(47, 158, 68, 0.3);
+}
+
+.quote-status-badge.status-cerrado {
+  background-color: rgba(26, 26, 26, 0.08);
+  color: var(--status-cerrado);
+  border: 1px solid rgba(26, 26, 26, 0.2);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}

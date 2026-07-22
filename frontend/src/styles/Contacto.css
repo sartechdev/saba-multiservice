@@ -1,0 +1,426 @@
+/* ── CONTACTO PAGE STYLES (COMPACT TOP-FORM REDESIGN) ── */
+.contact-landing-wrapper {
+  background-color: #fafaf8;
+  min-height: 85vh;
+  padding: 50px 0 90px;
+}
+
+.contact-top-section {
+  margin-bottom: 50px;
+}
+
+.contact-top-header {
+  margin-bottom: 32px;
+}
+
+.contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-red-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(196, 30, 43, 0.08);
+  border: 1px solid rgba(196, 30, 43, 0.2);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.contact-main-title {
+  font-size: 2.35rem;
+  font-weight: 900;
+  color: var(--color-black);
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .contact-main-title {
+    font-size: 2.85rem;
+  }
+}
+
+/* Grilla Superior: Formulario + Mapa */
+.contact-top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contact-top-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 44px;
+  }
+}
+
+/* Formulario Principal (Lo primero en verse) */
+.top-form-container {
+  background: var(--color-white);
+  border: 1px solid #e0e0da;
+  border-radius: var(--radius-lg);
+  padding: 34px 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin: 0 0 6px;
+}
+
+.contact-form-subtitle {
+  font-size: 0.92rem;
+  color: var(--color-gray-medium);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.contact-tracking-notice {
+  background: #f4f4f0;
+  border-left: 3px solid var(--color-red-primary);
+  padding: 12px 14px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.86rem;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0 0 22px;
+}
+
+.contact-tracking-notice a {
+  color: var(--color-red-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.contact-tracking-notice a:hover {
+  color: var(--color-red-dark);
+}
+
+.general-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group-full {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d5d5cc;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-base);
+  font-size: 0.95rem;
+  color: var(--color-black);
+  background: #fafaf8;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--color-red-primary);
+  background: var(--color-white);
+  box-shadow: 0 0 0 3px rgba(196, 30, 43, 0.12);
+}
+
+.form-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.contact-submit-btn {
+  background-color: var(--color-red-primary);
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 0.98rem;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(196, 30, 43, 0.35);
+  margin-top: 4px;
+}
+
+.contact-submit-btn:hover:not(:disabled) {
+  background-color: var(--color-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(196, 30, 43, 0.45);
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success banner */
+.contact-success-banner {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  color: #1b5e20;
+}
+
+.contact-success-banner h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.contact-success-banner p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.contact-btn-action-back {
+  background: transparent;
+  border: none;
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Contenedor del Mapa (Derecha) */
+.top-map-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.map-frame {
+  background: var(--color-white);
+  border: 1px solid #e0e0da;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  height: 380px;
+}
+
+@media (min-width: 1024px) {
+  .map-frame {
+    height: 430px;
+  }
+}
+
+.top-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #2F9E44;
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 0.96rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(47, 158, 68, 0.3);
+}
+
+.top-wa-btn:hover {
+  background-color: #2b8a3e;
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ── SECCIÓN COMPACTA DE INFORMACIÓN Y CANALES ── */
+.contact-compact-section {
+  padding-top: 40px;
+  border-top: 1px solid #e5e5e0;
+}
+
+.compact-section-header {
+  margin-bottom: 24px;
+}
+
+.compact-section-header h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin: 0 0 4px;
+}
+
+.compact-section-header p {
+  font-size: 0.92rem;
+  color: var(--color-gray-medium);
+  margin: 0;
+}
+
+/* Grilla Bento Compacta */
+.info-compact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .info-compact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.compact-card {
+  background: var(--color-white);
+  border: 1px solid #e0e0da;
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.compact-card:hover {
+  border-color: rgba(196, 30, 43, 0.4);
+  transform: translateY(-2px);
+}
+
+.compact-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.compact-card h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin: 0 0 6px;
+}
+
+.compact-card p {
+  font-size: 0.88rem;
+  color: var(--color-gray-medium);
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.compact-card p strong {
+  color: var(--color-black);
+}
+
+.compact-card a {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.compact-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-red-primary) !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.compact-link:hover {
+  color: var(--color-red-dark) !important;
+}
+
+/* Canales rápidos por WhatsApp (Fila de botones compactos) */
+.channels-compact-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 768px) {
+  .channels-compact-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.channel-chip-btn {
+  background: var(--color-white);
+  border: 1px solid #d5d5cc;
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--color-black);
+  transition: all var(--transition-fast);
+}
+
+.channel-chip-btn:hover {
+  background: #f4f4f0;
+  border-color: var(--color-red-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.channel-chip-btn span:first-child {
+  font-size: 1.5rem;
+}
+
+.channel-chip-btn div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.channel-chip-btn strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-black);
+}
+
+.channel-chip-btn span:nth-child(2) {
+  font-size: 0.78rem;
+  color: var(--color-gray-medium);
+}
+
+.chip-arrow {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-red-primary);
+  opacity: 0.7;
+}
+
+.channel-chip-btn:hover .chip-arrow {
+  opacity: 1;
+  transform: translateX(2px) translateY(-2px);
+}

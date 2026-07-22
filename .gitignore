@@ -1,0 +1,44 @@
+# ── DEPENDENCIAS Y COMPILADOS ──
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+
+# ── VARIABLES DE ENTORNO Y SECRETOS ──
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── LOGS Y ARCHIVOS TEMPORALES ──
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── ARCHIVOS DE SISTEMA Y EDITORES ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── ENTORNO DE IA / ARCHIVOS DE DIAGNÓSTICO TEMPORALES ──
+.agents/
+.gemini/
+*.csv
+Supabase*.csv
+prompt.txt
+prompts/
+reviews/
+
