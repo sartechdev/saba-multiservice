@@ -593,8 +593,14 @@ export const Catalogo = () => {
       {/* ── 3. DRAWER / MODAL RESPONSIVE EN MÓVIL ── */}
       <AnimatePresence>
         {mobileFilterOpen && (
-          <div className="catalog-mobile-modal-overlay">
+          <div
+            className="catalog-mobile-modal-overlay"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setMobileFilterOpen(false);
+            }}
+          >
             <motion.div
+
               className="catalog-mobile-drawer"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
