@@ -23,6 +23,18 @@ export const Catalogo = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    if (mobileFilterOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileFilterOpen]);
+
+
   // Ordenar jerárquicamente en árbol N-niveles y calcular ancestros
   const buildTree = (allCats, parentId = null, depth = 0, ancestorIds = []) => {
     const result = [];

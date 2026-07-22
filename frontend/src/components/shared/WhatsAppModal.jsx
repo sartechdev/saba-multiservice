@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const WhatsAppModal = ({ isOpen, onClose, product = null, title = 'Consultar por WhatsApp', subtitle = null, customMessage = null }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const phone = import.meta.env.VITE_WHATSAPP_NUMBER || '5493425011410';
+
 
   // Formatear precio en pesos argentinos si existe
   const formatPrice = (amount) => {

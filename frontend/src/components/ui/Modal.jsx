@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../../styles/Modal.css';
 
@@ -9,7 +9,19 @@ export const Modal = ({
   children,
   footer,
 }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
+
     <AnimatePresence>
       {isOpen && (
         <div className="modal-overlay-container">
