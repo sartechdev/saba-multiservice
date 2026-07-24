@@ -50,16 +50,17 @@ export default function Nosotros() {
           >
             {/* Columna Izquierda: Historia */}
             <div className="history-content">
-              <h1 className="history-title">Un taller tradicional con tecnología digital moderna</h1>
+              <h1 className="history-title">Multiservice de tu hogar</h1>
               
-              {/* // TODO: contenido real a confirmar con el cliente */}
               <p className="history-text">
-                Desde nuestros comienzos en la ciudad de Santa Fe, Saba Multiservice nació con una premisa clara: brindar una solución técnica confiable frente a la cultura del descarte. A lo largo de más de dos décadas, hemos acompañado la evolución tecnológica desde los clásicos televisores de tubo y las primeras videocaseteras hasta los actuales Smart TV 4K, microondas digitales y electrónica de alta precisión.
+                Desde nuestros comienzos en la ciudad de Santa Fe, Saba Multiservice nació con una premisa clara: brindar una solución técnica confiable frente a una cultura de descarte.
               </p>
               <p className="history-text">
-                Hoy en día, nuestro local en <strong>Catamarca 3420</strong> combina esa calidez del mostrador tradicional, donde te atiende directamente quien repara tu equipo, con instrumental digital avanzado para el diagnóstico de placas madre y bancos de pruebas especializados en línea blanca.
+                Con más de 30 años de servicio hemos acompañado la evolución de los electrodomésticos y adaptado nuestras reparaciones a estos.
               </p>
-              {/* // Nota interna: reseña histórica sujeta a expansión con anécdotas de los fundadores del comercio */}
+              <p className="history-text">
+                Hoy en día, nuestro local en Catamarca 3420 combina la calidez del mostrador tradicional, donde te atiende directamente quien repara tu equipo, con diagnósticos en el día y trabajos garantizados.
+              </p>
             </div>
 
             {/* Columna Derecha: Fotos Reales del Local y Taller */}
@@ -83,8 +84,8 @@ export default function Nosotros() {
               <div className="gallery-real-card">
                 <img src={controlesImg} alt="Stock de repuestos originales y controles en mostrador" className="gallery-card-img" />
                 <div className="gallery-card-overlay">
-                  <h4 className="gallery-card-title">Stock de Repuestos</h4>
-                  <p className="gallery-card-subtitle">Componentes originales</p>
+                  <h4 className="gallery-card-title">Stock de Accesorios</h4>
+                  <p className="gallery-card-subtitle">Amplia variedad</p>
                 </div>
               </div>
             </div>

@@ -277,13 +277,14 @@ export const Catalogo = () => {
           {selectedCategory !== 'todos' && (
             <button
               type="button"
-              onClick={() => setSelectedCategory('todos')}
+              onClick={(e) => { e.stopPropagation(); setSelectedCategory('todos'); }}
               className="catalog-sidebar-reset-btn"
             >
               Limpiar
             </button>
           )}
         </div>
+
         <div className="catalog-tree-container">
           <button
             type="button"
@@ -445,7 +446,7 @@ export const Catalogo = () => {
               Disponemos de electrodomésticos de última generación, repuestos de línea blanca para técnicos/particulares y accesorios para tu Smart TV y PC. Consultá disponibilidad y precio en el acto por WhatsApp.
             </p>
             <div className="catalog-promo-banner">
-              <span className="promo-prefix">En todos los productos:</span>
+              <span className="promo-prefix">En electrodomésticos:</span>
               <span><strong>3 cuotas sin interés</strong></span>
               <span className="promo-separator">•</span>
               <span><strong>10% de descuento</strong> en efectivo</span>
