@@ -57,14 +57,41 @@ export const ProductoDetalle = () => {
 
         setProduct(found);
 
-        // 3. Buscar productos relacionados
+        // 3. Buscar productos relacionados en Supabase (evitar borrados)
         if (found) {
-          const catId = found.category_id || found.categories?.id || 'nuevos';
-          const related = INITIAL_PRODUCTS.filter(
-            p => (p.category_id === catId || p.category_name === found.category_name) && p.slug !== found.slug && p.id !== found.id
-          ).slice(0, 3);
-          setRelatedProducts(related.length > 0 ? related : INITIAL_PRODUCTS.filter(p => p.slug !== found.slug).slice(0, 3));
+          let related = [];
+          
+          if (found.category_id) {
+            const { data: relatedCatData } = await supabase
+              .from('products')
+              .select('*, categories(name)')
+              .eq('category_id', found.category_id)
+              .neq('id', found.id)
+              .limit(3);
+              
+            if (relatedCatData && relatedCatData.length > 0) {
+              related = relatedCatData;
+            }
+          }
+          
+          if (related.length === 0) {
+            const { data: relatedFallback } = await supabase
+              .from('products')
+              .select('*, categories(name)')
+              .neq('id', found.id)
+              .limit(3);
+              
+            if (relatedFallback) related = relatedFallback;
+          }
+          
+          setRelatedProducts(
+            related.map(p => ({
+              ...p,
+              category_name: p.categories?.name || p.category_name || 'General'
+            }))
+          );
         }
+
       } catch (err) {
         console.warn('[ProductoDetalle] Error buscando detalle:', err);
         const fallback = INITIAL_PRODUCTS.find(p => p.slug === slug || p.id === slug) || null;
