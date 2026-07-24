@@ -113,6 +113,58 @@
   line-height: 1.6;
 }
 
+.catalog-promo-banner {
+  margin-top: 16px;
+  background: var(--color-red-primary);
+  color: var(--color-white);
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 400;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.catalog-promo-banner span {
+  display: block;
+}
+
+.catalog-promo-banner strong {
+  font-weight: 700;
+}
+
+.promo-prefix {
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.promo-separator {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .catalog-promo-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+  .catalog-promo-banner span {
+    display: inline;
+  }
+  .promo-prefix {
+    margin-bottom: 0;
+    margin-right: 4px;
+  }
+  .promo-separator {
+    display: inline;
+    margin: 0 4px;
+    opacity: 0.5;
+  }
+}
+
+
 /* ==========================================================================
    LAYOUT PRINCIPAL RESPONSIVE (2 COLUMNAS EN ESCRITORIO)
    ========================================================================== */

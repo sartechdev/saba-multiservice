@@ -18,7 +18,7 @@ export const Footer = () => {
             <span className="logo-ms">MULTISERVICE</span>
           </Link>
           <p className="footer-tagline">
-            Servicio técnico oficial y multimarca de electrodomésticos en Santa Fe. Más de 25 años garantizando seguridad y confianza en tu hogar.
+            Servicio técnico oficial y multimarca de electrodomésticos en Santa Fe. Más de 30 años garantizando seguridad y confianza en tu hogar.
           </p>
           <div className="footer-details">
             <p><strong>Dirección:</strong> Catamarca 3420, Santa Fe de la Vera Cruz, Santa Fe, Argentina</p>

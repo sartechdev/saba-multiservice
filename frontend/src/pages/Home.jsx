@@ -188,12 +188,12 @@ const DIFERENCIALES = [
   {
     icon: <WrenchToolIcon />,
     title: 'Taller propio sin intermediarios',
-    text: 'Contamos con instrumental electrónico de precisión en nuestro local. No tercerizamos diagnósticos ni envíos.',
+    text: 'No tercerizamos diagnósticos ni envíos.',
   },
   {
     icon: <AwardBadgeIcon />,
-    title: '+25 años de trayectoria',
-    text: 'Más de dos décadas ininterrumpidas brindando soluciones confiables a familias y comercios de Santa Fe Capital.',
+    title: '+30 años de trayectoria',
+    text: 'Más de tres décadas ininterrumpidas brindando soluciones confiables a familias y comercios de Santa Fe Capital.',
   },
 ];
 
@@ -212,15 +212,22 @@ export default function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        // Pedimos una muestra amplia para luego mezclarlos aleatoriamente en el cliente
         const { data, error } = await supabase
           .from('products')
           .select('*')
           .eq('available', true)
-          .order('created_at', { ascending: false })
-          .limit(4);
-        if (!error && data) setProducts(data);
+          .limit(50);
+
+        if (!error && data) {
+          // Mezclar el array (shuffle) y tomar 4 al azar
+          const shuffled = data.sort(() => 0.5 - Math.random());
+          setProducts(shuffled.slice(0, 4));
+        } else {
+          setProducts([]);
+        }
       } catch (err) {
-        console.error('Error fetching products:', err);
+        console.warn('Error al cargar productos en Home:', err);
       } finally {
         setLoadingProducts(false);
       }
@@ -235,7 +242,7 @@ export default function Home() {
         <title>Saba Multiservice | Servicio Técnico Oficial y Repuestos en Santa Fe Capital</title>
         <meta
           name="description"
-          content="Servicio técnico especializado en reparación de Smart TV, microondas y línea blanca en Santa Fe Capital. Venta de repuestos originales con garantía escrita. +25 años de trayectoria."
+          content="Servicio técnico especializado en reparación de Smart TV, microondas y línea blanca en Santa Fe Capital. Venta de repuestos originales con garantía escrita. +30 años de trayectoria."
         />
         <link rel="canonical" href="https://sabamultiservice.com.ar/" />
         <meta property="og:title" content="Saba Multiservice | Servicio Técnico Oficial en Santa Fe" />
@@ -309,9 +316,9 @@ export default function Home() {
               }}
               transition={{ type: 'spring', stiffness: 80, damping: 20 }}
             >
-              Reparamos tu electrodoméstico con{' '}
-              <span className="hero-headline-accent">presupuesto sin cargo</span> y garantía
-              escrita
+              Reparamos tu electrodoméstico.{' '}
+              <span className="hero-headline-accent">Presupuesto sin cargo</span> y garantía
+              de 3 meses.
             </motion.h1>
 
             {/* Subtitle */}
@@ -323,7 +330,7 @@ export default function Home() {
               }}
               transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
             >
-              Taller electrónico especializado. Más de 25 años devolviendo la vida a televisores,
+              Service especializado. Más de 30 años devolviendo la vida a televisores,
               hornos, microondas y pequeños electrodomésticos en el día.
             </motion.p>
 
@@ -366,8 +373,8 @@ export default function Home() {
                   <AwardBadgeIcon />
                 </div>
                 <div className="hero-stat-text">
-                  <h4>+25 Años</h4>
-                  <p>Trayectoria ininterrumpida</p>
+                  <h4>+30 Años</h4>
+                  <p>Experiencia comprobable</p>
                 </div>
               </div>
 
@@ -419,7 +426,7 @@ export default function Home() {
             variants={fadeUp}
             transition={{ duration: 0.5 }}
           >
-            Cómo trabajamos en nuestro taller
+            Cómo trabajamos en nuestro local
           </motion.h2>
           <motion.p
             className="home-section-subtitle"
@@ -429,7 +436,7 @@ export default function Home() {
             variants={fadeUp}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Un proceso técnico claro, transparente y sin letra chica. Vos tenés el control total antes de cualquier reparación.
+            Revisamos y presupuestamos sin cargo los artefactos. Realizamos reparacion de 24hs a 48hs.
           </motion.p>
 
           <motion.div
@@ -465,7 +472,7 @@ export default function Home() {
           >
             <div className="steps-trust-icon">✓</div>
             <div>
-              <strong>Compromiso:</strong> Si por cualquier motivo decidís no realizar la reparación una vez emitido el diagnóstico, te devolvemos tu electrodoméstico exactamente como ingresó, sin cobrarte un solo centavo de revisión.
+              <strong>Compromiso:</strong> Si por cualquier motivo decidís no realizar la reparación una vez emitido el diagnóstico, te devolvemos tu electrodoméstico exactamente como ingresó, sin cargo.
             </div>
           </motion.div>
         </div>
@@ -485,7 +492,7 @@ export default function Home() {
           >
             <h2 className="diferenciales-title">Calidad técnica y honestidad comercial</h2>
             <p className="diferenciales-subtitle">
-              No somos un servicio de intermediación ni derivamos trabajos. Operamos con laboratorio propio y repuestos originales de primera marca.
+              No somos un servicio de intermediación ni derivamos trabajos. Reparamos en el local, con repuestos originales garantizados.
             </p>
           </motion.div>
 
@@ -517,26 +524,7 @@ export default function Home() {
       {/* ── 4. QUÉ REPARAMOS (ASYMMETRICAL BENTO GRID w/ CONTROLES.WEBP) ── */}
       <section className="bento-section">
         <div className="container">
-          <motion.h2
-            className="home-section-title"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeUp}
-            transition={{ duration: 0.5 }}
-          >
-            Especialidades de nuestro laboratorio
-          </motion.h2>
-          <motion.p
-            className="home-section-subtitle"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeUp}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            Solucionamos fallas complejas en placas main, fuentes de alimentación, sistemas de calentamiento y motores.
-          </motion.p>
+          
 
           <motion.div
             className="bento-grid"
@@ -555,7 +543,7 @@ export default function Home() {
                 </div>
                 <h3 className="bento-title">Controles Remotos y Accesorios</h3>
                 <p className="bento-desc">
-                  Contamos con el mayor stock de controles remotos originales y alternativos para todas las marcas de Smart TV, aires acondicionados y sistemas de audio. Además, cables, soportes y periféricos para PC y celular.
+                  Contamos con el mayor stock de controles remotos originales y alternativos para todas las marcas de Smart TV y aires acondicionados. Además, cables de TV y accesorios.
                 </p>
                 <Link to="/productos" className="bento-action">
                   <span>Explorar inventario en local</span>
@@ -573,7 +561,7 @@ export default function Home() {
                   </div>
                   <h3 className="bento-title">Televisores y Smart TV</h3>
                   <p className="bento-desc">
-                    Cambio de tiras LED, reparación de placas main, fuentes y problemas de firmware en pantallas LCD y LED de 24" a 75".
+                    Reparaciones de led LCD desde 24" a 60".
                   </p>
                 </div>
                 <span className="bento-action mt-4">Consultar reparación →</span>
@@ -589,7 +577,7 @@ export default function Home() {
                   </div>
                   <h3 className="bento-title">Microondas y Hornos</h3>
                   <p className="bento-desc">
-                    Reemplazo de magnetrones, membranas táctiles, platos giratorios, transformadores de alta tensión y termostatos.
+                    Reemplazo de magnetrones, membranas táctiles, platos giratorios, transformadores de alta tensión y pintura de alta temperatura en el interior.
                   </p>
                 </div>
                 <span className="bento-action mt-4">Consultar reparación →</span>
@@ -621,7 +609,7 @@ export default function Home() {
                   </div>
                   <h3 className="bento-title">Pequeños Electrodomésticos</h3>
                   <p className="bento-desc">
-                    Arreglo de licuadoras, procesadoras, planchas, pavas eléctricas, freidoras y artefactos de cocina en general.
+                    Arreglo de licuadoras, procesadoras, planchitas, secadores, nebulizadores, secarropas, lustraspiradoras y aspiradoras.
                   </p>
                 </div>
                 <span className="bento-action mt-4">Consultar reparación →</span>
@@ -653,7 +641,7 @@ export default function Home() {
               variants={fadeUp}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Reparamos todas las líneas de electrodomésticos nacionales e importadas con instrumental de precisión.
+              Reparamos todas las líneas de electrodomésticos nacionales e importadas.
             </motion.p>
           </div>
 
@@ -779,11 +767,7 @@ export default function Home() {
                   <ProductCardMini product={product} />
                 </motion.div>
               ))
-            ) : (
-              <p style={{ color: 'var(--color-gray-medium)', gridColumn: '1 / -1' }}>
-                Próximamente publicaremos el inventario actualizado en esta sección.
-              </p>
-            )}
+            ) : null}
           </motion.div>
         </div>
       </section>

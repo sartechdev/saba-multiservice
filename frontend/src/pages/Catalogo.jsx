@@ -215,14 +215,14 @@ export const Catalogo = () => {
                   className="catalog-tree-label-btn"
                   onClick={() => handleSelectCategory(cat)}
                 >
-                  <span className="catalog-tree-icon">
-                    {currentDepth === 0 ? '📁' : '↳'}
-                  </span>
+                  {currentDepth > 0 && (
+                    <span className="catalog-tree-icon">↳</span>
+                  )}
                   <span className="catalog-tree-name">{cat.name}</span>
                   {count > 0 && <span className="catalog-tree-count">{count}</span>}
                 </button>
 
-                {hasChildren && (
+                {hasChildren ? (
                   <button
                     type="button"
                     className="catalog-tree-toggle-btn"
@@ -240,6 +240,8 @@ export const Catalogo = () => {
                       ▸
                     </motion.span>
                   </button>
+                ) : (
+                  <div style={{ width: '28px', flexShrink: 0 }} />
                 )}
               </div>
 
@@ -271,7 +273,7 @@ export const Catalogo = () => {
     <div className="catalog-sidebar-card">
       <div className="catalog-sidebar-section">
         <div className="catalog-sidebar-title-row">
-          <span className="catalog-sidebar-title">📁 Categorías</span>
+          <span className="catalog-sidebar-title">Categorías</span>
           {selectedCategory !== 'todos' && (
             <button
               type="button"
@@ -290,7 +292,6 @@ export const Catalogo = () => {
             style={{ padding: '8px 10px', border: 'none', background: selectedCategory === 'todos' ? 'var(--color-red-primary)' : 'transparent', cursor: 'pointer', textAlign: 'left', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontWeight: 600, color: selectedCategory === 'todos' ? '#fff' : 'inherit' }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span className="catalog-tree-icon">✨</span>
               <span>Todos los productos</span>
             </div>
             <span className="catalog-tree-count" style={{ background: selectedCategory === 'todos' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.06)', color: 'inherit' }}>
@@ -305,7 +306,7 @@ export const Catalogo = () => {
 
       <div className="catalog-sidebar-section">
         <div className="catalog-sidebar-title-row">
-          <span className="catalog-sidebar-title">🏷️ Marca / Línea</span>
+          <span className="catalog-sidebar-title">Marca / Línea</span>
           {selectedBrand !== 'todas' && (
             <button
               type="button"
@@ -443,6 +444,12 @@ export const Catalogo = () => {
             <p className="catalog-subtitle">
               Disponemos de electrodomésticos de última generación, repuestos de línea blanca para técnicos/particulares y accesorios para tu Smart TV y PC. Consultá disponibilidad y precio en el acto por WhatsApp.
             </p>
+            <div className="catalog-promo-banner">
+              <span className="promo-prefix">En todos los productos:</span>
+              <span><strong>3 cuotas sin interés</strong></span>
+              <span className="promo-separator">•</span>
+              <span><strong>10% de descuento</strong> en efectivo</span>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -587,6 +594,7 @@ export const Catalogo = () => {
                     className="catalog-empty-btn"
                     onClick={() => {
                       setSelectedCategory('todos');
+                      setSelectedBrand('todas');
                       setMinPrice('');
                       setMaxPrice('');
                       setIncludeOnRequest(true);

@@ -15,7 +15,7 @@ export const ServicioTecnico = () => {
     {
       icon: '📺',
       title: 'TV y Smart TV',
-      desc: 'Reparamos fuentes quemadas, reemplazamos tiras LED de pantalla oscura, solucionamos fallas de reinicio en Android/Google TV y problemas de sintonía.'
+      desc: 'Fallas en placa de fuente, tiras led, salida de audio, sintonizador, findware, etc.'
     },
     {
       icon: '⚡',
@@ -25,22 +25,17 @@ export const ServicioTecnico = () => {
     {
       icon: '🔥',
       title: 'Calefacción y Caloventores',
-      desc: 'Mantenimiento de estufas halógenas, caloventores eléctricos, radiadores de aceite y termostatos de seguridad anticalentamiento.'
+      desc: 'Mantenimiento de estufas halógenas, caloventores eléctricos y radiadores de aceite.'
     },
     {
       icon: '🌀',
       title: 'Ventilación de Pie y Techo',
-      desc: 'Cambio de bujes y rodamientos de motor frenado, bobinados, botoneras de velocidad y balanceo de aspas metálicas o plásticas.'
+      desc: 'Cambio de bujes y recambio de motor, botoneras de velocidad y cambio de aspas metálicas o plásticas.'
     },
     {
       icon: '☕',
       title: 'Pequeños Electro de Cocina',
-      desc: 'Pavas eléctricas cortocircuitadas, licuadoras, procesadoras, tostadoras y freidoras sin aceite (Air Fryer).'
-    },
-    {
-      icon: '🔊',
-      title: 'Audio y Electrónica',
-      desc: 'Equipos de sonido, parlantes Bluetooth con problemas de carga, amplificadores, controles remotos y fuentes universales.'
+      desc: 'Anafes, licuadoras, procesadoras, cariliteras y freidoras sin aceite (Air Fryer).'
     }
   ];
 
@@ -48,17 +43,17 @@ export const ServicioTecnico = () => {
     {
       number: '01',
       title: 'Ingreso presencial en mostrador',
-      desc: 'Traé tu electrodoméstico a nuestro local en Catamarca 3420, Santa Fe. No necesitás turno previo; te entregamos una orden de ingreso oficial en el acto.'
+      desc: 'Traé tu electrodoméstico a nuestro local en Catamarca 3420, Santa Fe. No necesitás turno previo.'
     },
     {
       number: '02',
-      title: 'Diagnóstico en laboratorio técnico',
-      desc: 'Nuestros especialistas destapan el equipo, miden componentes en banco de pruebas y constatan la causa exacta de la falla con instrumental de alta precisión.'
+      title: 'Diagnóstico técnico',
+      desc: 'Nuestros técnicos revisan el artefacto dentro de las 24 a 48hs.'
     },
     {
       number: '03',
-      title: 'Presupuesto informado y sin cargo',
-      desc: 'Te comunicamos por teléfono o WhatsApp el costo con repuestos y mano de obra. Si aceptás, reparamos. Si decidís no hacerlo, retirás sin pagar un solo centavo.'
+      title: 'Presupuesto sin cargo',
+      desc: 'Te comunicamos por teléfono o WhatsApp el costo con repuestos y mano de obra. Si aceptás, reparamos. Si decidís no hacerlo, retirás sin cargo.'
     }
   ];
 
@@ -125,7 +120,7 @@ export const ServicioTecnico = () => {
               Diagnóstico profesional y presupuestos sin cargo en taller
             </h1>
             <p className="service-hero-desc">
-              Especialistas en la reparación de televisores Smart TV, microondas, equipos de audio y pequeños electrodomésticos. Atención presencial en nuestro local con repuestos originales y 90 días de garantía.
+              Especialistas en la reparación de televisores Smart TV, microondas, y pequeños electrodomésticos. Atención presencial en nuestro local con repuestos originales y 90 días de garantía.
             </p>
             <div className="service-hero-actions">
               <a href="#proceso-presupuesto" className="service-btn-primary">
@@ -141,9 +136,9 @@ export const ServicioTecnico = () => {
       <section className="service-types-section">
         <div className="container">
           <div className="section-header-center">
-            <h2 className="section-heading">¿Qué equipos reparamos en laboratorio?</h2>
+            <h2 className="section-heading">¿Qué equipos reparamos en nuestro local?</h2>
             <p className="section-subtext">
-              Contamos con instrumental de banco de prueba y técnicos calificados para resolver fallas electrónicas complejas.
+              Contamos con repuestos originales, garantizados para resolver diversas fallas.
             </p>
           </div>
 
@@ -200,7 +195,7 @@ export const ServicioTecnico = () => {
           <div className="section-header-center">
             <h2 className="section-heading">¿Cómo es el proceso de diagnóstico y presupuesto?</h2>
             <p className="section-subtext">
-              Al tratarse de reparaciones electrónicas y mecánicas que requieren medición física con instrumental de laboratorio, los presupuestos se realizan exclusivamente con el equipo en nuestro taller.
+              Al tratarse de reparaciones, los presupuestos se realizan exclusivamente con el equipo en nuestro taller.
             </p>
           </div>
 
@@ -232,7 +227,7 @@ export const ServicioTecnico = () => {
                 <div className="policy-content">
                   <h3>Presupuestos 100% Sin Cargo</h3>
                   <p>
-                    Revisamos tu equipo en nuestro laboratorio sin costo. Si el presupuesto no se adapta a lo que buscás, podés retirar tu electrodoméstico sin abonar nada.
+                    Revisamos tu equipo sin costo. Si el presupuesto no se adapta a lo que buscás, podés retirar tu electrodoméstico sin cargo.
                   </p>
                 </div>
               </div>
@@ -240,9 +235,9 @@ export const ServicioTecnico = () => {
               <div className="policy-card">
                 <div className="policy-icon">🛡️</div>
                 <div className="policy-content">
-                  <h3>Garantía Escrita de 3 Meses</h3>
+                  <h3>Garantía de 3 Meses</h3>
                   <p>
-                    Todas nuestras reparaciones cuentan con una <strong>garantía oficial por escrito de 90 días corridos</strong> sobre el repuesto cambiado y la mano de obra realizada.
+                    Todas nuestras reparaciones cuentan con una <strong>garantía por escrito de 90 días</strong> sobre el repuesto cambiado y la mano de obra realizada.
                   </p>
                 </div>
               </div>

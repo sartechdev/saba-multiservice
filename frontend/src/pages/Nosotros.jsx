@@ -18,11 +18,11 @@ export default function Nosotros() {
         <title>Nosotros y Trayectoria en Santa Fe | Saba Multiservice</title>
         <meta
           name="description"
-          content="Más de 25 años de trayectoria en reparación de electrodomésticos, 150+ reseñas reales 4.6★ e informes técnicos oficiales para aseguradoras en Santa Fe Capital."
+          content="Más de 30 años de trayectoria en reparación de electrodomésticos, 150+ reseñas reales 4.6★ e informes técnicos oficiales para aseguradoras en Santa Fe Capital."
         />
         <link rel="canonical" href="https://sabamultiservice.com.ar/nosotros" />
-        <meta property="og:title" content="Trayectoria y Nuestra Historia | Saba Multiservice" />
-        <meta property="og:description" content="Taller tradicional con tecnología digital y más de 25 años al servicio de Santa Fe en Catamarca 3420." />
+        <meta property="og:title" content="Sobre Saba Multiservice | 30 Años de Experiencia" />
+        <meta property="og:description" content="Taller tradicional con tecnología digital y más de 30 años al servicio de Santa Fe en Catamarca 3420." />
         <meta property="og:url" content="https://sabamultiservice.com.ar/nosotros" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
@@ -105,7 +105,7 @@ export default function Nosotros() {
             >
               <div>
                 <span className="stat-icon">⚡</span>
-                <div className="stat-number">+25</div>
+                <div className="stat-number">+30</div>
               </div>
               <div>
                 <h3 className="stat-title">Años de Trayectoria</h3>
