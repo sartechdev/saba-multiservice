@@ -56,6 +56,8 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
   const isHome = location.pathname === '/';
+  const isNosotros = location.pathname === '/nosotros';
+  const isHeroPage = isHome || isNosotros;
 
   return (
     <>
@@ -65,7 +67,7 @@ const AnimatedRoutes = () => {
       {/* Reset window scroll on transition */}
       <ScrollToTop />
       
-      <main className={isAdminRoute ? 'admin-main-container' : isHome ? 'main-content-home' : 'main-content-page'}>
+      <main className={isAdminRoute ? 'admin-main-container' : isHeroPage ? 'main-content-home' : 'main-content-page'}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             {/* Public Pages */}

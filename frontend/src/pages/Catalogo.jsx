@@ -443,7 +443,7 @@ export const Catalogo = () => {
 
             <h1 className="catalog-title">Catálogo de Productos y Accesorios</h1>
             <p className="catalog-subtitle">
-              Disponemos de electrodomésticos de última generación, repuestos de línea blanca para técnicos/particulares y accesorios para tu Smart TV y PC. Consultá disponibilidad y precio en el acto por WhatsApp.
+              Disponemos de electrodomésticos del hogar, controles remotos y accesorios para celular y computadora.
             </p>
             <div className="catalog-promo-banner">
               <span className="promo-prefix">En electrodomésticos:</span>

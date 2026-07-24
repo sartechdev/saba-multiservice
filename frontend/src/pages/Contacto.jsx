@@ -254,7 +254,6 @@ export default function Contacto() {
                 <h4>Dirección del Taller</h4>
                 <p>
                   <strong>Catamarca 3420</strong>, Santa Fe Capital.<br />
-                  Estacionamiento en puerta para carga ágil de equipos.
                 </p>
                 <a
                   href="https://maps.app.goo.gl/k3M4vkiZHkRP2pdWA"

@@ -38,21 +38,25 @@ export default function Nosotros() {
         </script>
       </Helmet>
 
-      {/* ── 1. HERO SUPERIOR DE HISTORIA & GALERÍA (MODO OSCURO) ── */}
+      {/* ── 1. HERO SUPERIOR DE HISTORIA & GALERÍA ── */}
       <section className="about-history-hero">
-        <div className="about-hero-glow" />
-        <div className="container">
+        <div className="history-bg-wrapper">
+          <img src={frente2Img} alt="Fachada Saba" className="history-bg-image" />
+          <div className="history-bg-overlay" />
+        </div>
+        
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div
-            className="history-grid"
+            className="history-grid-classic"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
           >
             {/* Columna Izquierda: Historia */}
-            <div className="history-content">
+            <div className="history-content-classic">
               <h1 className="history-title">Multiservice de tu hogar</h1>
               
-              <p className="history-text">
+              <p className="history-text lead">
                 Desde nuestros comienzos en la ciudad de Santa Fe, Saba Multiservice nació con una premisa clara: brindar una solución técnica confiable frente a una cultura de descarte.
               </p>
               <p className="history-text">
@@ -63,26 +67,23 @@ export default function Nosotros() {
               </p>
             </div>
 
-            {/* Columna Derecha: Fotos Reales del Local y Taller */}
-            <div className="history-gallery-grid">
+            {/* Columna Derecha: Fotos Reales */}
+            <div className="history-gallery-classic">
               <div className="gallery-real-card large">
                 <img src={frente2Img} alt="Fachada y Mostrador Principal de Saba Multiservice en Catamarca 3420" className="gallery-card-img" />
                 <div className="gallery-card-overlay">
-                  <h4 className="gallery-card-title">Fachada y Mostrador Principal</h4>
+                  <h4 className="gallery-card-title">Fachada</h4>
                   <p className="gallery-card-subtitle">Catamarca 3420, Santa Fe Capital</p>
                 </div>
               </div>
 
               <div className="gallery-real-card">
-                <img src={caloventorImg} alt="Banco de Pruebas e instrumental de diagnóstico en laboratorio Saba" className="gallery-card-img" />
-                <div className="gallery-card-overlay">
-                  <h4 className="gallery-card-title">Banco de Pruebas</h4>
-                  <p className="gallery-card-subtitle">Laboratorio e instrumental</p>
-                </div>
-              </div>
-
-              <div className="gallery-real-card">
-                <img src={controlesImg} alt="Stock de repuestos originales y controles en mostrador" className="gallery-card-img" />
+                <img 
+                  src={controlesImg} 
+                  alt="Stock de repuestos originales y controles en mostrador" 
+                  className="gallery-card-img" 
+                  style={{ objectPosition: 'center bottom' }}
+                />
                 <div className="gallery-card-overlay">
                   <h4 className="gallery-card-title">Stock de Accesorios</h4>
                   <p className="gallery-card-subtitle">Amplia variedad</p>

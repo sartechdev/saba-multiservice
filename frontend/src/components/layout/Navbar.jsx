@@ -11,6 +11,8 @@ export const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const isNosotros = location.pathname === '/nosotros';
+  const isHeroPage = isHome || isNosotros;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +42,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className={`main-header ${isHome && !isScrolled ? 'header-hero-transparent' : 'header-glass-scrolled'}`}>
+    <header className={`main-header ${isHeroPage && !isScrolled ? 'header-hero-transparent' : 'header-glass-scrolled'}`}>
       <div className="container header-container">
         {/* Brand Logo */}
         <Link to="/" className="brand-logo" onClick={() => setIsOpen(false)}>
