@@ -7,7 +7,7 @@ import { ReviewCard } from '../components/shared/ReviewCard';
 import { ProductCardMini } from '../components/shared/ProductCardMini';
 import { MapEmbed } from '../components/shared/MapEmbed';
 import { WhatsAppModal } from '../components/shared/WhatsAppModal';
-import heroImg from '../assets/wppHero.png';
+import heroImg from '../assets/wppHero.webp';
 import controlesImg from '../assets/controles.webp';
 import { REAL_REVIEWS } from '../data/reviewsData';
 import '../styles/Home.css';

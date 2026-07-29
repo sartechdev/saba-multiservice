@@ -5,7 +5,7 @@ import { fadeInUp, staggerContainer, scaleUp } from '../lib/motionVariants';
 import { supabase } from '../lib/supabaseClient';
 
 import { ProductCard } from '../components/shared/ProductCard';
-import catalogoBg from '../assets/wppCat.png';
+import catalogoBg from '../assets/wppCat.webp';
 import '../styles/Catalogo.css';
 
 export const Catalogo = () => {
@@ -398,7 +398,7 @@ export const Catalogo = () => {
   return (
     <div className="catalog-wrapper">
       <Helmet>
-        <title>Saba Multiservice | Ctálogo</title>
+        <title>Saba Multiservice | Catálogo</title>
         <meta
           name="description"
           content="Explorá nuestro catálogo con electrodomésticos nuevos, repuestos originales y accesorios para Smart TV, microondas y línea blanca en Santa Fe. Consultas en el acto."
