@@ -5,7 +5,7 @@ import { fadeInUp, staggerContainer } from '../lib/motionVariants';
 import { Link } from 'react-router-dom';
 
 import { WhatsAppModal } from '../components/shared/WhatsAppModal';
-import servicioTecnicoBg from '../assets/servicio-tecnico.jpg';
+import servicioTecnicoBg from '../assets/wppSV.PNG';
 import '../styles/ServicioTecnico.css';
 
 export const ServicioTecnico = () => {

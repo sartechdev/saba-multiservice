@@ -5,7 +5,6 @@ import { fadeInUp } from '../lib/motionVariants';
 import { ReviewCard } from '../components/shared/ReviewCard';
 import { REAL_REVIEWS } from '../data/reviewsData';
 import frente2Img from '../assets/frente2.webp';
-import caloventorImg from '../assets/caloventor.webp';
 import controlesImg from '../assets/controles.webp';
 import '../styles/Nosotros.css';
 

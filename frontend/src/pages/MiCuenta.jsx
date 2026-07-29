@@ -104,7 +104,7 @@ export default function MiCuenta() {
   return (
     <div className="account-landing-wrapper">
       <Helmet>
-        <title>Mi Cuenta y Estado de Consultas | Saba Multiservice</title>
+        <title>Saba Multiservice | Mi Cuenta</title>
       </Helmet>
 
       <div className="container">

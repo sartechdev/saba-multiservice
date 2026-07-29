@@ -60,7 +60,7 @@ export default function Login() {
   return (
     <div className="auth-page-wrapper">
       <Helmet>
-        <title>Ingresar a Mi Cuenta | Saba Multiservice</title>
+        <title>Saba Multiservice | Ingresar</title>
       </Helmet>
 
       <motion.div

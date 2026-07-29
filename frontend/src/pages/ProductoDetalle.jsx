@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { fadeInUp } from '../lib/motionVariants';
 import { supabase } from '../lib/supabaseClient';
 
-import { INITIAL_PRODUCTS } from '../data/productsData';
 import { ProductCard } from '../components/shared/ProductCard';
 import { WhatsAppModal } from '../components/shared/WhatsAppModal';
 import '../styles/ProductoDetalle.css';
@@ -50,10 +49,7 @@ export const ProductoDetalle = () => {
           };
         }
 
-        // 2. Si no está en Supabase, buscar en INITIAL_PRODUCTS
-        if (!found) {
-          found = INITIAL_PRODUCTS.find(p => p.slug === slug || p.id === slug) || null;
-        }
+
 
         setProduct(found);
 
@@ -94,8 +90,7 @@ export const ProductoDetalle = () => {
 
       } catch (err) {
         console.warn('[ProductoDetalle] Error buscando detalle:', err);
-        const fallback = INITIAL_PRODUCTS.find(p => p.slug === slug || p.id === slug) || null;
-        setProduct(fallback);
+        setProduct(null);
       } finally {
         setIsLoading(false);
       }
@@ -132,7 +127,7 @@ export const ProductoDetalle = () => {
     return (
       <div className="product-detail-wrapper">
         <Helmet>
-          <title>Producto no encontrado | Saba Multiservice</title>
+          <title>Saba Multiservice | Producto no encontrado</title>
         </Helmet>
         <div className="container">
           <div className="product-not-found-card">

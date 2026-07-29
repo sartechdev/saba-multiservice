@@ -83,7 +83,7 @@ export default function Contacto() {
   return (
     <div className="contact-landing-wrapper">
       <Helmet>
-        <title>Contacto, Ubicación y Consultas Generales | Saba Multiservice</title>
+        <title>Saba Multiservice | Contacto</title>
         <meta
           name="description"
           content="Comunicate con Saba Multiservice. Local físico en Catamarca 3420, Santa Fe. Horarios de atención de mostrador, mapa y formulario de consultas rápidas."

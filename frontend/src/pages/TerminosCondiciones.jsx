@@ -18,7 +18,7 @@ export default function TerminosCondiciones() {
   return (
     <div className="legal-page-wrapper">
       <Helmet>
-        <title>Términos y Condiciones del Servicio | Saba Multiservice Santa Fe</title>
+        <title>Saba Multiservice | Términos y Condiciones</title>
         <meta
           name="description"
           content="Términos legales y condiciones de contratación del servicio técnico oficial, presupuestos sin cargo y garantías escritas en Saba Multiservice."

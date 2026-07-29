@@ -3,15 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeInUp, staggerContainer, scaleUp } from '../lib/motionVariants';
 import { supabase } from '../lib/supabaseClient';
-import { CATEGORIES as INITIAL_CATEGORIES, INITIAL_PRODUCTS } from '../data/productsData';
 
 import { ProductCard } from '../components/shared/ProductCard';
-import controlesImg from '../assets/controles.webp';
+import catalogoBg from '../assets/wppCat.png';
 import '../styles/Catalogo.css';
 
 export const Catalogo = () => {
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState(INITIAL_CATEGORIES);
+  const [categories, setCategories] = useState([]);
   const [brands, setBrands] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('todos');
   const [selectedBrand, setSelectedBrand] = useState('todas');
@@ -76,7 +75,7 @@ export const Catalogo = () => {
           rawCatList.filter(c => !orderedIds.has(c.id)).forEach(o => tree.push({ ...o, depth: 0, ancestors: [] }));
           setCategories(tree);
         } else {
-          setCategories(buildTree(INITIAL_CATEGORIES, null, 0, []));
+          setCategories([]);
         }
 
         // 2. Obtener marcas de Supabase
@@ -100,12 +99,12 @@ export const Catalogo = () => {
           }));
           setProducts(normalized);
         } else {
-          setProducts(INITIAL_PRODUCTS);
+          setProducts([]);
         }
       } catch (err) {
-        console.warn('[Catalogo] Usando datos locales por error o falta en DB:', err);
-        setProducts(INITIAL_PRODUCTS);
-        setCategories(buildTree(INITIAL_CATEGORIES, null, 0, []));
+        console.warn('[Catalogo] Error obteniendo datos de DB:', err);
+        setProducts([]);
+        setCategories([]);
       } finally {
         setIsLoading(false);
       }
@@ -399,7 +398,7 @@ export const Catalogo = () => {
   return (
     <div className="catalog-wrapper">
       <Helmet>
-        <title>Catálogo de Productos y Repuestos Originales | Saba Multiservice</title>
+        <title>Saba Multiservice | Ctálogo</title>
         <meta
           name="description"
           content="Explorá nuestro catálogo con electrodomésticos nuevos, repuestos originales y accesorios para Smart TV, microondas y línea blanca en Santa Fe. Consultas en el acto."
@@ -426,7 +425,7 @@ export const Catalogo = () => {
       <section className="catalog-page-header">
         <div className="catalog-hero-bg-container">
           <img
-            src={controlesImg}
+            src={catalogoBg}
             alt="Controles remotos y repuestos Saba Multiservice"
             className="catalog-hero-bg-img"
           />

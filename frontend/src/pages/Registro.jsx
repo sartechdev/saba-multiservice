@@ -78,7 +78,7 @@ export default function Registro() {
   return (
     <div className="auth-page-wrapper">
       <Helmet>
-        <title>Registro de Cuenta | Saba Multiservice</title>
+        <title>Saba Multiservice | Registro de Cuenta</title>
       </Helmet>
 
       <motion.div
