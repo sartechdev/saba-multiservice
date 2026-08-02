@@ -19,7 +19,7 @@ export default function PoliticasPrivacidad() {
   return (
     <div className="legal-page-wrapper">
       <Helmet>
-        <title>Políticas de Privacidad y Protección de Datos | Saba Multiservice</title>
+        <title>Saba Multiservice | Políticas de Privacidad</title>
         <meta
           name="description"
           content="Políticas de privacidad y manejo confidencial de datos personales conforme a la Ley N° 25.326 en Saba Multiservice Santa Fe."

@@ -244,12 +244,14 @@ export default function Home() {
           name="description"
           content="Servicio técnico especializado en reparación de Smart TV, microondas y línea blanca en Santa Fe Capital. Venta de repuestos originales con garantía escrita. +30 años de trayectoria."
         />
+        <meta name="google-site-verification" content="RwoKGgIs_gi-IHeNl8MJxVWSEbeuEYwdHU7TO5YljxQ" />
         <link rel="canonical" href="https://sabamultiservice.com.ar/" />
         <meta property="og:title" content="Saba Multiservice | Servicio Técnico Oficial en Santa Fe" />
         <meta property="og:description" content="Reparaciones especializadas con diagnóstico sin cargo y garantía escrita por 3 meses en Catamarca 3420, Santa Fe." />
         <meta property="og:url" content="https://sabamultiservice.com.ar/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+        
 
         <script type="application/ld+json">
           {JSON.stringify({
