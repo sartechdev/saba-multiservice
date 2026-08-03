@@ -164,10 +164,10 @@ export const ProductoDetalle = () => {
           name="description"
           content={product.short_desc || product.description?.substring(0, 150) || `Consultá por ${product.name} con atención personalizada y repuestos garantizados en Santa Fe.`}
         />
-        <link rel="canonical" href={`https://sabamultiservice.com.ar/producto/${product.slug || product.id}`} />
+        <link rel="canonical" href={`https://www.saba-multiservice.com/producto/${product.slug || product.id}`} />
         <meta property="og:title" content={`${product.name} | Saba Multiservice`} />
         <meta property="og:description" content={product.short_desc || product.description?.substring(0, 150) || `Consultá por ${product.name} en Catamarca 3420, Santa Fe Capital.`} />
-        <meta property="og:url" content={`https://sabamultiservice.com.ar/producto/${product.slug || product.id}`} />
+        <meta property="og:url" content={`https://www.saba-multiservice.com/producto/${product.slug || product.id}`} />
         <meta property="og:type" content="product" />
         {currentImage && <meta property="og:image" content={currentImage} />}
         {!product.price_on_request && product.price && (
@@ -190,7 +190,7 @@ export const ProductoDetalle = () => {
             },
             "offers": {
               "@type": "Offer",
-              "url": `https://sabamultiservice.com.ar/producto/${product.slug || product.id}`,
+              "url": `https://www.saba-multiservice.com/producto/${product.slug || product.id}`,
               "priceCurrency": "ARS",
               "price": product.price && !product.price_on_request ? product.price : "0",
               "availability": product.available ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",

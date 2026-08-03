@@ -20,6 +20,7 @@ export const Catalogo = () => {
   const [includeOnRequest, setIncludeOnRequest] = useState(true);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [sortOrder, setSortOrder] = useState('default');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -125,7 +126,7 @@ export const Catalogo = () => {
 
   // Filtrado general (Categoría + Precio + Búsqueda)
   const filteredProducts = useMemo(() => {
-    return products.filter(product => {
+    let result = products.filter(product => {
       // 1. Filtro Categoría jerárquico recursivo
       let matchesCategory = true;
       if (selectedCategory !== 'todos') {
@@ -165,7 +166,23 @@ export const Catalogo = () => {
 
       return matchesCategory && matchesBrand && matchesPrice && matchesSearch;
     });
-  }, [products, selectedCategory, selectedBrand, categories, minPrice, maxPrice, includeOnRequest, searchQuery]);
+
+    if (sortOrder === 'price_asc') {
+      result.sort((a, b) => {
+        const priceA = a.price_on_request || !a.price ? 999999999 : Number(a.price);
+        const priceB = b.price_on_request || !b.price ? 999999999 : Number(b.price);
+        return priceA - priceB;
+      });
+    } else if (sortOrder === 'price_desc') {
+      result.sort((a, b) => {
+        const priceA = a.price_on_request || !a.price ? -1 : Number(a.price);
+        const priceB = b.price_on_request || !b.price ? -1 : Number(b.price);
+        return priceB - priceA;
+      });
+    }
+
+    return result;
+  }, [products, selectedCategory, selectedBrand, categories, minPrice, maxPrice, includeOnRequest, searchQuery, sortOrder]);
 
   const toggleExpand = (catId) => {
     setExpandedCats(prev => {
@@ -403,19 +420,19 @@ export const Catalogo = () => {
           name="description"
           content="Explorá nuestro catálogo con electrodomésticos nuevos, repuestos originales y accesorios para Smart TV, microondas y línea blanca en Santa Fe. Consultas en el acto."
         />
-        <link rel="canonical" href="https://sabamultiservice.com.ar/catalogo" />
+        <link rel="canonical" href="https://www.saba-multiservice.com/catalogo" />
         <meta property="og:title" content="Catálogo de Repuestos y Productos | Saba Multiservice" />
         <meta property="og:description" content="Repuestos de línea blanca para técnicos y particulares, controles remotos y accesorios en Santa Fe Capital." />
-        <meta property="og:url" content="https://sabamultiservice.com.ar/catalogo" />
+        <meta property="og:url" content="https://www.saba-multiservice.com/catalogo" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+        <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "Catálogo de Productos y Accesorios - Saba Multiservice",
-            "url": "https://sabamultiservice.com.ar/catalogo",
+            "url": "https://www.saba-multiservice.com/catalogo",
             "description": "Catálogo online de repuestos, electrodomésticos y controles remotos de Saba Multiservice."
           })}
         </script>
@@ -459,29 +476,73 @@ export const Catalogo = () => {
         <div className="container">
           {/* Barra Superior para Móvil/Tablet */}
           <div className="catalog-mobile-topbar">
-            <button
-              type="button"
-              onClick={() => setMobileFilterOpen(true)}
-              className="catalog-mobile-filter-btn"
-            >
-              ⚙️ Categorías y Filtros {countActiveFilters > 0 ? `(${countActiveFilters})` : ''}
-            </button>
-            <div className="catalog-search-box" style={{ flex: 1 }}>
-              <input
-                type="text"
-                className="catalog-search-input"
-                placeholder="Buscar repuesto..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              {searchQuery && (
-                <button
-                  type="button"
-                  className="catalog-search-clear"
-                  onClick={() => setSearchQuery('')}
-                >
-                  ✕
-                </button>
+            {/* Fila 1: Boton filtros y buscador */}
+            <div className="catalog-mobile-topbar-row">
+              <button
+                type="button"
+                onClick={() => setMobileFilterOpen(true)}
+                className="catalog-mobile-filter-btn"
+              >
+                ⚙️ Categorías y Filtros {countActiveFilters > 0 ? `(${countActiveFilters})` : ''}
+              </button>
+              <div className="catalog-search-box" style={{ flex: 1 }}>
+                <input
+                  type="text"
+                  className="catalog-search-input"
+                  placeholder="Buscar repuesto..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    className="catalog-search-clear"
+                    onClick={() => setSearchQuery('')}
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Fila 2: Select Orden */}
+            <div className="catalog-mobile-sort-row">
+              <select
+                value={sortOrder}
+                onChange={(e) => setSortOrder(e.target.value)}
+                className="catalog-filter-select"
+                style={{ padding: '10px 12px', borderRadius: '8px', border: '1px solid #e2e2dd', background: '#fff', color: '#222', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer' }}
+              >
+                <option value="default">Orden por defecto</option>
+                <option value="price_asc">Menor precio</option>
+                <option value="price_desc">Mayor precio</option>
+              </select>
+            </div>
+
+            {/* Fila 3: Resultados */}
+            <div className="catalog-mobile-results-row">
+              <span>
+                {isLoading
+                  ? 'Cargando catálogo...'
+                  : `Mostrando ${filteredProducts.length} producto${filteredProducts.length === 1 ? '' : 's'}`}
+              </span>
+              {(selectedCategory !== 'todos' || selectedBrand !== 'todas' || minPrice !== '' || maxPrice !== '' || searchQuery) && (
+                <span style={{ marginLeft: '8px', fontSize: '0.85rem' }}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedCategory('todos');
+                      setSelectedBrand('todas');
+                      setMinPrice('');
+                      setMaxPrice('');
+                      setIncludeOnRequest(true);
+                      setSearchQuery('');
+                    }}
+                    style={{ background: 'none', border: 'none', color: 'var(--color-red-primary)', fontWeight: 700, cursor: 'pointer', textDecoration: 'underline' }}
+                  >
+                    (Limpiar)
+                  </button>
+                </span>
               )}
             </div>
           </div>
@@ -496,55 +557,71 @@ export const Catalogo = () => {
             <div className="catalog-main-content">
               {/* Controles superiores Desktop */}
               <div className="catalog-topbar-controls">
-                <div className="catalog-results-info">
-                  <span>
-                    {isLoading
-                      ? 'Cargando catálogo...'
-                      : `Mostrando ${filteredProducts.length} producto${filteredProducts.length === 1 ? '' : 's'}`}
-                  </span>
-                  {(selectedCategory !== 'todos' || selectedBrand !== 'todas' || minPrice !== '' || maxPrice !== '' || searchQuery) && (
-                    <span style={{ marginLeft: '12px', fontSize: '0.85rem' }}>
-                      Filtros activos{' '}
+                
+                <div className="catalog-topbar-left">
+                  <div className="catalog-search-box catalog-desktop-search">
+                    <svg className="catalog-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="11" cy="11" r="8" />
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input
+                      type="text"
+                      className="catalog-search-input"
+                      placeholder="Buscar por nombre, código o repuesto..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                    {searchQuery && (
                       <button
                         type="button"
-                        onClick={() => {
-                          setSelectedCategory('todos');
-                          setSelectedBrand('todas');
-                          setMinPrice('');
-                          setMaxPrice('');
-                          setIncludeOnRequest(true);
-                          setSearchQuery('');
-                        }}
-                        style={{ background: 'none', border: 'none', color: 'var(--color-red-primary)', fontWeight: 700, cursor: 'pointer', textDecoration: 'underline' }}
+                        className="catalog-search-clear"
+                        onClick={() => setSearchQuery('')}
+                        aria-label="Limpiar búsqueda"
                       >
-                        (Limpiar todo)
+                        ✕
                       </button>
+                    )}
+                  </div>
+
+                  <div className="catalog-results-info">
+                    <span>
+                      {isLoading
+                        ? 'Cargando catálogo...'
+                        : `Mostrando ${filteredProducts.length} producto${filteredProducts.length === 1 ? '' : 's'}`}
                     </span>
-                  )}
+                    {(selectedCategory !== 'todos' || selectedBrand !== 'todas' || minPrice !== '' || maxPrice !== '' || searchQuery) && (
+                      <span style={{ marginLeft: '12px', fontSize: '0.85rem' }}>
+                        Filtros activos{' '}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelectedCategory('todos');
+                            setSelectedBrand('todas');
+                            setMinPrice('');
+                            setMaxPrice('');
+                            setIncludeOnRequest(true);
+                            setSearchQuery('');
+                          }}
+                          style={{ background: 'none', border: 'none', color: 'var(--color-red-primary)', fontWeight: 700, cursor: 'pointer', textDecoration: 'underline' }}
+                        >
+                          (Limpiar todo)
+                        </button>
+                      </span>
+                    )}
+                  </div>
                 </div>
 
-                <div className="catalog-search-box catalog-desktop-search">
-                  <svg className="catalog-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                  <input
-                    type="text"
-                    className="catalog-search-input"
-                    placeholder="Buscar por nombre, código o repuesto..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                  {searchQuery && (
-                    <button
-                      type="button"
-                      className="catalog-search-clear"
-                      onClick={() => setSearchQuery('')}
-                      aria-label="Limpiar búsqueda"
-                    >
-                      ✕
-                    </button>
-                  )}
+                <div className="catalog-sort-box">
+                  <select
+                    value={sortOrder}
+                    onChange={(e) => setSortOrder(e.target.value)}
+                    className="catalog-filter-select"
+                    style={{ padding: '10px 12px', borderRadius: '8px', border: '1px solid #e2e2dd', background: '#fff', color: '#222', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer' }}
+                  >
+                    <option value="default">Orden por defecto</option>
+                    <option value="price_asc">Menor precio</option>
+                    <option value="price_desc">Mayor precio</option>
+                  </select>
                 </div>
               </div>
 

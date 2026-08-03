@@ -89,8 +89,7 @@ export default function AdminMensajes() {
     const matchesSearch = !searchLow ||
       (q.full_name && q.full_name.toLowerCase().includes(searchLow)) ||
       (q.phone && q.phone.toLowerCase().includes(searchLow)) ||
-      (q.email && q.email.toLowerCase().includes(searchLow)) ||
-      (q.appliance_type && q.appliance_type.toLowerCase().includes(searchLow));
+      (q.email && q.email.toLowerCase().includes(searchLow));
     return matchesStatus && matchesSearch;
   });
 
@@ -101,8 +100,14 @@ export default function AdminMensajes() {
     if (!cleanPhone) return null;
 
     const name = quote.full_name?.split(' ')[0] || 'Cliente';
-    const type = quote.appliance_type || 'consulta general';
-    const msg = encodeURIComponent(`Hola ${name}! Te contactamos desde el taller de Saba Multiservice en relación a tu ${type} ingresada en nuestra web. Te comentamos que...`);
+    
+    let baseMsg = `Hola ${name}! Te contactamos desde el taller de Saba Multiservice en relación a tu consulta ingresada en nuestra web.\n\n`;
+    if (quote.issue_description) {
+      baseMsg += `Nos dejaste esta consulta:\n_"${quote.issue_description}"_\n\n`;
+    }
+    baseMsg += `Te comentamos que...`;
+
+    const msg = encodeURIComponent(baseMsg);
     return `https://wa.me/${cleanPhone}?text=${msg}`;
   };
 
@@ -206,7 +211,6 @@ export default function AdminMensajes() {
               <tr>
                 <th>Fecha Ingreso</th>
                 <th>Cliente y Datos</th>
-                <th>Equipo / Asunto</th>
                 <th>Estado</th>
                 <th>Notas Privadas</th>
                 <th style={{ textAlign: 'right' }}>Acciones</th>
@@ -236,10 +240,6 @@ export default function AdminMensajes() {
                         {quote.phone && quote.phone !== 'No especificado' && <span>📱 {quote.phone}</span>}
                         {quote.email && <span>📧 {quote.email}</span>}
                       </div>
-                    </td>
-                    <td>
-                      <div style={{ fontWeight: 700 }}>{quote.appliance_type || 'Consulta general'}</div>
-                      {quote.brand && <div style={{ fontSize: '0.8rem', color: '#666' }}>Marca/Detalle: {quote.brand}</div>}
                     </td>
                     <td>
                       <span className={`admin-badge-status admin-badge-${quote.status || 'nuevo'}`}>
@@ -299,7 +299,6 @@ export default function AdminMensajes() {
                   <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#666', textTransform: 'uppercase' }}>
                     Consulta / Presupuesto #{selectedQuote.id}
                   </span>
-                  <h3 style={{ marginTop: '2px' }}>Gestión de Asunto: {selectedQuote.appliance_type || 'General'}</h3>
                 </div>
                 <button onClick={() => setSelectedQuote(null)} className="admin-modal-close">✖</button>
               </div>
@@ -334,18 +333,7 @@ export default function AdminMensajes() {
                     </div>
                   </div>
 
-                  {/* Foto adjunta si existe */}
-                  {selectedQuote.image_url && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <label style={{ fontSize: '0.88rem', fontWeight: 700 }}>Foto adjunta por el cliente al consultar:</label>
-                      <div style={{ border: '1px solid #E2E2E2', borderRadius: '8px', overflow: 'hidden', maxHeight: '240px', background: '#F5F5F5', textAlign: 'center' }}>
-                        <a href={selectedQuote.image_url} target="_blank" rel="noopener noreferrer" title="Hacé clic para ver en tamaño original">
-                          <img src={selectedQuote.image_url} alt="Adjunto cliente" style={{ maxHeight: '240px', objectFit: 'contain' }} />
-                        </a>
-                      </div>
-                      <span style={{ fontSize: '0.78rem', color: '#666' }}>Hacé clic sobre la imagen para abrirla en pantalla completa.</span>
-                    </div>
-                  )}
+
 
                   <hr style={{ border: 'none', borderTop: '1px solid #EAEAEA', margin: '8px 0' }} />
 

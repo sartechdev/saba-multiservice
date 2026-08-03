@@ -10,7 +10,6 @@ const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || '5493425011410';
 
 export const QuoteForm = ({ initialAppliance = '' }) => {
   const { user } = useAuth();
-  const [selectedFile, setSelectedFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -26,17 +25,9 @@ export const QuoteForm = ({ initialAppliance = '' }) => {
       fullName: '',
       phone: '',
       email: '',
-      applianceType: initialAppliance || 'TV y Smart TV',
-      brand: '',
       issueDescription: ''
     }
   });
-
-  const handleFileChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      setSelectedFile(e.target.files[0]);
-    }
-  };
 
   const onSubmit = async (data) => {
     setErrorMessage('');
@@ -50,41 +41,15 @@ export const QuoteForm = ({ initialAppliance = '' }) => {
     }
 
     setIsSubmitting(true);
-    let photoUrl = null;
 
     try {
-      // 1. Intentar subir foto a Supabase Storage si se seleccionó archivo
-      if (selectedFile) {
-        try {
-          const fileExt = selectedFile.name.split('.').pop();
-          const fileName = `${Date.now()}_${Math.random().toString(36).substring(2, 8)}.${fileExt}`;
-          const filePath = `quotes/${fileName}`;
-
-          const { data: uploadData, error: uploadError } = await supabase.storage
-            .from('quote-photos')
-            .upload(filePath, selectedFile);
-
-          if (!uploadError && uploadData) {
-            const { data: publicUrlData } = supabase.storage
-              .from('quote-photos')
-              .getPublicUrl(filePath);
-            photoUrl = publicUrlData?.publicUrl || null;
-          }
-        } catch (err) {
-          console.warn('[QuoteForm] No se pudo subir la foto (puede no estar configurado el bucket quote-photos):', err);
-        }
-      }
-
-      // 2. Insertar solicitud en tabla quotes
+      // Insertar solicitud en tabla quotes
       const quotePayload = {
         user_id: user ? user.id : null,
         full_name: data.fullName.trim(),
         phone: data.phone.trim(),
         email: data.email ? data.email.trim() : null,
-        appliance_type: data.applianceType,
-        brand: data.brand ? data.brand.trim() : null,
         issue_description: data.issueDescription.trim(),
-        photo_url: photoUrl,
         status: 'nuevo'
       };
 
@@ -100,7 +65,6 @@ export const QuoteForm = ({ initialAppliance = '' }) => {
       setSubmittedData(data);
       setIsSuccess(true);
       reset();
-      setSelectedFile(null);
     } catch (error) {
       console.error('[QuoteForm] Error al guardar cotización:', error);
       setSubmittedData(data);
@@ -121,8 +85,7 @@ export const QuoteForm = ({ initialAppliance = '' }) => {
     const text = `*Hola Saba Multiservice! Solicito presupuesto:*
 - *Nombre:* ${data.fullName}
 - *Teléfono:* ${data.phone}
-${data.email ? `- *Email:* ${data.email}\n` : ''}- *Equipo:* ${data.applianceType} ${data.brand ? `(${data.brand})` : ''}
-- *Falla:* ${data.issueDescription}`;
+${data.email ? `- *Email:* ${data.email}\n` : ''}- *Falla:* ${data.issueDescription}`;
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
   };
 
@@ -152,7 +115,7 @@ ${data.email ? `- *Email:* ${data.email}\n` : ''}- *Equipo:* ${data.applianceTyp
             </div>
             <h4 className="quote-success-title">¡Recibimos tu consulta con éxito!</h4>
             <p className="quote-success-text">
-              Ya registramos la solicitud para tu <strong>{submittedData?.applianceType}</strong>. Un técnico especializado revisará tu consulta y se comunicará al número <strong>{submittedData?.phone}</strong> a la brevedad.
+              Ya registramos la solicitud. Un técnico especializado revisará tu consulta y se comunicará al número <strong>{submittedData?.phone}</strong> a la brevedad.
             </p>
 
             <div className="quote-success-cta-box">
@@ -277,70 +240,6 @@ ${data.email ? `- *Email:* ${data.email}\n` : ''}- *Equipo:* ${data.applianceTyp
                 {errors.email && (
                   <span className="form-error-msg">⚠️ {errors.email.message}</span>
                 )}
-              </div>
-
-              {/* Tipo de Electrodoméstico */}
-              <div className="form-group">
-                <label className="form-label" htmlFor="applianceType">
-                  <span>Tipo de equipo</span>
-                </label>
-                <select
-                  id="applianceType"
-                  className="form-select"
-                  {...register('applianceType', { required: 'Seleccioná el tipo de equipo' })}
-                >
-                  <option value="TV y Smart TV">TV / Smart TV / LED</option>
-                  <option value="Microondas y Hornos">Microondas / Horno Eléctrico</option>
-                  <option value="Calefacción y Caloventores">Calefacción / Caloventor / Estufa</option>
-                  <option value="Ventilación">Ventilador de Pie / Industrial / Techo</option>
-                  <option value="Pequeños Electrodomésticos de Cocina">Pequeños Electrodomésticos de Cocina</option>
-                  <option value="Audio y Electrónica">Audio / Electrónica General</option>
-                  <option value="Otro Equipo">Otro (Especificar en descripción)</option>
-                </select>
-              </div>
-
-              {/* Marca */}
-              <div className="form-group">
-                <label className="form-label" htmlFor="brand">
-                  <span>Marca del equipo</span>
-                  <span className="form-label-optional">(Opcional)</span>
-                </label>
-                <input
-                  id="brand"
-                  type="text"
-                  className="form-input"
-                  placeholder="Ej: Samsung, LG, Philips, Liliana..."
-                  {...register('brand')}
-                />
-              </div>
-
-              {/* Foto / Adjunto (Opcional) */}
-              <div className="form-group">
-                <label className="form-label">
-                  <span>Foto del problema o etiqueta</span>
-                  <span className="form-label-optional">(Opcional)</span>
-                </label>
-                <div className="file-upload-zone" onClick={() => document.getElementById('photoInput').click()}>
-                  <input
-                    id="photoInput"
-                    type="file"
-                    accept="image/*"
-                    className="file-upload-input"
-                    onChange={handleFileChange}
-                  />
-                  <div className="file-upload-label">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                      <polyline points="17 8 12 3 7 8" />
-                      <line x1="12" y1="3" x2="12" y2="15" />
-                    </svg>
-                    {selectedFile ? (
-                      <span className="selected-file">📁 {selectedFile.name}</span>
-                    ) : (
-                      <span>Hacé clic para adjuntar una foto del equipo o etiqueta</span>
-                    )}
-                  </div>
-                </div>
               </div>
             </div>
 

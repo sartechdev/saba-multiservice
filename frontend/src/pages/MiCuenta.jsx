@@ -48,7 +48,7 @@ export default function MiCuenta() {
       // NUNCA solicitamos admin_notes (privadas del taller). Seleccionamos solo las columnas requeridas y la respuesta pública.
       const { data, error } = await supabase
         .from('quotes')
-        .select('id, appliance_type, brand, issue_description, status, admin_response, created_at')
+        .select('id, issue_description, status, admin_response, created_at')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
 

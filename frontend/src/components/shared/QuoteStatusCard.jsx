@@ -5,8 +5,6 @@ import '../../styles/QuoteStatusCard.css';
 export const QuoteStatusCard = ({ quote, index = 0 }) => {
   // Destructuramos estrictamente los campos permitidos. NUNCA extraemos ni renderizamos admin_notes.
   const {
-    appliance_type,
-    brand,
     issue_description,
     status = 'nuevo',
     admin_response,
@@ -49,17 +47,7 @@ export const QuoteStatusCard = ({ quote, index = 0 }) => {
     }
   };
 
-  const getIconForAppliance = (type) => {
-    if (!type) return '📋';
-    const t = type.toLowerCase();
-    if (t.includes('tv') || t.includes('televisor') || t.includes('smart')) return '📺';
-    if (t.includes('microondas') || t.includes('horno')) return '⚡';
-    if (t.includes('ventilador') || t.includes('aspas')) return '🌀';
-    if (t.includes('calefac') || t.includes('caloventor') || t.includes('estufa')) return '🔥';
-    if (t.includes('audio') || t.includes('parlante') || t.includes('sonido')) return '🔊';
-    if (t.includes('consulta') || t.includes('general')) return '💬';
-    return '🔧';
-  };
+
 
   return (
     <motion.div
@@ -70,9 +58,8 @@ export const QuoteStatusCard = ({ quote, index = 0 }) => {
     >
       <div className="quote-card-header">
         <div className="quote-card-type">
-          <span>{getIconForAppliance(appliance_type)}</span>
-          <span>{appliance_type || 'Consulta enviada'}</span>
-          {brand && <span className="quote-card-brand">{brand}</span>}
+          <span>📋</span>
+          <span>Consulta enviada</span>
         </div>
         <div className={`quote-status-badge ${statusConfig.className}`}>
           <span className="status-dot" />

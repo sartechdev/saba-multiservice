@@ -33,7 +33,7 @@ export const Footer = () => {
                 +54 9 342 501-1410
               </button>
             </p>
-            <p><strong>Horarios:</strong> Lunes a Viernes de 9:00 a 18:00 hs y Sábados de 9:00 a 12:00 hs</p>
+            <p><strong>Horarios:</strong> Lunes a Viernes de 9:00 a 17:00 hs y Sábados de 9:00 a 12:00 hs</p>
           </div>
         </div>
 

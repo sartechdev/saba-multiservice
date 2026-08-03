@@ -28,7 +28,7 @@ export default function AdminDashboard() {
       // 1. Consultas y estadísticas
       const { data: quotesData, error: quotesError } = await supabase
         .from('quotes')
-        .select('id, full_name, phone, appliance_type, status, created_at')
+        .select('id, full_name, phone, status, created_at')
         .order('created_at', { ascending: false });
 
       if (quotesError) throw quotesError;
@@ -214,7 +214,6 @@ export default function AdminDashboard() {
                 <th>Fecha</th>
                 <th>Cliente</th>
                 <th>Teléfono / Contacto</th>
-                <th>Tipo / Línea</th>
                 <th>Estado actual</th>
               </tr>
             </thead>
@@ -240,7 +239,6 @@ export default function AdminDashboard() {
                         <span style={{ color: '#888' }}>Sin teléfono</span>
                       )}
                     </td>
-                    <td>{quote.appliance_type || 'General'}</td>
                     <td>
                       <span className={`admin-badge-status admin-badge-${quote.status || 'nuevo'}`}>
                         {quote.status?.replace('_', ' ') || 'nuevo'}

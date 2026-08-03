@@ -244,13 +244,12 @@ export default function Home() {
           name="description"
           content="Servicio técnico especializado en reparación de Smart TV, microondas y línea blanca en Santa Fe Capital. Venta de repuestos originales con garantía escrita. +30 años de trayectoria."
         />
-        <meta name="google-site-verification" content="RwoKGgIs_gi-IHeNl8MJxVWSEbeuEYwdHU7TO5YljxQ" />
-        <link rel="canonical" href="https://sabamultiservice.com.ar/" />
+        <link rel="canonical" href="https://www.saba-multiservice.com/" />
         <meta property="og:title" content="Saba Multiservice | Servicio Técnico Oficial en Santa Fe" />
         <meta property="og:description" content="Reparaciones especializadas con diagnóstico sin cargo y garantía escrita por 3 meses en Catamarca 3420, Santa Fe." />
-        <meta property="og:url" content="https://sabamultiservice.com.ar/" />
+        <meta property="og:url" content="https://www.saba-multiservice.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+        <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
         
 
         <script type="application/ld+json">
@@ -258,10 +257,10 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Saba Multiservice",
-            "url": "https://sabamultiservice.com.ar/",
+            "url": "https://www.saba-multiservice.com/",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://sabamultiservice.com.ar/catalogo?buscar={search_term_string}",
+              "target": "https://www.saba-multiservice.com/catalogo?buscar={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           })}
@@ -836,7 +835,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4>Horarios de atención de mostrador</h4>
-                  <p>Lunes a Viernes de 9:00 a 18:00 hs y Sábados de 9:00 a 12:00 hs</p>
+                  <p>Lunes a Viernes de 9:00 a 17:00 hs y Sábados de 9:00 a 12:00 hs</p>
                 </div>
               </div>
 

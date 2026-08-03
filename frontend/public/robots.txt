@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow: /mi-cuenta
 
 # Sitemaps
-Sitemap: https://sabamultiservice.com.ar/sitemap.xml
+Sitemap: https://www.saba-multiservice.com/sitemap.xml

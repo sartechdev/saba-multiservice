@@ -65,12 +65,12 @@ export const ServicioTecnico = () => {
           name="description"
           content="Reparación especializada de Smart TV, microondas, calefacción y electrodomésticos en Santa Fe. Diagnóstico sin cargo y garantía escrita en Catamarca 3420."
         />
-        <link rel="canonical" href="https://sabamultiservice.com.ar/servicio-tecnico" />
+        <link rel="canonical" href="https://www.saba-multiservice.com/servicio-tecnico" />
         <meta property="og:title" content="Servicio Técnico Oficial en Santa Fe | Saba Multiservice" />
         <meta property="og:description" content="Reparación especializada de electrodomésticos y Smart TV con diagnóstico gratuito y garantía escrita." />
-        <meta property="og:url" content="https://sabamultiservice.com.ar/servicio-tecnico" />
+        <meta property="og:url" content="https://www.saba-multiservice.com/servicio-tecnico" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+        <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({

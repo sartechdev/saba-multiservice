@@ -19,19 +19,19 @@ export default function Nosotros() {
           name="description"
           content="Más de 30 años de trayectoria en reparación de electrodomésticos, 150+ reseñas reales 4.6★ e informes técnicos oficiales para aseguradoras en Santa Fe Capital."
         />
-        <link rel="canonical" href="https://sabamultiservice.com.ar/nosotros" />
+        <link rel="canonical" href="https://www.saba-multiservice.com/nosotros" />
         <meta property="og:title" content="Sobre Saba Multiservice | 30 Años de Experiencia" />
         <meta property="og:description" content="Taller tradicional con tecnología digital y más de 30 años al servicio de Santa Fe en Catamarca 3420." />
-        <meta property="og:url" content="https://sabamultiservice.com.ar/nosotros" />
+        <meta property="og:url" content="https://www.saba-multiservice.com/nosotros" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+        <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
             "name": "Nosotros y Trayectoria - Saba Multiservice",
-            "url": "https://sabamultiservice.com.ar/nosotros",
+            "url": "https://www.saba-multiservice.com/nosotros",
             "description": "Historia y trayectoria técnica de Saba Multiservice en Santa Fe Capital."
           })}
         </script>

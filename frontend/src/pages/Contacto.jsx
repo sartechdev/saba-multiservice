@@ -54,8 +54,6 @@ export default function Contacto() {
           full_name: formData.fullName.trim(),
           phone: formData.phone.trim() || 'No especificado',
           email: formData.email ? formData.email.trim() : null,
-          appliance_type: 'Consulta general',
-          brand: 'Atención al Cliente',
           issue_description: formData.message.trim(),
           status: 'nuevo'
         }
@@ -88,19 +86,19 @@ export default function Contacto() {
           name="description"
           content="Comunicate con Saba Multiservice. Local físico en Catamarca 3420, Santa Fe. Horarios de atención de mostrador, mapa y formulario de consultas rápidas."
         />
-        <link rel="canonical" href="https://sabamultiservice.com.ar/contacto" />
+        <link rel="canonical" href="https://www.saba-multiservice.com/contacto" />
         <meta property="og:title" content="Contacto y Ubicación en Santa Fe | Saba Multiservice" />
         <meta property="og:description" content="Atención de mostrador en Catamarca 3420, Santa Fe Capital. Consultas por WhatsApp y formulario online." />
-        <meta property="og:url" content="https://sabamultiservice.com.ar/contacto" />
+        <meta property="og:url" content="https://www.saba-multiservice.com/contacto" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sabamultiservice.com.ar/og.png" />
+        <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contacto y Ubicación - Saba Multiservice",
-            "url": "https://sabamultiservice.com.ar/contacto",
+            "url": "https://www.saba-multiservice.com/contacto",
             "description": "Contacto directo, teléfono, mapa y horarios de atención de Saba Multiservice en Santa Fe."
           })}
         </script>
@@ -271,7 +269,7 @@ export default function Contacto() {
               <div>
                 <h4>Horarios de Mostrador</h4>
                 <p>
-                  <strong>Lunes a Viernes:</strong> 09:00 a 18:00 hs (corrido)<br />
+                  <strong>Lunes a Viernes:</strong> 09:00 a 17:00 hs (corrido)<br />
                   <strong>Sábados:</strong> 09:00 a 12:00 hs
                 </p>
               </div>
@@ -282,7 +280,7 @@ export default function Contacto() {
               <div>
                 <h4>Teléfono y WhatsApp</h4>
                 <p>
-                  <strong>Contacto:</strong> <a href="tel:+5493425011410">+54 9 342 501-1410</a>
+                  <strong>Contacto:</strong> +54 9 342 501-1410
                 </p>
               </div>
             </div>
