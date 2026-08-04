@@ -28,7 +28,7 @@ async function generateSitemap() {
   console.log('🔄 Generando sitemap.xml SEO dinámico...');
   loadEnv();
 
-  const baseUrl = 'https://sabamultiservice.com.ar';
+  const baseUrl = 'https://www.saba-multiservice.com';
   const today = new Date().toISOString().split('T')[0];
 
   const staticUrls = [

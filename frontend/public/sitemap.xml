@@ -3,1111 +3,1129 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://saba-multiservice.com/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/servicio-tecnico</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/servicio-tecnico</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/nosotros</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/nosotros</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/contacto</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/contacto</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/terminos-y-condiciones</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/terminos-y-condiciones</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/politicas-de-privacidad</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/politicas-de-privacidad</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=climatizacion</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=climatizacion</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=herramientas</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=herramientas</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=estufa</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=estufa</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=convector</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=convector</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=caloventor</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=caloventor</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=artefactos-de-cocina</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=artefactos-de-cocina</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=anafe</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=anafe</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=multicocina-y-parilla</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=multicocina-y-parilla</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=extractor-de-aire</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=extractor-de-aire</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=multiprocesadora-y-picadora</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=multiprocesadora-y-picadora</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=batidora</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=batidora</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=licuadora</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=licuadora</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=artefactos-de-limpieza</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=artefactos-de-limpieza</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=cuidado-personal</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=cuidado-personal</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=aspiradora-y-lustraspiradora</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=aspiradora-y-lustraspiradora</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=freidora-de-aire</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=freidora-de-aire</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=horno-electrico</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=horno-electrico</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=microondas</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=microondas</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=desayuno</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=desayuno</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=cafetera</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=cafetera</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=pava-electrica</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=pava-electrica</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=tostadora</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=tostadora</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=espumador</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=espumador</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=yogurtera</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=yogurtera</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=exprimidor-y-juguera</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=exprimidor-y-juguera</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=sandwichera</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=sandwichera</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=afeitadora-y-cortapelo</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=afeitadora-y-cortapelo</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=planchita-y-buclera</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=planchita-y-buclera</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=secador-de-pelo</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=secador-de-pelo</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=nebulizador</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=nebulizador</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=hogar-varios</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=hogar-varios</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=plancha-de-ropa</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=plancha-de-ropa</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=desarrugador</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=desarrugador</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=secarropas</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=secarropas</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=bordeadora</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=bordeadora</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=ventilador</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=ventilador</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=rallador</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=rallador</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=controles-remotos</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=controles-remotos</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=control-aire-acondicionado</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=control-aire-acondicionado</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=control-led-lcd</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=control-led-lcd</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=control-deco-convertidor</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=control-deco-convertidor</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/catalogo?categoria=control-tv-tubo</loc>
-    <lastmod>2026-07-24</lastmod>
+    <loc>https://www.saba-multiservice.com/catalogo?categoria=control-tv-tubo</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/estufa-3-velas-w108</loc>
+    <loc>https://www.saba-multiservice.com/producto/estufa-3-velas-w108</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/termoconvector-w182</loc>
+    <loc>https://www.saba-multiservice.com/producto/termoconvector-w182</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/caloventor-ax-ca</loc>
+    <loc>https://www.saba-multiservice.com/producto/caloventor-ax-ca</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/estufa-2-velas-w122</loc>
+    <loc>https://www.saba-multiservice.com/producto/estufa-2-velas-w122</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/estufa-2-velas-ax-c1000</loc>
+    <loc>https://www.saba-multiservice.com/producto/estufa-2-velas-ax-c1000</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/caloventor-w114</loc>
+    <loc>https://www.saba-multiservice.com/producto/caloventor-w114</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/convector-bajo-consumo-axel-coom</loc>
+    <loc>https://www.saba-multiservice.com/producto/convector-bajo-consumo-axel-coom</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/caloventor-w116</loc>
+    <loc>https://www.saba-multiservice.com/producto/caloventor-w116</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/vitroconvector-ax-vitrocot</loc>
+    <loc>https://www.saba-multiservice.com/producto/vitroconvector-ax-vitrocot</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/termoconvector-con-turbo-w184</loc>
+    <loc>https://www.saba-multiservice.com/producto/termoconvector-con-turbo-w184</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/mini-calefactor-digital-de-pared-ax-cap500</loc>
+    <loc>https://www.saba-multiservice.com/producto/mini-calefactor-digital-de-pared-ax-cap500</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/vitro-calefactor-digital-con-control-remoto-ax-vitrodigt</loc>
+    <loc>https://www.saba-multiservice.com/producto/vitro-calefactor-digital-con-control-remoto-ax-vitrodigt</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/juguera-electrica-exprimidor-w327</loc>
+    <loc>https://www.saba-multiservice.com/producto/juguera-electrica-exprimidor-w327</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/batidora-de-mano-amasadora-2-en-1-w305</loc>
+    <loc>https://www.saba-multiservice.com/producto/batidora-de-mano-amasadora-2-en-1-w305</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/microondas-digital-20l-w2002</loc>
+    <loc>https://www.saba-multiservice.com/producto/microondas-digital-20l-w2002</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/microondas-a-perilla-20l-w2001</loc>
+    <loc>https://www.saba-multiservice.com/producto/microondas-a-perilla-20l-w2001</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/horno-freidor-por-aire-28l-w1128</loc>
+    <loc>https://www.saba-multiservice.com/producto/horno-freidor-por-aire-28l-w1128</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/freidora-de-aire-42l-w9131n</loc>
+    <loc>https://www.saba-multiservice.com/producto/freidora-de-aire-42l-w9131n</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/freidora-de-aire-5l-al-4801k</loc>
+    <loc>https://www.saba-multiservice.com/producto/freidora-de-aire-5l-al-4801k</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/freidora-de-aire-45l-w131</loc>
+    <loc>https://www.saba-multiservice.com/producto/freidora-de-aire-45l-w131</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/freidora-de-aire-42l-w132</loc>
+    <loc>https://www.saba-multiservice.com/producto/freidora-de-aire-42l-w132</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/anafe-doble-ax-ae2h</loc>
+    <loc>https://www.saba-multiservice.com/producto/anafe-doble-ax-ae2h</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/anafe-vitroceramico-w44</loc>
+    <loc>https://www.saba-multiservice.com/producto/anafe-vitroceramico-w44</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/anafe-doble-w42</loc>
+    <loc>https://www.saba-multiservice.com/producto/anafe-doble-w42</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/anafe-simple-w40</loc>
+    <loc>https://www.saba-multiservice.com/producto/anafe-simple-w40</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/multicocina-electrica-w54</loc>
+    <loc>https://www.saba-multiservice.com/producto/multicocina-electrica-w54</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/multicocina-electrica-w53</loc>
+    <loc>https://www.saba-multiservice.com/producto/multicocina-electrica-w53</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/horno-electrico-60l-ax-hc60l</loc>
+    <loc>https://www.saba-multiservice.com/producto/horno-electrico-60l-ax-hc60l</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/extractor-y-purificador-de-cocina-ax-750-blanco</loc>
+    <loc>https://www.saba-multiservice.com/producto/extractor-y-purificador-de-cocina-ax-750-blanco</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/extractor-y-purificador-de-cocina-ax-750</loc>
+    <loc>https://www.saba-multiservice.com/producto/extractor-y-purificador-de-cocina-ax-750</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/parrilla-grill-electrica-w2015</loc>
+    <loc>https://www.saba-multiservice.com/producto/parrilla-grill-electrica-w2015</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/horno-electrico-30l-ax-hc30e</loc>
+    <loc>https://www.saba-multiservice.com/producto/horno-electrico-30l-ax-hc30e</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/parrilla-grill-electrica-w2017</loc>
+    <loc>https://www.saba-multiservice.com/producto/parrilla-grill-electrica-w2017</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/parrilla-grill-electrica-w2016</loc>
+    <loc>https://www.saba-multiservice.com/producto/parrilla-grill-electrica-w2016</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/olla-a-presion-w140</loc>
+    <loc>https://www.saba-multiservice.com/producto/olla-a-presion-w140</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/arrocera-vaporera-w141</loc>
+    <loc>https://www.saba-multiservice.com/producto/arrocera-vaporera-w141</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/horno-electrico-45l-doble-hornalla-ax-hch45</loc>
+    <loc>https://www.saba-multiservice.com/producto/horno-electrico-45l-doble-hornalla-ax-hch45</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/horno-electrico-acero-inoxidable-45l-ax-</loc>
+    <loc>https://www.saba-multiservice.com/producto/horno-electrico-acero-inoxidable-45l-ax-</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/horno-electrico-45l-ax-hc45-negro</loc>
+    <loc>https://www.saba-multiservice.com/producto/horno-electrico-45l-ax-hc45-negro</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/fabrica-de-helados-w135</loc>
+    <loc>https://www.saba-multiservice.com/producto/fabrica-de-helados-w135</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/juguera-electrica-con-boca-extra-grande-w329</loc>
+    <loc>https://www.saba-multiservice.com/producto/juguera-electrica-con-boca-extra-grande-w329</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/yogurtera-electrica-digital-w632</loc>
+    <loc>https://www.saba-multiservice.com/producto/yogurtera-electrica-digital-w632</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/yogurtera-electrica-w630</loc>
+    <loc>https://www.saba-multiservice.com/producto/yogurtera-electrica-w630</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/exprimidor-electrico-w32</loc>
+    <loc>https://www.saba-multiservice.com/producto/exprimidor-electrico-w32</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/exprimidor-electrico-w27</loc>
+    <loc>https://www.saba-multiservice.com/producto/exprimidor-electrico-w27</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/exprimidor-electrico-w429</loc>
+    <loc>https://www.saba-multiservice.com/producto/exprimidor-electrico-w429</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/licuadora-15l-vaso-plastico-color-rojo</loc>
+    <loc>https://www.saba-multiservice.com/producto/licuadora-15l-vaso-plastico-color-rojo</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/licuadora-acero-inoxidable-jarra-de-vidrio-w1804</loc>
+    <loc>https://www.saba-multiservice.com/producto/licuadora-acero-inoxidable-jarra-de-vidrio-w1804</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/licuadora-15-l-con-jarra-de-vidrio-w1904</loc>
+    <loc>https://www.saba-multiservice.com/producto/licuadora-15-l-con-jarra-de-vidrio-w1904</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/licuadora-de-mano-mixer-con-accesorios-w1904</loc>
+    <loc>https://www.saba-multiservice.com/producto/licuadora-de-mano-mixer-con-accesorios-w1904</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/multiprocesadora-con-licuadora-w1919n</loc>
+    <loc>https://www.saba-multiservice.com/producto/multiprocesadora-con-licuadora-w1919n</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/multiprocesadora-w1819n</loc>
+    <loc>https://www.saba-multiservice.com/producto/multiprocesadora-w1819n</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/sandwichera-3-en-1-w340</loc>
+    <loc>https://www.saba-multiservice.com/producto/sandwichera-3-en-1-w340</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/sandwichera-electrica-w851</loc>
+    <loc>https://www.saba-multiservice.com/producto/sandwichera-electrica-w851</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/sandwichera-electrica-individual-w16</loc>
+    <loc>https://www.saba-multiservice.com/producto/sandwichera-electrica-individual-w16</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/panquequera-electrica-con-batidor-y-bowl-w102</loc>
+    <loc>https://www.saba-multiservice.com/producto/panquequera-electrica-con-batidor-y-bowl-w102</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/tostadora-electrica-w854</loc>
+    <loc>https://www.saba-multiservice.com/producto/tostadora-electrica-w854</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/tostadora-electrica-w851</loc>
+    <loc>https://www.saba-multiservice.com/producto/tostadora-electrica-w851</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/tostadora-electrica-w836</loc>
+    <loc>https://www.saba-multiservice.com/producto/tostadora-electrica-w836</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/cafetera-filtro-12-l-w1932</loc>
+    <loc>https://www.saba-multiservice.com/producto/cafetera-filtro-12-l-w1932</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/cafetera-filtro-06-l-w1930</loc>
+    <loc>https://www.saba-multiservice.com/producto/cafetera-filtro-06-l-w1930</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/espumador-de-leche-w870n</loc>
+    <loc>https://www.saba-multiservice.com/producto/espumador-de-leche-w870n</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/pava-electrica-w1718</loc>
+    <loc>https://www.saba-multiservice.com/producto/pava-electrica-w1718</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/pava-electrica-acero-w1702</loc>
+    <loc>https://www.saba-multiservice.com/producto/pava-electrica-acero-w1702</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/pava-electrica-w1715</loc>
+    <loc>https://www.saba-multiservice.com/producto/pava-electrica-w1715</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/pava-electrica-vidrio-w1719</loc>
+    <loc>https://www.saba-multiservice.com/producto/pava-electrica-vidrio-w1719</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/batidora-con-bowl-amasadora-2-en-1-w303</loc>
+    <loc>https://www.saba-multiservice.com/producto/batidora-con-bowl-amasadora-2-en-1-w303</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/batidora-planetaria-w306r</loc>
+    <loc>https://www.saba-multiservice.com/producto/batidora-planetaria-w306r</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/multipicadora-bowl-vidrio-w1810</loc>
+    <loc>https://www.saba-multiservice.com/producto/multipicadora-bowl-vidrio-w1810</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/balanza-digital-de-cocina-con-bowl-w7500</loc>
+    <loc>https://www.saba-multiservice.com/producto/balanza-digital-de-cocina-con-bowl-w7500</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/rallador-electrico-3-en-1-w318b</loc>
+    <loc>https://www.saba-multiservice.com/producto/rallador-electrico-3-en-1-w318b</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/rallador-electrico-3-en-1-w319</loc>
+    <loc>https://www.saba-multiservice.com/producto/rallador-electrico-3-en-1-w319</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/pochoclera-electrica-carrito-vintage-w321</loc>
+    <loc>https://www.saba-multiservice.com/producto/pochoclera-electrica-carrito-vintage-w321</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/destapador-automatico-electrico-w4500</loc>
+    <loc>https://www.saba-multiservice.com/producto/destapador-automatico-electrico-w4500</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/plancha-seca-w30p</loc>
+    <loc>https://www.saba-multiservice.com/producto/plancha-seca-w30p</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/plancha-a-vapor-ceramica-w38</loc>
+    <loc>https://www.saba-multiservice.com/producto/plancha-a-vapor-ceramica-w38</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/plancha-a-vapor-w34a</loc>
+    <loc>https://www.saba-multiservice.com/producto/plancha-a-vapor-w34a</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/plancha-a-vapor-con-guardacable-w39</loc>
+    <loc>https://www.saba-multiservice.com/producto/plancha-a-vapor-con-guardacable-w39</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/plancha-inalambrica-a-vapor-w1233</loc>
+    <loc>https://www.saba-multiservice.com/producto/plancha-inalambrica-a-vapor-w1233</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/desarrugador-a-vapor-plegable-w2008</loc>
+    <loc>https://www.saba-multiservice.com/producto/desarrugador-a-vapor-plegable-w2008</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/desarrugador-a-vapor-con-percha-w207</loc>
+    <loc>https://www.saba-multiservice.com/producto/desarrugador-a-vapor-con-percha-w207</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/aspiradora-tacho-3-en-1-de-10-l-w1530</loc>
+    <loc>https://www.saba-multiservice.com/producto/aspiradora-tacho-3-en-1-de-10-l-w1530</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/aspiradora-ciclonica-sin-bolsa-1800-w-w540</loc>
+    <loc>https://www.saba-multiservice.com/producto/aspiradora-ciclonica-sin-bolsa-1800-w-w540</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/aspiradora-de-tacho-20-l-w531</loc>
+    <loc>https://www.saba-multiservice.com/producto/aspiradora-de-tacho-20-l-w531</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/aspiradora-vertical-ciclonica-w520</loc>
+    <loc>https://www.saba-multiservice.com/producto/aspiradora-vertical-ciclonica-w520</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/aspiradora-inalambrica-usb-w515</loc>
+    <loc>https://www.saba-multiservice.com/producto/aspiradora-inalambrica-usb-w515</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/aspiradora-de-auto-12-v-w550</loc>
+    <loc>https://www.saba-multiservice.com/producto/aspiradora-de-auto-12-v-w550</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/lustraspiradora-liliana-espejo</loc>
+    <loc>https://www.saba-multiservice.com/producto/lustraspiradora-liliana-espejo</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secador-plegable-w189</loc>
+    <loc>https://www.saba-multiservice.com/producto/secador-plegable-w189</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secador-plegable-w191</loc>
+    <loc>https://www.saba-multiservice.com/producto/secador-plegable-w191</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secador-w196</loc>
+    <loc>https://www.saba-multiservice.com/producto/secador-w196</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secador-de-pelo-profesional-ionico-2000-w-w94</loc>
+    <loc>https://www.saba-multiservice.com/producto/secador-de-pelo-profesional-ionico-2000-w-w94</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secador-de-pelo-con-difusor-w4192</loc>
+    <loc>https://www.saba-multiservice.com/producto/secador-de-pelo-con-difusor-w4192</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secador-de-pelo-profesional-ionico-con-difusor-2000-w-w98</loc>
+    <loc>https://www.saba-multiservice.com/producto/secador-de-pelo-profesional-ionico-con-difusor-2000-w-w98</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/planchita-de-pelo-w104</loc>
+    <loc>https://www.saba-multiservice.com/producto/planchita-de-pelo-w104</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/planchita-de-pelo-nano-titanium-w100n</loc>
+    <loc>https://www.saba-multiservice.com/producto/planchita-de-pelo-nano-titanium-w100n</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/planchita-de-pelo-ceramica-w4182</loc>
+    <loc>https://www.saba-multiservice.com/producto/planchita-de-pelo-ceramica-w4182</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/bucleadora-w195</loc>
+    <loc>https://www.saba-multiservice.com/producto/bucleadora-w195</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/planchita-cepillo-de-pelo-ion-ceramica-w4180</loc>
+    <loc>https://www.saba-multiservice.com/producto/planchita-cepillo-de-pelo-ion-ceramica-w4180</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/planchita-cepillo</loc>
+    <loc>https://www.saba-multiservice.com/producto/planchita-cepillo</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/cepillo-secador-de-pelo-w4191</loc>
+    <loc>https://www.saba-multiservice.com/producto/cepillo-secador-de-pelo-w4191</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/cepillo-secador-de-pelo-ionico-w4190</loc>
+    <loc>https://www.saba-multiservice.com/producto/cepillo-secador-de-pelo-ionico-w4190</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/trimmer-inalambrico-facial-y-corporal-w826</loc>
+    <loc>https://www.saba-multiservice.com/producto/trimmer-inalambrico-facial-y-corporal-w826</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/trimmer-inalambrico-facial-y-corporal-w827</loc>
+    <loc>https://www.saba-multiservice.com/producto/trimmer-inalambrico-facial-y-corporal-w827</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/afeitadora-inalambrica-recargable-w812</loc>
+    <loc>https://www.saba-multiservice.com/producto/afeitadora-inalambrica-recargable-w812</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/afeitadora-portatil-w810</loc>
+    <loc>https://www.saba-multiservice.com/producto/afeitadora-portatil-w810</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/cortapelo-profesional-w6101n</loc>
+    <loc>https://www.saba-multiservice.com/producto/cortapelo-profesional-w6101n</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/set-cortapelo-trimmer-nariz-oido-w6102</loc>
+    <loc>https://www.saba-multiservice.com/producto/set-cortapelo-trimmer-nariz-oido-w6102</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-3-en-1-3m18p-de-18</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-3-en-1-3m18p-de-18</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/cortapelo-inalambrico-w823</loc>
+    <loc>https://www.saba-multiservice.com/producto/cortapelo-inalambrico-w823</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/rotomartillo-perforador-w9025</loc>
+    <loc>https://www.saba-multiservice.com/producto/rotomartillo-perforador-w9025</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/taladro-percutor-w9023</loc>
+    <loc>https://www.saba-multiservice.com/producto/taladro-percutor-w9023</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/taladro-atornillador-inalambrico-w9020</loc>
+    <loc>https://www.saba-multiservice.com/producto/taladro-atornillador-inalambrico-w9020</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/amoladora-angular-w9000</loc>
+    <loc>https://www.saba-multiservice.com/producto/amoladora-angular-w9000</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-de-pie-16w1116</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-de-pie-16w1116</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/w118-ventilador-3-en-1-metalico-pie-pared-piso-18</loc>
+    <loc>https://www.saba-multiservice.com/producto/w118-ventilador-3-en-1-metalico-pie-pared-piso-18</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-turbo-w1214</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-turbo-w1214</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-turbo-20-blanco</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-turbo-20-blanco</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/taladro-atornillador-inalambrico-con-2-baterias-kit-con-brocas-y-puntas-w9021</loc>
+    <loc>https://www.saba-multiservice.com/producto/taladro-atornillador-inalambrico-con-2-baterias-kit-con-brocas-y-puntas-w9021</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/mini-motosierra-inalambrica-w9030</loc>
+    <loc>https://www.saba-multiservice.com/producto/mini-motosierra-inalambrica-w9030</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/bordeadora-desmalezadora-w9003</loc>
+    <loc>https://www.saba-multiservice.com/producto/bordeadora-desmalezadora-w9003</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/hidrolavadora-inalambrica-portatil-w9009</loc>
+    <loc>https://www.saba-multiservice.com/producto/hidrolavadora-inalambrica-portatil-w9009</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/compartir-ventilador-de-pie-ax-pie20</loc>
+    <loc>https://www.saba-multiservice.com/producto/compartir-ventilador-de-pie-ax-pie20</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-de-pie-20-nacional-titanio</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-de-pie-20-nacional-titanio</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-de-pie-industrial-ax-pie30</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-de-pie-industrial-ax-pie30</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-de-pared-embassy-de-20</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-de-pared-embassy-de-20</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-de-pared-24-ax-par26</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-de-pared-24-ax-par26</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/ventilador-turbo-16-ax-tv16</loc>
+    <loc>https://www.saba-multiservice.com/producto/ventilador-turbo-16-ax-tv16</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secarropas-centrifugo-acero-65kg</loc>
+    <loc>https://www.saba-multiservice.com/producto/secarropas-centrifugo-acero-65kg</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secarropas-centrifugo-65-kg-color-blanc</loc>
+    <loc>https://www.saba-multiservice.com/producto/secarropas-centrifugo-65-kg-color-blanc</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/secarropas-a-calor-ax3000</loc>
+    <loc>https://www.saba-multiservice.com/producto/secarropas-a-calor-ax3000</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/plancha-seca-ax-pl1200al-1200w</loc>
+    <loc>https://www.saba-multiservice.com/producto/plancha-seca-ax-pl1200al-1200w</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/controles</loc>
+    <loc>https://www.saba-multiservice.com/producto/controles</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/controles-led-comun</loc>
+    <loc>https://www.saba-multiservice.com/producto/controles-led-comun</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/control-aire-original</loc>
+    <loc>https://www.saba-multiservice.com/producto/control-aire-original</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saba-multiservice.com/producto/control-aire-universal</loc>
+    <loc>https://www.saba-multiservice.com/producto/control-aire-universal</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.saba-multiservice.com/producto/control-decodificador</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.saba-multiservice.com/producto/control-convertidor</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.saba-multiservice.com/producto/control-decodificadores</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
