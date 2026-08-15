@@ -50,7 +50,7 @@ export const QuoteForm = ({ initialAppliance = '' }) => {
         phone: data.phone.trim(),
         email: data.email ? data.email.trim() : null,
         issue_description: data.issueDescription.trim(),
-        status: 'nuevo'
+        status: 'sin_responder'
       };
 
       const { error: dbError } = await supabase

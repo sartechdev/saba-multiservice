@@ -138,28 +138,16 @@
   letter-spacing: 0.02em;
 }
 
-.quote-status-badge.status-nuevo {
-  background-color: rgba(107, 107, 107, 0.12);
-  color: var(--status-nuevo);
-  border: 1px solid rgba(107, 107, 107, 0.25);
-}
-
-.quote-status-badge.status-revision {
-  background-color: rgba(201, 154, 46, 0.14);
-  color: #a67c1e;
-  border: 1px solid rgba(201, 154, 46, 0.35);
+.quote-status-badge.status-sin-responder {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #DC2626;
+  border: 1px solid rgba(220, 38, 38, 0.25);
 }
 
 .quote-status-badge.status-respondido {
-  background-color: rgba(47, 158, 68, 0.12);
-  color: var(--status-respondido);
-  border: 1px solid rgba(47, 158, 68, 0.3);
-}
-
-.quote-status-badge.status-cerrado {
-  background-color: rgba(26, 26, 26, 0.08);
-  color: var(--status-cerrado);
-  border: 1px solid rgba(26, 26, 26, 0.2);
+  background-color: rgba(22, 163, 74, 0.12);
+  color: #16A34A;
+  border: 1px solid rgba(22, 163, 74, 0.25);
 }
 
 .status-dot {

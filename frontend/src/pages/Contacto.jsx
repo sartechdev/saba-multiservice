@@ -55,7 +55,7 @@ export default function Contacto() {
           phone: formData.phone.trim() || 'No especificado',
           email: formData.email ? formData.email.trim() : null,
           issue_description: formData.message.trim(),
-          status: 'nuevo'
+          status: 'sin_responder'
         }
       ]);
 

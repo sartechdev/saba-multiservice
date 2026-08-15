@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '../../lib/supabaseClient';
 import '../../styles/AdminConsole.css';
+import '../../styles/AdminMensajes.css';
 
 export default function AdminMensajes() {
   const [quotes, setQuotes] = useState([]);
@@ -16,7 +17,7 @@ export default function AdminMensajes() {
 
   // Modal de Detalle / Edición
   const [selectedQuote, setSelectedQuote] = useState(null);
-  const [editStatus, setEditStatus] = useState('nuevo');
+  const [editStatus, setEditStatus] = useState('sin_responder');
   const [editNotes, setEditNotes] = useState('');
   const [editResponse, setEditResponse] = useState('');
   const [saving, setSaving] = useState(false);
@@ -24,6 +25,35 @@ export default function AdminMensajes() {
   useEffect(() => {
     fetchQuotes();
   }, []);
+
+  // Bloquear scroll del fondo y escuchar tecla Escape cuando el modal esté abierto
+  useEffect(() => {
+    if (selectedQuote) {
+      document.body.style.overflow = 'hidden';
+      const handleKeyDown = (e) => {
+        if (e.key === 'Escape') {
+          setSelectedQuote(null);
+        }
+      };
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [selectedQuote]);
+
+  // Auto-ocultar mensaje de éxito después de 4 segundos
+  useEffect(() => {
+    if (successMsg) {
+      const timer = setTimeout(() => {
+        setSuccessMsg(null);
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMsg]);
 
   const fetchQuotes = async () => {
     setLoading(true);
@@ -46,7 +76,7 @@ export default function AdminMensajes() {
 
   const openDetailModal = (quote) => {
     setSelectedQuote(quote);
-    setEditStatus(quote.status || 'nuevo');
+    setEditStatus(quote.status === 'respondido' ? 'respondido' : 'sin_responder');
     setEditNotes(quote.admin_notes || '');
     setEditResponse(quote.admin_response || '');
     setSuccessMsg(null);
@@ -84,7 +114,11 @@ export default function AdminMensajes() {
   };
 
   const filteredQuotes = quotes.filter(q => {
-    const matchesStatus = statusFilter === 'todos' || q.status === statusFilter;
+    const isSinResponder = q.status !== 'respondido';
+    const matchesStatus =
+      statusFilter === 'todos' ||
+      (statusFilter === 'sin_responder' && isSinResponder) ||
+      (statusFilter === 'respondido' && q.status === 'respondido');
     const searchLow = searchTerm.trim().toLowerCase();
     const matchesSearch = !searchLow ||
       (q.full_name && q.full_name.toLowerCase().includes(searchLow)) ||
@@ -137,13 +171,13 @@ export default function AdminMensajes() {
       </div>
 
       {error && (
-        <div style={{ background: '#FFF5F5', border: '1px solid #FEB2B2', color: '#9B2C2C', padding: '14px', borderRadius: '8px', fontWeight: 600 }}>
+        <div className="admin-msg-alert-error">
           ⚠️ {error}
         </div>
       )}
 
       {successMsg && (
-        <div style={{ background: '#E8F5E9', border: '1px solid #A5D6A7', color: '#1B5E20', padding: '14px', borderRadius: '8px', fontWeight: 600 }}>
+        <div className="admin-msg-alert-success">
           ✅ {successMsg}
         </div>
       )}
@@ -158,29 +192,16 @@ export default function AdminMensajes() {
             Todas ({quotes.length})
           </button>
           <button
-            onClick={() => setStatusFilter('nuevo')}
-            className={`admin-status-tab ${statusFilter === 'nuevo' ? 'active' : ''}`}
-            style={statusFilter === 'nuevo' ? { background: '#991B1B', borderColor: '#991B1B' } : {}}
+            onClick={() => setStatusFilter('sin_responder')}
+            className={`admin-status-tab ${statusFilter === 'sin_responder' ? 'active admin-msg-status-filter-nuevo' : ''}`}
           >
-            🚨 Nuevas ({quotes.filter(q => q.status === 'nuevo').length})
-          </button>
-          <button
-            onClick={() => setStatusFilter('en_revision')}
-            className={`admin-status-tab ${statusFilter === 'en_revision' ? 'active' : ''}`}
-          >
-            ⏳ En Revisión ({quotes.filter(q => q.status === 'en_revision').length})
+            🚨 Sin responder ({quotes.filter(q => q.status !== 'respondido').length})
           </button>
           <button
             onClick={() => setStatusFilter('respondido')}
             className={`admin-status-tab ${statusFilter === 'respondido' ? 'active' : ''}`}
           >
             💬 Respondidas ({quotes.filter(q => q.status === 'respondido').length})
-          </button>
-          <button
-            onClick={() => setStatusFilter('cerrado')}
-            className={`admin-status-tab ${statusFilter === 'cerrado' ? 'active' : ''}`}
-          >
-            ✔️ Cerradas ({quotes.filter(q => q.status === 'cerrado').length})
           </button>
         </div>
 
@@ -198,11 +219,11 @@ export default function AdminMensajes() {
       {/* ── TABLA DE CONSULTAS ── */}
       <div className="admin-table-container">
         {loading ? (
-          <div style={{ padding: '36px', textAlign: 'center', color: 'var(--color-gray-medium)' }}>
+          <div className="admin-msg-table-loading">
             Cargando bandeja de entrada...
           </div>
         ) : filteredQuotes.length === 0 ? (
-          <div style={{ padding: '36px', textAlign: 'center', color: 'var(--color-gray-medium)' }}>
+          <div className="admin-msg-table-empty">
             No se encontraron consultas o presupuestos para este filtro.
           </div>
         ) : (
@@ -213,7 +234,7 @@ export default function AdminMensajes() {
                 <th>Cliente y Datos</th>
                 <th>Estado</th>
                 <th>Notas Privadas</th>
-                <th style={{ textAlign: 'right' }}>Acciones</th>
+                <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
@@ -225,51 +246,63 @@ export default function AdminMensajes() {
                   hour: '2-digit',
                   minute: '2-digit'
                 });
-                const isNew = quote.status === 'nuevo';
+                const isSinResponder = quote.status !== 'respondido';
                 const waUrl = getWhatsAppLink(quote);
 
                 return (
-                  <tr key={quote.id} className={isNew ? 'admin-row-nuevo' : ''}>
-                    <td style={{ whiteSpace: 'nowrap', color: '#666', fontSize: '0.85rem' }}>{dateFormatted}</td>
-                    <td>
-                      <div style={{ fontWeight: 700, fontSize: '0.96rem', color: isNew ? '#991B1B' : 'var(--color-black)' }}>
+                  <tr key={quote.id} className={isSinResponder ? 'admin-row-nuevo' : ''}>
+                    <td data-label="Fecha Ingreso" className="admin-msg-date-cell">
+                      <span className="admin-msg-date">{dateFormatted}</span>
+                      {isSinResponder && <span className="admin-msg-badge-new">¡NUEVO!</span>}
+                    </td>
+                    <td data-label="Cliente y Datos">
+                      <div className={`admin-msg-client-name ${isSinResponder ? 'is-new' : 'not-new'}`}>
                         {quote.full_name || 'Sin nombre ingresado'}
-                        {isNew && <span style={{ marginLeft: '6px', fontSize: '0.7rem', background: '#FEE2E2', color: '#991B1B', padding: '1px 5px', borderRadius: '4px' }}>¡NUEVO!</span>}
                       </div>
-                      <div style={{ fontSize: '0.82rem', color: '#555', display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '2px' }}>
-                        {quote.phone && quote.phone !== 'No especificado' && <span>📱 {quote.phone}</span>}
-                        {quote.email && <span>📧 {quote.email}</span>}
+                      <div className="admin-msg-contact-info">
+                        <div className="admin-msg-contact-line">
+                          Registrado: <strong className={quote.user_id ? 'admin-msg-reg-yes' : 'admin-msg-reg-no'}>{quote.user_id ? 'SI' : 'NO'}</strong>
+                        </div>
+                        {quote.phone && quote.phone !== 'No especificado' && (
+                          <div className="admin-msg-contact-line">
+                            Celular: <strong>{quote.phone}</strong>
+                          </div>
+                        )}
+                        {quote.email && (
+                          <div className="admin-msg-contact-line">
+                            Correo: <strong>{quote.email}</strong>
+                          </div>
+                        )}
                       </div>
                     </td>
-                    <td>
-                      <span className={`admin-badge-status admin-badge-${quote.status || 'nuevo'}`}>
-                        {quote.status?.replace('_', ' ') || 'nuevo'}
+                    <td data-label="Estado">
+                      <span className={`admin-badge-status ${isSinResponder ? 'admin-badge-sin_responder' : 'admin-badge-respondido'}`}>
+                        {isSinResponder ? 'Sin responder' : 'Respondido'}
                       </span>
                     </td>
-                    <td>
+                    <td data-label="Notas Privadas">
                       {quote.admin_notes ? (
-                        <div style={{ fontSize: '0.8rem', background: '#FFFBEB', color: '#B45309', padding: '4px 8px', borderRadius: '4px', maxWidth: '200px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', border: '1px solid #FCD34D' }}>
+                        <div className="admin-msg-notes-private">
                           🔒 {quote.admin_notes}
                         </div>
                       ) : (
-                        <span style={{ fontSize: '0.8rem', color: '#AAA' }}>Sin notas</span>
+                        <span className="admin-msg-notes-empty">Sin notas</span>
                       )}
                     </td>
-                    <td style={{ textAlign: 'right' }}>
-                      <div style={{ display: 'inline-flex', gap: '8px', alignItems: 'center' }}>
+                    <td data-label="Acciones">
+                      <div className="admin-msg-actions">
                         {waUrl && (
                           <a
                             href={waUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="admin-btn-secondary"
-                            style={{ padding: '6px 10px', fontSize: '0.8rem', background: '#E8F5E9', borderColor: '#A5D6A7', color: '#1B5E20', textDecoration: 'none', fontWeight: 700 }}
+                            className="admin-btn-secondary admin-msg-btn-wa"
                             title="Responder rápido al cliente por WhatsApp"
                           >
                             WhatsApp
                           </a>
                         )}
-                        <button onClick={() => openDetailModal(quote)} className="admin-btn-primary" style={{ padding: '6px 14px', fontSize: '0.82rem' }}>
+                        <button onClick={() => openDetailModal(quote)} className="admin-btn-primary admin-msg-btn-manage">
                           Gestionar
                         </button>
                       </div>
@@ -285,19 +318,19 @@ export default function AdminMensajes() {
       {/* ── MODAL DETALLE Y GESTIÓN DE CONSULTA ── */}
       <AnimatePresence>
         {selectedQuote && (
-          <div className="admin-modal-overlay">
+          <div className="admin-modal-overlay" onClick={() => setSelectedQuote(null)}>
             <motion.div
-              className="admin-modal-content"
-              style={{ maxWidth: '680px' }}
+              className="admin-modal-content admin-msg-modal-content"
+              onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="admin-modal-header" style={{ background: '#F9F9F8' }}>
+              <div className="admin-modal-header admin-msg-modal-header">
                 <div>
-                  <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#666', textTransform: 'uppercase' }}>
-                    Consulta / Presupuesto #{selectedQuote.id}
+                  <span className="admin-msg-modal-title">
+                    Consulta de: {selectedQuote.full_name || 'Cliente sin nombre'}
                   </span>
                 </div>
                 <button onClick={() => setSelectedQuote(null)} className="admin-modal-close">✖</button>
@@ -306,62 +339,62 @@ export default function AdminMensajes() {
               <form onSubmit={handleSaveChanges}>
                 <div className="admin-modal-body">
                   {/* Datos Clave de Contacto */}
-                  <div style={{ background: '#F8F8F8', border: '1px solid #E2E2E2', borderRadius: '8px', padding: '16px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                  <div className="admin-msg-modal-grid">
                     <div>
-                      <div style={{ fontSize: '0.78rem', color: '#666', fontWeight: 700, textTransform: 'uppercase' }}>Cliente</div>
-                      <div style={{ fontSize: '1.05rem', fontWeight: 800 }}>{selectedQuote.full_name || 'Sin nombre'}</div>
+                      <div className="admin-msg-modal-label">Cliente</div>
+                      <div className="admin-msg-modal-value">{selectedQuote.full_name || 'Sin nombre'}</div>
+                      <div className="admin-msg-contact-line">
+                        Registrado: <strong className={selectedQuote.user_id ? 'admin-msg-reg-yes' : 'admin-msg-reg-no'}>{selectedQuote.user_id ? 'SI' : 'NO'}</strong>
+                      </div>
                     </div>
                     <div>
-                      <div style={{ fontSize: '0.78rem', color: '#666', fontWeight: 700, textTransform: 'uppercase' }}>Teléfono / WhatsApp</div>
-                      <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--color-red-primary)' }}>
+                      <div className="admin-msg-modal-label">Celular</div>
+                      <div className="admin-msg-modal-value highlight">
                         {selectedQuote.phone || 'No especificado'}
                       </div>
                     </div>
                     {selectedQuote.email && (
-                      <div style={{ gridColumn: 'span 2' }}>
-                        <div style={{ fontSize: '0.78rem', color: '#666', fontWeight: 700, textTransform: 'uppercase' }}>Correo electrónico</div>
-                        <div style={{ fontWeight: 600 }}>{selectedQuote.email}</div>
+                      <div className="admin-msg-modal-grid-span">
+                        <div className="admin-msg-modal-label">Correo</div>
+                        <div className="admin-msg-modal-value-sm">{selectedQuote.email}</div>
                       </div>
                     )}
                   </div>
 
                   {/* Detalle del Problema o Inquietud */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <label style={{ fontSize: '0.88rem', fontWeight: 700 }}>Detalle reportado por el cliente:</label>
-                    <div style={{ background: '#FFF', border: '1px solid #D1D1D1', borderRadius: '6px', padding: '14px', fontSize: '0.95rem', lineHeight: '1.6', color: '#222', minHeight: '80px', whiteSpace: 'pre-wrap' }}>
+                  <div className="admin-msg-modal-desc-container">
+                    <label className="admin-msg-modal-desc-label">Detalle reportado por el cliente:</label>
+                    <div className="admin-msg-modal-desc-box">
                       {selectedQuote.issue_description || 'No se ingresó una descripción detallada.'}
                     </div>
                   </div>
 
 
 
-                  <hr style={{ border: 'none', borderTop: '1px solid #EAEAEA', margin: '8px 0' }} />
+                  <hr className="admin-msg-modal-hr" />
 
                   {/* Selector de Estado Operativo */}
                   <div className="admin-form-group">
-                    <label htmlFor="quote-status" style={{ fontSize: '0.95rem', color: 'var(--color-red-primary)' }}>
-                      Actualizar Estado Operativo de la Consulta *
+                    <label htmlFor="quote-status" className="admin-msg-modal-select-label">
+                      Actualizar Estado del Mensaje *
                     </label>
                     <select
                       id="quote-status"
                       value={editStatus}
                       onChange={(e) => setEditStatus(e.target.value)}
-                      className="admin-form-select"
-                      style={{ fontWeight: 700, fontSize: '1rem', border: '2px solid var(--color-black)' }}
+                      className="admin-form-select admin-msg-modal-select"
                     >
-                      <option value="nuevo">🚨 Nuevo (Recién ingresado, sin diagnóstico o respuesta)</option>
-                      <option value="en_revision">⏳ En Revisión (Equipo en taller / Cotizando repuestos)</option>
-                      <option value="respondido">💬 Respondido / Presupuesto Enviado (Por WhatsApp o email)</option>
-                      <option value="cerrado">✔️ Cerrado / Finalizado (Reparación entregada o desestimada)</option>
+                      <option value="sin_responder">🚨 Sin responder (Pendiente de respuesta)</option>
+                      <option value="respondido">💬 Respondido (Respondido vía WhatsApp o respuesta web)</option>
                     </select>
-                    <small style={{ color: '#666', fontSize: '0.82rem' }}>
-                      Tip: Muchas respuestas se envían por WhatsApp. No olvides cambiar aquí el estado a "Respondido" o "Cerrado" para mantener al día el historial web del cliente.
+                    <small className="admin-msg-modal-select-tip">
+                      Tip: Una vez que te comuniques con el cliente o le envíes el presupuesto (vía WhatsApp o mensaje web), marcá el estado como "Respondido".
                     </small>
                   </div>
 
                   {/* Respuesta para el Cliente */}
-                  <div className="admin-notes-box" style={{ background: '#FAF8F5', borderColor: '#E5E0D8' }}>
-                    <div className="admin-notes-header" style={{ color: '#333333' }}>
+                  <div className="admin-notes-box admin-msg-notes-box-public">
+                    <div className="admin-notes-header admin-msg-notes-header-public">
                       <span>✉️</span>
                       <span>Respuesta Oficial para el Cliente (Visible en "Mi Cuenta")</span>
                     </div>
@@ -369,10 +402,9 @@ export default function AdminMensajes() {
                       value={editResponse}
                       onChange={(e) => setEditResponse(e.target.value)}
                       placeholder="Escribí acá el diagnóstico, costo de reparación, repuesto disponible o respuesta que el cliente leerá en su perfil..."
-                      className="admin-notes-textarea"
-                      style={{ borderColor: '#D6D0C4', background: '#FFFFFF' }}
+                      className="admin-notes-textarea admin-msg-textarea-public"
                     />
-                    <div style={{ fontSize: '0.78rem', color: '#555555', marginTop: '6px' }}>
+                    <div className="admin-msg-notes-tip-public">
                       Si el usuario tiene una cuenta registrada, podrá ver este texto en la tarjeta de su consulta dentro de la sección "Mi Cuenta".
                     </div>
                   </div>
@@ -389,20 +421,19 @@ export default function AdminMensajes() {
                       placeholder="Escribí acá el diagnóstico técnico, costo de mano de obra calculado, número de repuesto necesario, o acuerdos hablados en mostrador/celular con el cliente..."
                       className="admin-notes-textarea"
                     />
-                    <div style={{ fontSize: '0.78rem', color: '#92400E', marginTop: '6px' }}>
+                    <div className="admin-msg-notes-tip-private">
                       Este campo está protegido por las políticas del servidor y nunca se muestra al cliente en "Mi Cuenta".
                     </div>
                   </div>
                 </div>
 
-                <div className="admin-modal-footer" style={{ justifyContent: 'space-between' }}>
+                <div className="admin-modal-footer admin-msg-modal-footer">
                   {getWhatsAppLink(selectedQuote) ? (
                     <a
                       href={getWhatsAppLink(selectedQuote)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="admin-btn-secondary"
-                      style={{ background: '#2F9E44', borderColor: '#2F9E44', color: '#FFF', textDecoration: 'none', fontWeight: 700 }}
+                      className="admin-btn-secondary admin-msg-btn-wa-modal"
                     >
                       💬 Chatear al WhatsApp del Cliente
                     </a>
@@ -410,7 +441,7 @@ export default function AdminMensajes() {
                     <span />
                   )}
 
-                  <div style={{ display: 'flex', gap: '10px' }}>
+                  <div className="admin-msg-btn-group">
                     <button type="button" onClick={() => setSelectedQuote(null)} className="admin-btn-secondary">
                       Cancelar
                     </button>

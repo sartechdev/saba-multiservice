@@ -343,39 +343,30 @@
   text-decoration: underline;
 }
 
-/* Badges de Estado */
+/* Badges / Textos de Estado */
 .admin-badge-status {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.78rem;
-  font-weight: 700;
+  display: inline-block;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.85rem;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: none;
+  background: transparent !important;
 }
 
+.admin-badge-sin_responder,
 .admin-badge-nuevo {
-  background-color: #FEE2E2;
-  color: #991B1B;
-  border: 1px solid #FCA5A5;
-}
-
-.admin-badge-en_revision {
-  background-color: #FEF3C7;
-  color: #92400E;
-  border: 1px solid #FDE68A;
+  color: #DC2626 !important;
+  background: transparent !important;
+  border: none;
 }
 
 .admin-badge-respondido {
-  background-color: #D1FAE5;
-  color: #065F46;
-  border: 1px solid #A7F3D0;
-}
-
-.admin-badge-cerrado {
-  background-color: #F3F4F6;
-  color: #374151;
-  border: 1px solid #E5E7EB;
+  color: #16A34A !important;
+  background: transparent !important;
+  border: none;
 }
 
 /* ── Notas Internas Protegidas (`admin_notes`) ── */
@@ -552,4 +543,92 @@
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
+}
+
+/* ── Estilos Responsivos de Tablas para Mobile (Cards) ── */
+@media (max-width: 768px) {
+  .admin-table-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .admin-table, 
+  .admin-table thead, 
+  .admin-table tbody, 
+  .admin-table th, 
+  .admin-table td, 
+  .admin-table tr {
+    display: block;
+  }
+  
+  .admin-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .admin-table tr {
+    background: var(--color-white);
+    border: 1px solid #EAEAEA;
+    margin-bottom: 16px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  
+  .admin-table td {
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+    position: relative;
+    padding: 12px 16px !important;
+    min-height: auto;
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .admin-table td:last-child {
+    border-bottom: 0;
+  }
+  
+  /* Uso del atributo data-label inyectado desde React */
+  .admin-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 700;
+    color: var(--color-gray-medium);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+  }
+
+  /* Excepción para la columna Acciones, que a veces es la última */
+  .admin-table td[data-label="Acciones"] {
+    flex-direction: row;
+    justify-content: flex-end;
+    background: #FDFDFD;
+    padding: 16px !important;
+  }
+  
+  .admin-table td[data-label="Acciones"]::before {
+    display: none;
+  }
+
+  /* Posicionamiento de ¡NUEVO! en la parte superior derecha de la card centrado verticalmente */
+  .admin-table td[data-label="Fecha Ingreso"] {
+    position: relative;
+    padding-right: 90px !important;
+  }
+
+  .admin-table td[data-label="Fecha Ingreso"] .admin-msg-badge-new {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    margin: 0;
+  }
 }

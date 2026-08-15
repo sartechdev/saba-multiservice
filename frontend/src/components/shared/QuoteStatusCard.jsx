@@ -6,26 +6,17 @@ export const QuoteStatusCard = ({ quote, index = 0 }) => {
   // Destructuramos estrictamente los campos permitidos. NUNCA extraemos ni renderizamos admin_notes.
   const {
     issue_description,
-    status = 'nuevo',
+    status = 'sin_responder',
     admin_response,
     created_at
   } = quote || {};
 
-  // Mapeo de estados a nombres legibles y clases CSS (Accesibilidad 35+)
+  // Mapeo de los 2 únicos estados de consulta
   const getStatusConfig = (st) => {
-    switch (st?.toLowerCase()) {
-      case 'nuevo':
-        return { label: 'Recibido (Pendiente de revisión)', className: 'status-nuevo' };
-      case 'en_revision':
-      case 'revision':
-        return { label: 'En revisión técnica', className: 'status-revision' };
-      case 'respondido':
-        return { label: 'Presupuesto informado / Respondido', className: 'status-respondido' };
-      case 'cerrado':
-        return { label: 'Consulta finalizada / Cerrada', className: 'status-cerrado' };
-      default:
-        return { label: 'Recibido', className: 'status-nuevo' };
+    if (st?.toLowerCase() === 'respondido') {
+      return { label: 'Respondido', className: 'status-respondido' };
     }
+    return { label: 'Sin responder', className: 'status-sin-responder' };
   };
 
   const statusConfig = getStatusConfig(status);

@@ -7,8 +7,8 @@ import '../../styles/AdminConsole.css';
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
-    nuevos: 0,
-    enRevision: 0,
+    sinResponder: 0,
+    respondidos: 0,
     totalConsultas: 0,
     productos: 0,
     categorias: 0,
@@ -51,12 +51,12 @@ export default function AdminDashboard() {
         console.warn('Error contando categorías:', catError.message);
       }
 
-      const nuevosCount = quotesData?.filter(q => q.status === 'nuevo').length || 0;
-      const revisionCount = quotesData?.filter(q => q.status === 'en_revision').length || 0;
+      const sinResponderCount = quotesData?.filter(q => q.status !== 'respondido').length || 0;
+      const respondidosCount = quotesData?.filter(q => q.status === 'respondido').length || 0;
 
       setStats({
-        nuevos: nuevosCount,
-        enRevision: revisionCount,
+        sinResponder: sinResponderCount,
+        respondidos: respondidosCount,
         totalConsultas: quotesData?.length || 0,
         productos: productsCount || 0,
         categorias: catCount || 0,
@@ -95,7 +95,7 @@ export default function AdminDashboard() {
           </button>
           <Link to="/admin/mensajes" className="admin-btn-primary" style={{ textDecoration: 'none' }}>
             <span>📩</span>
-            <span>Ver Bandeja ({stats.nuevos})</span>
+            <span>Ver Bandeja ({stats.sinResponder})</span>
           </Link>
         </div>
       </div>
@@ -109,18 +109,18 @@ export default function AdminDashboard() {
       {/* ── TARJETAS DE MÉTRICAS / RESUMEN ── */}
       <div className="admin-stats-grid">
         <div className="admin-stat-card stat-highlight">
-          <span className="admin-stat-label">🚨 Mensajes Nuevos Sin Responder</span>
-          <span className="admin-stat-number">{loading ? '-' : stats.nuevos}</span>
+          <span className="admin-stat-label">🚨 Mensajes Sin Responder</span>
+          <span className="admin-stat-number">{loading ? '-' : stats.sinResponder}</span>
           <p style={{ fontSize: '0.82rem', color: 'var(--color-gray-medium)', margin: 0 }}>
-            {stats.nuevos === 1 ? 'Requiere atención inmediata hoy' : stats.nuevos > 1 ? 'Consultas pendientes de revisión inicial' : '¡Excelente! Bandeja al día'}
+            {stats.sinResponder === 1 ? 'Requiere respuesta al cliente' : stats.sinResponder > 1 ? 'Consultas pendientes de respuesta' : '¡Excelente! Todas las consultas respondidas'}
           </p>
         </div>
 
         <div className="admin-stat-card">
-          <span className="admin-stat-label">⏳ Presupuestos en Revisión</span>
-          <span className="admin-stat-number">{loading ? '-' : stats.enRevision}</span>
+          <span className="admin-stat-label">💬 Consultas Respondidas</span>
+          <span className="admin-stat-number">{loading ? '-' : stats.respondidos}</span>
           <p style={{ fontSize: '0.82rem', color: 'var(--color-gray-medium)', margin: 0 }}>
-            Equipos en diagnóstico de técnicos
+            Respuestas enviadas por WhatsApp o web
           </p>
         </div>
 
@@ -225,12 +225,12 @@ export default function AdminDashboard() {
                   hour: '2-digit',
                   minute: '2-digit'
                 });
-                const isNew = quote.status === 'nuevo';
+                const isSinResponder = quote.status !== 'respondido';
                 return (
-                  <tr key={quote.id} className={isNew ? 'admin-row-nuevo' : ''}>
-                    <td style={{ whiteSpace: 'nowrap', color: '#666' }}>{dateFormatted}</td>
-                    <td style={{ fontWeight: 700 }}>{quote.full_name || 'Cliente sin nombre'}</td>
-                    <td>
+                  <tr key={quote.id} className={isSinResponder ? 'admin-row-nuevo' : ''}>
+                    <td data-label="Fecha" style={{ whiteSpace: 'nowrap', color: '#666' }}>{dateFormatted}</td>
+                    <td data-label="Cliente" style={{ fontWeight: 700 }}>{quote.full_name || 'Cliente sin nombre'}</td>
+                    <td data-label="Teléfono / Contacto">
                       {quote.phone && quote.phone !== 'No especificado' ? (
                         <a href={`https://wa.me/${quote.phone.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="phone-link">
                           💬 {quote.phone}
@@ -239,9 +239,9 @@ export default function AdminDashboard() {
                         <span style={{ color: '#888' }}>Sin teléfono</span>
                       )}
                     </td>
-                    <td>
-                      <span className={`admin-badge-status admin-badge-${quote.status || 'nuevo'}`}>
-                        {quote.status?.replace('_', ' ') || 'nuevo'}
+                    <td data-label="Estado actual">
+                      <span className={`admin-badge-status ${isSinResponder ? 'admin-badge-sin_responder' : 'admin-badge-respondido'}`}>
+                        {isSinResponder ? 'Sin responder' : 'Respondido'}
                       </span>
                     </td>
                   </tr>
