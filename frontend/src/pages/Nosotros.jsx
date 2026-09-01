@@ -43,7 +43,7 @@ export default function Nosotros() {
           <img src={frente2Img} alt="Fachada Saba" className="history-bg-image" />
           <div className="history-bg-overlay" />
         </div>
-        
+
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div
             className="history-grid-classic"
@@ -54,7 +54,7 @@ export default function Nosotros() {
             {/* Columna Izquierda: Historia */}
             <div className="history-content-classic">
               <h1 className="history-title">Multiservice de tu hogar</h1>
-              
+
               <p className="history-text lead">
                 Desde nuestros comienzos en la ciudad de Santa Fe, Saba Multiservice nació con una premisa clara: brindar una solución técnica confiable frente a una cultura de descarte.
               </p>
@@ -77,10 +77,10 @@ export default function Nosotros() {
               </div>
 
               <div className="gallery-real-card">
-                <img 
-                  src={controlesImg} 
-                  alt="Stock de repuestos originales y controles en mostrador" 
-                  className="gallery-card-img" 
+                <img
+                  src={controlesImg}
+                  alt="Stock de repuestos originales y controles en mostrador"
+                  className="gallery-card-img"
                   style={{ objectPosition: 'center bottom' }}
                 />
                 <div className="gallery-card-overlay">

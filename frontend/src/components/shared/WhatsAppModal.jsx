@@ -28,11 +28,10 @@ export const WhatsAppModal = ({ isOpen, onClose, product = null, title = 'Consul
   // Construir mensaje personalizado
   let messageText = customMessage || 'Hola Saba Multiservice! Quisiera realizar una consulta.';
   if (product) {
-    messageText = `Hola Saba Multiservice! Quiero consultar sobre: ${product.name}${
-      product.price && !product.price_on_request
+    messageText = `Hola Saba Multiservice! Quiero consultar sobre: ${product.name}${product.price && !product.price_on_request
         ? ` (Precio ref: ${formatPrice(product.price)})`
         : ''
-    }`;
+      }`;
   }
 
   const encodedMessage = encodeURIComponent(messageText);

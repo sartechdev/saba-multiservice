@@ -63,10 +63,10 @@ const AnimatedRoutes = () => {
     <>
       {/* Hide standard Navbar on admin routes */}
       {!isAdminRoute && <Navbar />}
-      
+
       {/* Reset window scroll on transition */}
       <ScrollToTop />
-      
+
       <main className={isAdminRoute ? 'admin-main-container' : isHeroPage ? 'main-content-home' : 'main-content-page'}>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
@@ -81,7 +81,7 @@ const AnimatedRoutes = () => {
             <Route path="/registro" element={<PageWrapper><Registro /></PageWrapper>} />
             <Route path="/terminos-y-condiciones" element={<PageWrapper><TerminosCondiciones /></PageWrapper>} />
             <Route path="/politicas-de-privacidad" element={<PageWrapper><PoliticasPrivacidad /></PageWrapper>} />
-            
+
             {/* Protected Client Pages */}
             <Route path="/mi-cuenta" element={
               <ProtectedRoute>
@@ -113,7 +113,7 @@ const AnimatedRoutes = () => {
 
       {/* Hide standard Footer on admin routes */}
       {!isAdminRoute && <Footer />}
-      
+
       {/* WhatsApp float is always present but hides internally inside admin pages */}
       <WhatsAppFloatButton />
     </>

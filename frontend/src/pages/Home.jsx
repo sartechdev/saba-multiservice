@@ -199,8 +199,8 @@ const DIFERENCIALES = [
 
 // ── Multimarca Static Tags ──
 const MULTIMARCA_LIST = [
-  'Samsung', 'LG', 'Whirlpool', 'Philips', 'Drean', 'Noblex', 
-  'Peabody', 'BGH', 'Ultracomb', 'Liliana', 'Philco', 'TCL', 
+  'Samsung', 'LG', 'Whirlpool', 'Philips', 'Drean', 'Noblex',
+  'Peabody', 'BGH', 'Ultracomb', 'Liliana', 'Philco', 'TCL',
   'Sony', 'Motorola', 'Atma', 'Electrolux', 'Hitachi', 'Sanyo', 'Patrick', 'Longvie'
 ];
 
@@ -250,7 +250,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.saba-multiservice.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
-        
+
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -525,7 +525,7 @@ export default function Home() {
       {/* ── 4. QUÉ REPARAMOS (ASYMMETRICAL BENTO GRID w/ CONTROLES.WEBP) ── */}
       <section className="bento-section">
         <div className="container">
-          
+
 
           <motion.div
             className="bento-grid"
