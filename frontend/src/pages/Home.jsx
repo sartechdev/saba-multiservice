@@ -7,7 +7,9 @@ import { ReviewCard } from '../components/shared/ReviewCard';
 import { ProductCardMini } from '../components/shared/ProductCardMini';
 import { MapEmbed } from '../components/shared/MapEmbed';
 import { WhatsAppModal } from '../components/shared/WhatsAppModal';
+import { trackClarityEvent } from '../lib/clarity';
 import heroImg from '../assets/wppHero.webp';
+
 import controlesImg from '../assets/controles.webp';
 import { REAL_REVIEWS } from '../data/reviewsData';
 import '../styles/Home.css';
@@ -350,13 +352,17 @@ export default function Home() {
               </Link>
               <button
                 type="button"
-                onClick={() => setIsWaModalOpen(true)}
+                onClick={() => {
+                  trackClarityEvent('hero_whatsapp_click');
+                  setIsWaModalOpen(true);
+                }}
                 className="hero-cta-whatsapp"
                 style={{ border: 'none', cursor: 'pointer' }}
               >
                 <WhatsAppIcon />
                 <span>Consultar por WhatsApp</span>
               </button>
+
             </motion.div>
 
             {/* Stats Row integrated below CTAs on the left side to leave right side free */}

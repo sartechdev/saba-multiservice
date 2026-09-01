@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../hooks/useAuth';
+import { trackClarityEvent } from '../../lib/clarity';
 import '../../styles/Navbar.css';
 
 export const Navbar = () => {
@@ -41,6 +42,15 @@ export const Navbar = () => {
     { name: 'Contacto', path: '/contacto' },
   ];
 
+  const handleNavLinkClick = (link) => {
+    if (link.path === '/productos') {
+      trackClarityEvent('navbar_catalogo_click');
+    } else if (link.path === '/servicio-tecnico') {
+      trackClarityEvent('navbar_servicio_tecnico_click');
+    }
+  };
+
+
   return (
     <header className={`main-header ${isHeroPage && !isScrolled ? 'header-hero-transparent' : 'header-glass-scrolled'}`}>
       <div className="container header-container">
@@ -57,6 +67,7 @@ export const Navbar = () => {
               key={link.path}
               to={link.path}
               className={({ isActive }) => `nav-link ${isActive ? 'nav-link-active' : ''}`}
+              onClick={() => handleNavLinkClick(link)}
             >
               {link.name}
             </NavLink>
@@ -107,11 +118,15 @@ export const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   className={({ isActive }) => `mobile-nav-link ${isActive ? 'mobile-nav-link-active' : ''}`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    handleNavLinkClick(link);
+                    setIsOpen(false);
+                  }}
                 >
                   {link.name}
                 </NavLink>
               ))}
+
 
               {user ? (
                 <div className="mobile-user-actions">
