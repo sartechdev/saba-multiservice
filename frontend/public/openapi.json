@@ -1,0 +1,211 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Saba Multiservice API",
+    "version": "1.0.0",
+    "description": "API oficial de Saba Multiservice para consulta de catálogo de repuestos, gestión de órdenes de reparación y cotización de servicios técnicos en Santa Fe Capital, Argentina.",
+    "contact": {
+      "name": "Saba Multiservice",
+      "url": "https://www.saba-multiservice.com",
+      "email": "contacto@saba-multiservice.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.saba-multiservice.com",
+      "description": "Servidor de Producción"
+    }
+  ],
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Verificar estado de salud del servicio",
+        "description": "Retorna el estado operativo de los sistemas de Saba Multiservice.",
+        "operationId": "getHealthStatus",
+        "responses": {
+          "200": {
+            "description": "Sistema operativo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthStatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/products": {
+      "get": {
+        "summary": "Consultar catálogo de repuestos y accesorios",
+        "description": "Permite buscar repuestos originales de Smart TV, microondas, lavarropas, heladeras y controles remotos disponibles en Santa Fe Capital.",
+        "operationId": "listProducts",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Término de búsqueda (nombre, modelo, marca)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "description": "Categoría del repuesto (smart-tv, microondas, linea-blanca, controles)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listado de repuestos encontrados",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/quotes": {
+      "post": {
+        "summary": "Solicitar presupuesto o cotización técnica",
+        "description": "Envía una solicitud de reparación o presupuesto para un electrodoméstico o Smart TV.",
+        "operationId": "createQuote",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuoteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Presupuesto registrado exitosamente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuoteResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HealthStatus": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "pass"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "string",
+            "example": "1.0.0"
+          }
+        },
+        "required": ["status", "timestamp"]
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "example": "Control Remoto Smart TV Samsung Original"
+          },
+          "brand": {
+            "type": "string",
+            "example": "Samsung"
+          },
+          "category": {
+            "type": "string",
+            "example": "Smart TV"
+          },
+          "price": {
+            "type": "number",
+            "example": 25000
+          },
+          "in_stock": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "QuoteRequest": {
+        "type": "object",
+        "required": ["client_name", "client_phone", "appliance_type", "issue_description"],
+        "properties": {
+          "client_name": {
+            "type": "string",
+            "example": "Juan Pérez"
+          },
+          "client_phone": {
+            "type": "string",
+            "example": "+54 9 342 501-1410"
+          },
+          "client_email": {
+            "type": "string",
+            "format": "email",
+            "example": "juan@example.com"
+          },
+          "appliance_type": {
+            "type": "string",
+            "example": "Smart TV"
+          },
+          "brand": {
+            "type": "string",
+            "example": "LG"
+          },
+          "model": {
+            "type": "string",
+            "example": "43UN7300"
+          },
+          "issue_description": {
+            "type": "string",
+            "example": "La pantalla enciende con audio pero no da imagen (tiras LED dañadas)."
+          }
+        }
+      },
+      "QuoteResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "status": {
+            "type": "string",
+            "example": "en_revision"
+          },
+          "message": {
+            "type": "string",
+            "example": "Presupuesto recibido correctamente. El equipo técnico se comunicará en breve."
+          }
+        }
+      }
+    }
+  }
+}

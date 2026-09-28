@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentación API | Saba Multiservice</title>
+  <meta name="description" content="Documentación de la API pública y servicios para agentes IA de Saba Multiservice en Santa Fe Capital.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; color: #1e293b; background: #f8fafc; }
+    h1 { color: #0284c7; }
+    h2 { border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 2rem; }
+    code { background: #e2e8f0; padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+    pre { background: #0f172a; color: #f8fafc; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    .badge { display: inline-block; background: #0284c7; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Saba Multiservice API & Agent Docs</h1>
+  <p>Bienvenido a la documentación para desarrolladores y agentes autónomos de <strong>Saba Multiservice</strong>. Proveemos servicios técnicos oficiales de reparación y venta de repuestos en Santa Fe Capital.</p>
+  
+  <h2>Especificación OpenAPI 3.1</h2>
+  <p>La especificación completa en formato OpenAPI está disponible en: <a href="/openapi.json"><code>/openapi.json</code></a></p>
+
+  <h2>Catálogo de APIs (RFC 9727)</h2>
+  <p>El catálogo en formato linkset+json está publicado en: <a href="/.well-known/api-catalog"><code>/.well-known/api-catalog</code></a></p>
+
+  <h2>Recursos Principales</h2>
+  <ul>
+    <li><span class="badge">GET</span> <code>/api/health</code>: Verificación de estado del servicio.</li>
+    <li><span class="badge">GET</span> <code>/api/products</code>: Búsqueda en catálogo de repuestos y controles.</li>
+    <li><span class="badge">POST</span> <code>/api/quotes</code>: Creación de solicitudes de presupuesto de reparación técnica.</li>
+  </ul>
+
+  <h2>Protocolos para Agentes de Inteligencia Artificial</h2>
+  <ul>
+    <li><strong>ARD Manifest:</strong> <a href="/.well-known/ai-catalog.json"><code>/.well-known/ai-catalog.json</code></a></li>
+    <li><strong>MCP Server Card (SEP-1649):</strong> <a href="/.well-known/mcp/server-card.json"><code>/.well-known/mcp/server-card.json</code></a></li>
+    <li><strong>Agent Skills Index:</strong> <a href="/.well-known/agent-skills/index.json"><code>/.well-known/agent-skills/index.json</code></a></li>
+    <li><strong>Auth.md:</strong> <a href="/auth.md"><code>/auth.md</code></a></li>
+    <li><strong>Markdown for Agents:</strong> Compatible con cabecera <code>Accept: text/markdown</code> en <code>/</code> o vía <a href="/llms.txt"><code>/llms.txt</code></a>.</li>
+  </ul>
+</body>
+</html>

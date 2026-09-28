@@ -1,0 +1,30 @@
+# Saba Multiservice - Documentación Integral para Agentes y Modelos de Lenguaje
+
+## Identidad del Negocio
+- **Nombre:** Saba Multiservice
+- **Actividad Principal:** Servicio técnico oficial multimarca de electrodomésticos, Smart TV, microondas, lavarropas, refrigeración y audio. Venta minorista y mayorista de repuestos originales, placas electrónicas, tiras de LED y controles remotos.
+- **Ubicación:** Catamarca 3420, S3000 Santa Fe Capital, Provincia de Santa Fe, República Argentina.
+- **Teléfono / WhatsApp:** +54 9 342 501-1410
+- **Email:** contacto@saba-multiservice.com
+- **Sitio Web:** https://www.saba-multiservice.com
+
+## Horarios de Atención
+- Lunes a Viernes: 08:30 a 18:00 hs (horario corrido).
+- Sábados: 09:00 a 13:00 hs.
+- Domingos y feriados nacionales: Cerrado.
+
+## Especialidades Técnicas y Marcas
+1. **Smart TV:** Samsung, LG, Philips, TCL, Noblex, Hitachi, RCA, Sony, Philco, BGH, Admiral, Telefunken. Fallas comunes: Backlight quemado (audio sin imagen), placa fuente dañada por picos de tensión, falla de firmware / reinicio en bucle, placa main averiada.
+2. **Microondas:** BGH Quick Chef, Philco, Samsung, Whirlpool, Atma. Fallas comunes: No calienta (magnetrón / fusible / capacitor), chispas internas (placa de mica carbonizada), teclado táctil no responde, plato no gira (motor síncrono).
+3. **Lavarropas y Secarropas:** Drean (Next, Blue, Concept), Longvie, Patrick, Whirlpool, Electrolux, Aurora, Candy, Bosch, LG. Fallas comunes: No desagota (bomba obstruida/quemada), error de trabapuerta (blocapuerta roto), ruidos al centrifugar (rodamientos gastados), tambor caído (cruceta partida), no centrifuga (carbones o condensador).
+
+## Catálogo de Repuestos y Accesorios
+- Stock permanente de controles remotos configurados listos para usar sin necesidad de códigos.
+- Placas electrónicas originales y universales.
+- Válvulas, bombas, fuelles de puerta, mangueras, termostatos y presostatos.
+- Retiro en local físico en Santa Fe Capital y envíos acordados.
+
+## Presupuestos y Recepción de Equipos
+- Diagnóstico técnico en laboratorio propio.
+- Garantía escrita sobre mano de obra y repuestos provistos.
+- Formulario de contacto online disponible 24/7 en https://www.saba-multiservice.com/#cotizar.

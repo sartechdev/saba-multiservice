@@ -1,0 +1,54 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Saba Multiservice",
+    "identifier": "did:web:saba-multiservice.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:saba-multiservice.com:server:mcp",
+      "displayName": "Saba Multiservice MCP Server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://www.saba-multiservice.com/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "consultar reparacion de televisor o electrodomesticos en Santa Fe",
+        "buscar repuestos de smart tv o lavarropas en saba multiservice",
+        "pedir presupuesto tecnico de microondas en Santa Fe",
+        "contacto y horarios de servicio tecnico saba"
+      ]
+    },
+    {
+      "identifier": "urn:air:saba-multiservice.com:skills:index",
+      "displayName": "Saba Multiservice Agent Skills Discovery",
+      "type": "application/json",
+      "url": "https://www.saba-multiservice.com/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "habilidades de agente para cotizar reparaciones en Santa Fe",
+        "skills para buscar repuestos y controles remotos originales",
+        "consultar estado de presupuesto de servicio tecnico"
+      ]
+    },
+    {
+      "identifier": "urn:air:saba-multiservice.com:api:catalog",
+      "displayName": "Saba Multiservice API Catalog",
+      "type": "application/linkset+json",
+      "url": "https://www.saba-multiservice.com/.well-known/api-catalog",
+      "representativeQueries": [
+        "api de catalogo de repuestos saba multiservice",
+        "api de presupuestos y reparacion en santa fe",
+        "openapi spec de saba multiservice"
+      ]
+    },
+    {
+      "identifier": "urn:air:saba-multiservice.com:docs:llmstxt",
+      "displayName": "Saba Multiservice LLMs Knowledge Base",
+      "type": "text/markdown",
+      "url": "https://www.saba-multiservice.com/llms.txt",
+      "representativeQueries": [
+        "resumen completo para modelos de lenguaje de saba multiservice",
+        "informacion de servicios tecnicos y direccion saba santa fe",
+        "guia de reparaciones y garantias para agentes IA"
+      ]
+    }
+  ]
+}

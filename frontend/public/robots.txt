@@ -1,8 +1,12 @@
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /admin
 Disallow: /admin/
 Disallow: /mi-cuenta
+
+# Agent Resource Discovery (ARD / ai-catalog)
+Agentmap: https://www.saba-multiservice.com/.well-known/ai-catalog.json
 
 # Sitemaps
 Sitemap: https://www.saba-multiservice.com/sitemap.xml

@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.saba-multiservice.com/api",
+      "service-desc": [
+        {
+          "href": "https://www.saba-multiservice.com/openapi.json",
+          "type": "application/openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://www.saba-multiservice.com/docs/api",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://www.saba-multiservice.com/api/health.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

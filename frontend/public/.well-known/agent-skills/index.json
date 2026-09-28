@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "solicitar-cotizacion",
+      "type": "skill-md",
+      "description": "Permite a agentes de IA solicitar presupuestos y cotizaciones de reparación técnica en Saba Multiservice (Santa Fe Capital).",
+      "url": "https://www.saba-multiservice.com/.well-known/agent-skills/solicitar-cotizacion/SKILL.md",
+      "digest": "sha256:b1a367c0de3e115700101c9d1a41e6389faf7ed6ecfcd0f1ecc13b95cf862b21"
+    },
+    {
+      "name": "consultar-repuestos",
+      "type": "skill-md",
+      "description": "Instrucciones para que agentes IA consulten el catálogo de repuestos, accesorios y controles remotos originales de Saba Multiservice.",
+      "url": "https://www.saba-multiservice.com/.well-known/agent-skills/consultar-repuestos/SKILL.md",
+      "digest": "sha256:25a2238803be4c56d04466f7d9592b65073f443e45d70c9bafe03cb0e8d81c8d"
+    },
+    {
+      "name": "consultar-reparacion",
+      "type": "skill-md",
+      "description": "Instrucciones para que agentes IA verifiquen el estado de un servicio técnico u orden de trabajo en Saba Multiservice.",
+      "url": "https://www.saba-multiservice.com/.well-known/agent-skills/consultar-reparacion/SKILL.md",
+      "digest": "sha256:7f8778e2f627b67456fd7ced3890e997d7dd1d589a0deb0c3b9e7c3981f5b604"
+    }
+  ]
+}

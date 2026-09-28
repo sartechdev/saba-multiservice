@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "serverInfo": {
+    "name": "saba-multiservice-mcp",
+    "version": "1.0.0",
+    "description": "Servidor MCP oficial de Saba Multiservice en Santa Fe Capital. Permite a agentes de IA consultar el catálogo de repuestos de Smart TV, línea blanca y microondas, solicitar presupuestos técnicos y verificar el estado de órdenes de reparación."
+  },
+  "endpoint": "https://www.saba-multiservice.com/api/mcp",
+  "transport": {
+    "type": "http",
+    "endpoint": "https://www.saba-multiservice.com/api/mcp"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "consultar_catalogo_repuestos",
+        "description": "Busca repuestos, controles remotos y accesorios disponibles en el inventario de Saba Multiservice por texto o categoría.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Término de búsqueda, p. ej. 'control samsung', 'magnetron philco', 'bomba desagote drean'"
+            },
+            "categoria": {
+              "type": "string",
+              "enum": ["todos", "smart-tv", "microondas", "linea-blanca", "controles-remotos", "audio"]
+            }
+          },
+          "required": ["query"]
+        }
+      },
+      {
+        "name": "solicitar_presupuesto_reparacion",
+        "description": "Envía una solicitud de presupuesto para reparación técnica de un artefacto a nuestro taller en Santa Fe Capital.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "nombre": {
+              "type": "string",
+              "description": "Nombre y apellido del cliente"
+            },
+            "telefono": {
+              "type": "string",
+              "description": "Teléfono de contacto o WhatsApp del cliente"
+            },
+            "tipo_artefacto": {
+              "type": "string",
+              "description": "Tipo de equipo, p. ej. Smart TV, Microondas, Lavarropas"
+            },
+            "marca": {
+              "type": "string",
+              "description": "Marca del equipo, p. ej. Samsung, LG, Drean, Philips"
+            },
+            "falla": {
+              "type": "string",
+              "description": "Descripción detallada del problema o falla"
+            }
+          },
+          "required": ["nombre", "telefono", "tipo_artefacto", "falla"]
+        }
+      },
+      {
+        "name": "consultar_informacion_local",
+        "description": "Devuelve dirección física, horarios de atención, números de WhatsApp y cobertura de Saba Multiservice en Santa Fe Capital.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "resources": [
+      {
+        "uri": "saba://catalogo/destacados",
+        "name": "Repuestos Destacados",
+        "mimeType": "application/json",
+        "description": "Lista de repuestos y controles de alta rotación con precios y disponibilidad en Santa Fe."
+      },
+      {
+        "uri": "saba://servicios/tarifas-base",
+        "name": "Guía de Diagnóstico y Reparación",
+        "mimeType": "text/markdown",
+        "description": "Guía con términos de garantía, tiempos estimados de reparación y proceso de recepción."
+      }
+    ],
+    "prompts": [
+      {
+        "name": "asistir_cliente_electrodomesticos",
+        "description": "Guía al usuario para identificar el repuesto correcto o diagnosticar preliminarmente la falla de su electrodoméstico."
+      }
+    ]
+  }
+}

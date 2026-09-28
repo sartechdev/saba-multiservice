@@ -159,6 +159,8 @@ ${data.email ? `- *Email:* ${data.email}\n` : ''}- *Falla:* ${data.issueDescript
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             noValidate
+            toolname="solicitar_presupuesto"
+            tooldescription="Formulario para solicitar presupuesto técnico de reparación de electrodomésticos o Smart TV en Saba Multiservice"
           >
             {errorMessage && (
               <div className="quote-error-banner">
@@ -186,6 +188,7 @@ ${data.email ? `- *Email:* ${data.email}\n` : ''}- *Falla:* ${data.issueDescript
                   type="text"
                   className="form-input"
                   placeholder="Ej: Carlos Gómez"
+                  toolparamdescription="Nombre y apellido completo del cliente solicitante"
                   {...register('fullName', {
                     required: 'El nombre completo es obligatorio',
                     minLength: { value: 3, message: 'Ingresá al menos 3 letras' }
@@ -206,6 +209,7 @@ ${data.email ? `- *Email:* ${data.email}\n` : ''}- *Falla:* ${data.issueDescript
                   type="tel"
                   className="form-input"
                   placeholder="Ej: 342 5123456"
+                  toolparamdescription="Número de teléfono o WhatsApp de contacto directo del cliente"
                   {...register('phone', {
                     required: 'El teléfono es obligatorio para poder contactarte',
                     pattern: {
@@ -230,6 +234,7 @@ ${data.email ? `- *Email:* ${data.email}\n` : ''}- *Falla:* ${data.issueDescript
                   type="email"
                   className="form-input"
                   placeholder="Ej: tuemail@correo.com"
+                  toolparamdescription="Dirección de correo electrónico opcional para envío de presupuesto"
                   {...register('email', {
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -252,6 +257,7 @@ ${data.email ? `- *Email:* ${data.email}\n` : ''}- *Falla:* ${data.issueDescript
                 id="issueDescription"
                 className="form-textarea"
                 placeholder="Explicá brevemente qué problema tiene o qué síntoma presenta (ej: No enciende, hace ruido extraño al girar, no calienta, no responde el control remoto...)"
+                toolparamdescription="Descripción detallada de la falla o avería que presenta el electrodoméstico"
                 {...register('issueDescription', {
                   required: 'Por favor, describí qué problema tiene el equipo',
                   minLength: { value: 10, message: 'Ingresá al menos 10 caracteres para que el técnico entienda el problema' }

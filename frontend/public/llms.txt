@@ -1,0 +1,16 @@
+# Saba Multiservice
+
+> Servicio técnico especializado en reparación de Smart TV, microondas, línea blanca y venta de repuestos originales en Santa Fe Capital, Argentina. Más de 25 años de experiencia.
+
+- [Catálogo Online](https://www.saba-multiservice.com/catalogo): Consulta de repuestos, controles remotos y componentes.
+- [Solicitud de Presupuesto](https://www.saba-multiservice.com/#cotizar): Formulario web para diagnóstico y cotización de equipos.
+- [Ubicación y Horarios](https://www.saba-multiservice.com/#contacto): Catamarca 3420, Santa Fe Capital. Lunes a Viernes 08:30 a 18:00 hs, Sábados 09:00 a 13:00 hs.
+- [WhatsApp Directo](https://wa.me/5493425011410): Atención y consulta inmediata.
+
+## Documentación Técnica y Recursos para Agentes IA
+- [OpenAPI Spec](https://www.saba-multiservice.com/openapi.json): Especificación OpenAPI 3.1.
+- [API Catalog](https://www.saba-multiservice.com/.well-known/api-catalog): Catálogo RFC 9727 linkset+json.
+- [ARD Catalog](https://www.saba-multiservice.com/.well-known/ai-catalog.json): Manifiesto de capacidades ARD.
+- [MCP Server Card](https://www.saba-multiservice.com/.well-known/mcp/server-card.json): Ficha de servidor MCP (SEP-1649).
+- [Agent Skills](https://www.saba-multiservice.com/.well-known/agent-skills/index.json): Índice de habilidades para agentes.
+- [Auth.md](https://www.saba-multiservice.com/auth.md): Directrices de registro y autenticación para agentes.
