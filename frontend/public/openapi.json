@@ -79,7 +79,7 @@
     "/api/quotes": {
       "post": {
         "summary": "Solicitar presupuesto o cotización técnica",
-        "description": "Envía una solicitud de reparación o presupuesto para un electrodoméstico o Smart TV.",
+        "description": "Envía una solicitud de reparación o presupuesto para Smart TV, microondas, hornos eléctricos o pequeños electrodomésticos (Saba Multiservice NO realiza reparación de línea blanca).",
         "operationId": "createQuote",
         "requestBody": {
           "required": true,

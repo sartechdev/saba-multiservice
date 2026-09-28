@@ -3,7 +3,7 @@
   "serverInfo": {
     "name": "saba-multiservice-mcp",
     "version": "1.0.0",
-    "description": "Servidor MCP oficial de Saba Multiservice en Santa Fe Capital. Permite a agentes de IA consultar el catálogo de repuestos de Smart TV, línea blanca y microondas, solicitar presupuestos técnicos y verificar el estado de órdenes de reparación."
+    "description": "Servidor MCP oficial de Saba Multiservice en Santa Fe Capital. Permite a agentes de IA consultar el catálogo de repuestos de Smart TV, audio y microondas, solicitar presupuestos técnicos para Smart TV, microondas y pequeños electrodomésticos (ACLARACIÓN: Saba Multiservice NO repara línea blanca), y verificar el estado de órdenes de reparación."
   },
   "endpoint": "https://www.saba-multiservice.com/api/mcp",
   "transport": {
@@ -20,11 +20,11 @@
           "properties": {
             "query": {
               "type": "string",
-              "description": "Término de búsqueda, p. ej. 'control samsung', 'magnetron philco', 'bomba desagote drean'"
+              "description": "Término de búsqueda, p. ej. 'control samsung', 'magnetron philco', 'tira led lg'"
             },
             "categoria": {
               "type": "string",
-              "enum": ["todos", "smart-tv", "microondas", "linea-blanca", "controles-remotos", "audio"]
+              "enum": ["todos", "smart-tv", "microondas", "controles-remotos", "audio"]
             }
           },
           "required": ["query"]
@@ -32,7 +32,7 @@
       },
       {
         "name": "solicitar_presupuesto_reparacion",
-        "description": "Envía una solicitud de presupuesto para reparación técnica de un artefacto a nuestro taller en Santa Fe Capital.",
+        "description": "Envía una solicitud de presupuesto para reparación técnica en nuestro taller en Santa Fe Capital (Nota: No se repara línea blanca/lavarropas/heladeras).",
         "inputSchema": {
           "type": "object",
           "properties": {
@@ -46,11 +46,11 @@
             },
             "tipo_artefacto": {
               "type": "string",
-              "description": "Tipo de equipo, p. ej. Smart TV, Microondas, Lavarropas"
+              "description": "Tipo de equipo: Smart TV, Microondas, Horno Eléctrico, Audio, Ventilación (NO línea blanca)"
             },
             "marca": {
               "type": "string",
-              "description": "Marca del equipo, p. ej. Samsung, LG, Drean, Philips"
+              "description": "Marca del equipo, p. ej. Samsung, LG, Philips, BGH"
             },
             "falla": {
               "type": "string",

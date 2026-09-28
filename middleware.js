@@ -25,19 +25,22 @@ const MARKDOWN_CONTENT = `# Saba Multiservice - Servicio Técnico Oficial y Repu
 - Reparación de teclados táctiles de membrana y placas de control.
 - Marcas: BGH, Philco, Whirlpool, Samsung, Atma, etc.
 
-### 3. Línea Blanca (Lavarropas, Secarropas, Lavavajillas)
-- Cambio de bombas de desagote, válvulas de entrada de agua y presostatos.
-- Recambio de rodamientos (rulemanes), retenes y crucetas de tambor.
-- Reparación y reprogramación de placas electrónicas y selectores.
-- Marcas: Drean, Longvie, Patrick, Whirlpool, Electrolux, Aurora, Bosch, etc.
+### 3. Ventilación, Calefacción y Pequeños Electrodomésticos
+- Mantenimiento y reparación de estufas halógenas, caloventores eléctricos y radiadores.
+- Ventiladores de pie y de techo (cambio de bujes, motores, aspas).
+- Hornos eléctricos, freidoras de aire (Air Fryer), anafes, licuadoras y cafeteras.
+
+> ⚠️ **ACLARACIÓN IMPORTANTE SOBRE LÍNEA BLANCA:**  
+> **Saba Multiservice NO realiza reparación ni servicio técnico de línea blanca (NO se reparan lavarropas, heladeras, secarropas ni lavavajillas).**  
+> El servicio técnico se especializa exclusivamente en Smart TV, audio, microondas, hornos eléctricos y pequeños electrodomésticos.
 
 ---
 
 ## Catálogo de Repuestos y Accesorios
-Disponemos de un amplio stock para entrega inmediata en taller o envío:
-- **Controles Remotos:** Mandos originales para Smart TV (con acceso directo a Netflix, YouTube, Prime Video) y acondicionadores de aire.
-- **Componentes Electrónicos:** Placas madre, fuentes de alimentación, barras LED.
-- **Repuestos Mecánicos:** Bloques de puerta para lavarropas, tiradores, mangueras, fuelles y termostatos.
+Disponemos de stock para entrega inmediata en taller o consulta online:
+- **Controles Remotos:** Mandos originales para Smart TV (acceso directo a Netflix, YouTube, etc.) y aires acondicionados.
+- **Componentes Electrónicos:** Fuentes de alimentación, tiras de LED, placas main, magnetrones, micas y platos de microondas.
+- **Accesorios y Soportes:** Soportes para TV articulados y fijos.
 
 ---
 

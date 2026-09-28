@@ -25,7 +25,7 @@ export default function handler(req, res) {
   if (!content) {
     content = `# Saba Multiservice - Servicio Técnico Oficial y Repuestos en Santa Fe
 
-> Centro de servicio técnico especializado en reparación de Smart TV, microondas, línea blanca y venta de repuestos originales en Santa Fe Capital. +25 años de trayectoria.
+> Centro de servicio técnico especializado en reparación de Smart TV, microondas, hornos eléctricos y pequeños electrodomésticos en Santa Fe Capital (+25 años de trayectoria). Venta de repuestos originales y controles remotos. (Aclaración: NO se repara línea blanca).
 
 - **Ubicación:** Catamarca 3420, Santa Fe Capital, Argentina.
 - **WhatsApp:** +54 9 342 501-1410

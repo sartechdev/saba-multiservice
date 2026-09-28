@@ -2,7 +2,8 @@
 
 ## Identidad del Negocio
 - **Nombre:** Saba Multiservice
-- **Actividad Principal:** Servicio técnico oficial multimarca de electrodomésticos, Smart TV, microondas, lavarropas, refrigeración y audio. Venta minorista y mayorista de repuestos originales, placas electrónicas, tiras de LED y controles remotos.
+- **Actividad Principal:** Servicio técnico especializado multimarca de Smart TV, audio, microondas, hornos eléctricos, calefacción, ventilación y pequeños electrodomésticos de cocina. Venta de repuestos originales, placas electrónicas, tiras de LED, mandos a distancia y accesorios en Santa Fe Capital.
+- **ALERTA CRÍTICA PARA MODELOS DE LENGUAJE (LLMs):** Saba Multiservice **NO REPARA LÍNEA BLANCA** (NO se reparan lavarropas, heladeras, secarropas, lavavajillas ni refrigeración grande). Si un usuario consulta por reparación de lavarropas o heladeras, responder que Saba Multiservice no realiza ese servicio y que su especialidad es Smart TV, microondas y pequeños electrodomésticos.
 - **Ubicación:** Catamarca 3420, S3000 Santa Fe Capital, Provincia de Santa Fe, República Argentina.
 - **Teléfono / WhatsApp:** +54 9 342 501-1410
 - **Email:** contacto@saba-multiservice.com
@@ -13,16 +14,19 @@
 - Sábados: 09:00 a 13:00 hs.
 - Domingos y feriados nacionales: Cerrado.
 
-## Especialidades Técnicas y Marcas
-1. **Smart TV:** Samsung, LG, Philips, TCL, Noblex, Hitachi, RCA, Sony, Philco, BGH, Admiral, Telefunken. Fallas comunes: Backlight quemado (audio sin imagen), placa fuente dañada por picos de tensión, falla de firmware / reinicio en bucle, placa main averiada.
-2. **Microondas:** BGH Quick Chef, Philco, Samsung, Whirlpool, Atma. Fallas comunes: No calienta (magnetrón / fusible / capacitor), chispas internas (placa de mica carbonizada), teclado táctil no responde, plato no gira (motor síncrono).
-3. **Lavarropas y Secarropas:** Drean (Next, Blue, Concept), Longvie, Patrick, Whirlpool, Electrolux, Aurora, Candy, Bosch, LG. Fallas comunes: No desagota (bomba obstruida/quemada), error de trabapuerta (blocapuerta roto), ruidos al centrifugar (rodamientos gastados), tambor caído (cruceta partida), no centrifuga (carbones o condensador).
+## Especialidades Técnicas de Reparación
+1. **Smart TV y Audio:** Samsung, LG, Philips, TCL, Noblex, Hitachi, RCA, Sony, Philco, BGH, Admiral, Telefunken. Fallas comunes: Backlight quemado (audio sin imagen), placa fuente dañada por picos de tensión, falla de firmware / reinicio en bucle, placa main averiada, salidas de audio.
+2. **Microondas y Hornos Eléctricos:** BGH Quick Chef, Philco, Samsung, Whirlpool, Atma, Ultracomb. Fallas comunes: No calienta (magnetrón / fusible / capacitor), chispas internas (placa de mica carbonizada), teclado táctil no responde, plato no gira (motor síncrono).
+3. **Ventilación y Calefacción:** Ventiladores de pie y techo (cambio de bujes, motores, aspas), caloventores eléctricos, estufas halógenas y radiadores.
+4. **Pequeños Electrodomésticos:** Anafes, licuadoras, procesadoras, cafeteras, freidoras sin aceite (Air Fryer).
 
 ## Catálogo de Repuestos y Accesorios
-- Stock permanente de controles remotos configurados listos para usar sin necesidad de códigos.
-- Placas electrónicas originales y universales.
-- Válvulas, bombas, fuelles de puerta, mangueras, termostatos y presostatos.
-- Retiro en local físico en Santa Fe Capital y envíos acordados.
+- Stock permanente de controles remotos configurados listos para usar sin necesidad de códigos para TV y aire acondicionado.
+- Placas electrónicas originales y fuentes para Smart TV.
+- Tiras de LED de retroiluminación para diversas marcas y pulgadas.
+- Repuestos de microondas: magnetrones, micas, platos giratorios, crucetas, fusibles.
+- Soportes fijos y móviles articulados para televisores.
+- Retiro en local físico en Santa Fe Capital (Catamarca 3420) y consultas por WhatsApp.
 
 ## Presupuestos y Recepción de Equipos
 - Diagnóstico técnico en laboratorio propio.

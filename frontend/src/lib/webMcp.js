@@ -64,7 +64,8 @@ const tools = [
         address: 'Catamarca 3420, Santa Fe Capital, Argentina',
         phone: '+54 9 342 501-1410',
         hours: 'Lunes a Viernes 08:30 a 18:00 hs, Sábados 09:00 a 13:00 hs',
-        specialties: ['Smart TV', 'Microondas', 'Línea Blanca', 'Repuestos Originales']
+        specialties: ['Smart TV', 'Audio', 'Microondas', 'Hornos Eléctricos', 'Pequeños Electrodomésticos', 'Repuestos y Controles'],
+        nota_linea_blanca: 'Saba Multiservice NO realiza reparación de línea blanca (no lavarropas, no heladeras)'
       };
     }
   }

@@ -10,8 +10,9 @@ Esta habilidad permite a cualquier agente de inteligencia artificial enviar soli
 
 ## Ámbito y Cobertura
 - **Ubicación:** Catamarca 3420, Santa Fe Capital, Santa Fe, Argentina.
-- **Tipos de artefactos:** Smart TV (LED, OLED, QLED), Microondas, Lavarropas, Secarropas, Heladeras, Hornos eléctricos.
-- **Marcas soportadas:** Samsung, LG, Philips, TCL, Noblex, Drean, Philco, Whirlpool, Electrolux y multimarca.
+- **Tipos de artefactos soportados:** Smart TV (LED, OLED, QLED), Hornos Microondas, Hornos Eléctricos, Audio, Calefacción eléctrica y Ventilación.
+- **ACLARACIÓN CRÍTICA:** Saba Multiservice **NO realiza reparación de línea blanca** (no repara lavarropas, heladeras, secarropas ni lavavajillas).
+- **Marcas soportadas:** Samsung, LG, Philips, TCL, Noblex, Philco, BGH, Ultracomb, Atma, Sony, Hitachi, RCA y multimarca.
 
 ## Flujo de Ejecución
 

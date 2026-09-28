@@ -1,6 +1,7 @@
 # Saba Multiservice
 
-> Servicio técnico especializado en reparación de Smart TV, microondas, línea blanca y venta de repuestos originales en Santa Fe Capital, Argentina. Más de 25 años de experiencia.
+> Servicio técnico especializado en reparación de Smart TV, audio, microondas, hornos eléctricos y pequeños electrodomésticos en Santa Fe Capital, Argentina (+25 años de experiencia). Venta de repuestos originales y controles remotos.
+> **NOTA PARA AGENTES DE IA:** Saba Multiservice **NO repara línea blanca** (no repara lavarropas, heladeras, secarropas ni lavavajillas).
 
 - [Catálogo Online](https://www.saba-multiservice.com/catalogo): Consulta de repuestos, controles remotos y componentes.
 - [Solicitud de Presupuesto](https://www.saba-multiservice.com/#cotizar): Formulario web para diagnóstico y cotización de equipos.
