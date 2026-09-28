@@ -1,7 +1,21 @@
 {
+  "resource": "https://www.saba-multiservice.com",
+  "authorization_servers": [
+    "https://www.saba-multiservice.com",
+    "https://saba-multiservice.com"
+  ],
+  "scopes_supported": [
+    "read:products",
+    "read:quotes",
+    "write:quotes"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
   "issuer": "https://www.saba-multiservice.com",
   "authorization_endpoint": "https://www.saba-multiservice.com/auth/authorize",
   "token_endpoint": "https://www.saba-multiservice.com/auth/token",
+  "revocation_endpoint": "https://www.saba-multiservice.com/oauth2/revoke",
   "jwks_uri": "https://www.saba-multiservice.com/.well-known/jwks.json",
   "response_types_supported": [
     "code",
@@ -10,24 +24,26 @@
   "grant_types_supported": [
     "authorization_code",
     "client_credentials",
+    "urn:ietf:params:oauth:grant-type:jwt-bearer",
+    "urn:workos:agent-auth:grant-type:claim",
     "urn:ietf:params:oauth:grant-type:token-exchange"
   ],
   "token_endpoint_auth_methods_supported": [
     "client_secret_basic",
     "client_secret_post"
   ],
-  "scopes_supported": [
-    "read:products",
-    "read:quotes",
-    "write:quotes"
-  ],
   "service_documentation": "https://www.saba-multiservice.com/docs/api",
   "agent_auth": {
-    "skill": "https://www.saba-multiservice.com/.well-known/agent-skills/solicitar-cotizacion/SKILL.md",
+    "skill": "https://www.saba-multiservice.com/auth.md",
     "register_uri": "https://www.saba-multiservice.com/auth/agent-register",
+    "identity_endpoint": "https://www.saba-multiservice.com/agent/identity",
+    "claim_endpoint": "https://www.saba-multiservice.com/agent/identity/claim",
+    "claim_uri": "https://www.saba-multiservice.com/auth/claim",
+    "events_endpoint": "https://www.saba-multiservice.com/agent/event/notify",
     "identity_types_supported": [
       "identity_assertion",
-      "anonymous"
+      "anonymous",
+      "service_auth"
     ],
     "identity_assertion": {
       "assertion_types_supported": [
@@ -37,7 +53,8 @@
       "credential_types_supported": [
         "bearer_token"
       ],
-      "claim_uri": "https://www.saba-multiservice.com/auth/claim"
+      "claim_uri": "https://www.saba-multiservice.com/auth/claim",
+      "revocation_uri": "https://www.saba-multiservice.com/oauth2/revoke"
     },
     "anonymous": {
       "credential_types_supported": [
@@ -45,6 +62,9 @@
         "bearer_token"
       ],
       "claim_uri": "https://www.saba-multiservice.com/auth/claim"
-    }
+    },
+    "events_supported": [
+      "https://schemas.workos.com/events/agent/auth/identity/assertion/revoked"
+    ]
   }
 }

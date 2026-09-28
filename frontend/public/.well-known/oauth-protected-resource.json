@@ -1,7 +1,10 @@
 {
   "resource": "https://www.saba-multiservice.com",
+  "resource_name": "Saba Multiservice",
+  "resource_logo_uri": "https://www.saba-multiservice.com/logo1.webp",
   "authorization_servers": [
-    "https://www.saba-multiservice.com"
+    "https://www.saba-multiservice.com",
+    "https://saba-multiservice.com"
   ],
   "scopes_supported": [
     "read:products",

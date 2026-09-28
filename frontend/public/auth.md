@@ -1,39 +1,58 @@
-# Saba Multiservice auth.md
+---
+agent_auth:
+  skill: "https://www.saba-multiservice.com/auth.md"
+  register_uri: "https://www.saba-multiservice.com/auth/agent-register"
+  identity_endpoint: "https://www.saba-multiservice.com/agent/identity"
+  claim_endpoint: "https://www.saba-multiservice.com/agent/identity/claim"
+  claim_uri: "https://www.saba-multiservice.com/auth/claim"
+  events_endpoint: "https://www.saba-multiservice.com/agent/event/notify"
+  identity_types_supported:
+    - anonymous
+    - identity_assertion
+    - service_auth
+---
 
-Protocolo y directrices de autenticación y registro para Agentes Autónomos de Inteligencia Artificial en **Saba Multiservice** (Santa Fe Capital, Argentina).
+# auth.md
 
-## Información del Servicio
-- **Emisor / Issuer:** `https://www.saba-multiservice.com`
-- **Recurso Protegido (PRM):** `https://www.saba-multiservice.com`
-- **Metadatos OAuth:** `https://www.saba-multiservice.com/.well-known/oauth-authorization-server`
-- **Metadatos de Recurso (RFC 9728):** `https://www.saba-multiservice.com/.well-known/oauth-protected-resource`
-- **Endpoint de Registro de Agentes:** `https://www.saba-multiservice.com/auth/agent-register`
+You are an agent. This service supports **agentic registration**: discover → register → (claim if needed) → exchange for an access_token → call API.
 
-## Audiencia Objetivo
-Este estándar permite a agentes de IA interactuar de manera segura y programática con los servicios de catálogo de repuestos y recepción de solicitudes de servicio técnico.
+- **Service Name:** Saba Multiservice
+- **Resource Server (PRM):** `https://www.saba-multiservice.com/.well-known/oauth-protected-resource`
+- **Authorization Server:** `https://www.saba-multiservice.com/.well-known/oauth-authorization-server`
+- **Identity Endpoint:** `https://www.saba-multiservice.com/agent/identity`
+- **Registration URI:** `https://www.saba-multiservice.com/auth/agent-register`
+- **Token Endpoint:** `https://www.saba-multiservice.com/auth/token`
 
-## Métodos de Identidad y Registro Soportados
+## Step 1 — Discovery
 
-1. **Anonymous / Client Credentials (Recomendado para lectura de catálogo):**
-   - Agentes no autenticados o con credenciales anónimas pueden consultar el catálogo de repuestos y verificar disponibilidad sin requerir autenticación previa.
-   - Endpoint de obtención de token: `POST /auth/token` con `grant_type=client_credentials`.
+Fetch the Protected Resource Metadata:
+```http
+GET /.well-known/oauth-protected-resource HTTP/1.1
+Host: www.saba-multiservice.com
+```
 
-2. **Verified Email / Assertion (Para envío de presupuestos por clientes):**
-   - Para registrar presupuestos a nombre de un usuario o cliente, el agente debe proveer un correo verificado o número de WhatsApp válido para contactar al cliente.
-   - Token de acceso enviado mediante cabecera HTTP:
-     ```http
-     Authorization: Bearer <access_token>
-     ```
+Fetch the Authorization Server metadata:
+```http
+GET /.well-known/oauth-authorization-server HTTP/1.1
+Host: www.saba-multiservice.com
+```
 
-3. **ID-JAG (Identity Assertion):**
-   - Soportado mediante tipo de aserción `urn:ietf:params:oauth:token-type:id-jag`.
+## Step 2 — Identity & Registration Methods
 
-## Alcances (Scopes) Disponibles
-- `read:products`: Consulta pública del stock de repuestos y accesorios.
-- `read:quotes`: Consulta del estado de reparación técnica de un equipo.
-- `write:quotes`: Creación de una nueva solicitud de presupuesto en taller.
+1. **Anonymous / Client Credentials (Public Catalog Read):**
+   - No user identity required for catalog queries.
+   - Endpoint: `POST /auth/token` with `grant_type=client_credentials`.
 
-## Contacto Humano y Taller
-- **Dirección:** Catamarca 3420, Santa Fe Capital, Argentina.
+2. **Verified Email / Assertion (Quote Requests on behalf of clients):**
+   - Provide client email or verified WhatsApp contact (`+54 9 342 501-1410`).
+   - Assertion types: `urn:ietf:params:oauth:token-type:id-jag` and `verified_email`.
+
+## Scopes Supported
+- `read:products`: Consulta de repuestos, precios y disponibilidad en Santa Fe.
+- `read:quotes`: Seguimiento de órdenes de reparación y estado de servicio técnico.
+- `write:quotes`: Creación de presupuestos y solicitudes de reparación técnica.
+
+## Contacto & Taller Físico
+- **Ubicación:** Catamarca 3420, Santa Fe Capital, Argentina.
 - **WhatsApp:** +54 9 342 501-1410
 - **Email:** contacto@saba-multiservice.com
