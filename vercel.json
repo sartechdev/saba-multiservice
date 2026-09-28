@@ -205,7 +205,7 @@
         {
           "type": "header",
           "key": "accept",
-          "value": ".*text/markdown.*"
+          "value": "(.*text/markdown.*)"
         }
       ],
       "destination": "/api/index"
@@ -216,7 +216,18 @@
         {
           "type": "header",
           "key": "accept",
-          "value": ".*text/markdown.*"
+          "value": "(.*text/markdown.*)"
+        }
+      ],
+      "destination": "/api/index"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(.*text/markdown.*)"
         }
       ],
       "destination": "/api/index"
