@@ -420,10 +420,10 @@ export const Catalogo = () => {
           name="description"
           content="Explorá nuestro catálogo con electrodomésticos nuevos, repuestos originales y accesorios para Smart TV, microondas y línea blanca en Santa Fe. Consultas en el acto."
         />
-        <link rel="canonical" href="https://www.saba-multiservice.com/catalogo" />
+        <link rel="canonical" href="https://www.saba-multiservice.com/productos" />
         <meta property="og:title" content="Catálogo de Repuestos y Productos | Saba Multiservice" />
         <meta property="og:description" content="Repuestos de línea blanca para técnicos y particulares, controles remotos y accesorios en Santa Fe Capital." />
-        <meta property="og:url" content="https://www.saba-multiservice.com/catalogo" />
+        <meta property="og:url" content="https://www.saba-multiservice.com/productos" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
 
@@ -432,7 +432,7 @@ export const Catalogo = () => {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "Catálogo de Productos y Accesorios - Saba Multiservice",
-            "url": "https://www.saba-multiservice.com/catalogo",
+            "url": "https://www.saba-multiservice.com/productos",
             "description": "Catálogo online de repuestos, electrodomésticos y controles remotos de Saba Multiservice."
           })}
         </script>

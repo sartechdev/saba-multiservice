@@ -33,7 +33,7 @@ async function generateSitemap() {
 
   const staticUrls = [
     { loc: '/', priority: '1.0', changefreq: 'daily' },
-    { loc: '/catalogo', priority: '0.9', changefreq: 'daily' },
+    { loc: '/productos', priority: '0.9', changefreq: 'daily' },
     { loc: '/servicio-tecnico', priority: '0.9', changefreq: 'weekly' },
     { loc: '/nosotros', priority: '0.8', changefreq: 'monthly' },
     { loc: '/contacto', priority: '0.8', changefreq: 'monthly' },
@@ -59,7 +59,7 @@ async function generateSitemap() {
 
       if (!prodErr && products) {
         dynamicProductUrls = products.map(p => ({
-          loc: `/producto/${p.slug}`,
+          loc: `/productos/${p.slug}`,
           priority: '0.8',
           changefreq: 'weekly',
           lastmod: p.updated_at ? p.updated_at.split('T')[0] : today
@@ -74,7 +74,7 @@ async function generateSitemap() {
 
       if (!catErr && categories) {
         dynamicCategoryUrls = categories.map(c => ({
-          loc: `/catalogo?categoria=${c.slug}`,
+          loc: `/productos?categoria=${c.slug}`,
           priority: '0.7',
           changefreq: 'weekly',
           lastmod: today

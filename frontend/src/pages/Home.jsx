@@ -262,7 +262,7 @@ export default function Home() {
             "url": "https://www.saba-multiservice.com/",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://www.saba-multiservice.com/catalogo?buscar={search_term_string}",
+              "target": "https://www.saba-multiservice.com/productos?buscar={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           })}

@@ -122,11 +122,10 @@ CREATE TABLE public.quotes (
     full_name TEXT NOT NULL,
     phone TEXT NOT NULL,
     email TEXT,
-    appliance_type TEXT NOT NULL,
     brand TEXT,
     issue_description TEXT NOT NULL,
     photo_url TEXT,
-    status TEXT NOT NULL DEFAULT 'nuevo' CHECK (status IN ('nuevo', 'en_revision', 'respondido', 'cerrado')),
+    status TEXT NOT NULL DEFAULT 'sin_responder' CHECK (status IN ('sin_responder', 'respondido')),
     admin_notes TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
@@ -144,7 +143,7 @@ BEGIN
   END IF;
   
   -- Force initial status and prevent client-side admin notes injection
-  new.status := 'nuevo';
+  new.status := 'sin_responder';
   new.admin_notes := NULL;
   
   RETURN new;

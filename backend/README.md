@@ -52,12 +52,12 @@ erDiagram
         string full_name
         string phone
         string email "nullable"
-        string appliance_type
         string brand "nullable"
         string issue_description
         string photo_url "nullable"
-        string status "nuevo | en_revision | respondido | cerrado"
-        string admin_notes "nullable"
+        string status "sin_responder | respondido"
+        string admin_notes "nullable (privado)"
+        string admin_response "nullable (público al cliente)"
         timestamptz created_at
         timestamptz updated_at
     }
