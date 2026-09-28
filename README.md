@@ -1,6 +1,8 @@
 # 🛠️ Saba Multiservice — Plataforma Integral de Servicio Técnico & Catálogo
 
-Plataforma web de última generación con **Single Page Application (SPA) camuflada de Multi Page Application (MPA)** para **Saba Multiservice**, servicio técnico especializado y multimarca de Smart TV, microondas y pequeños electrodomésticos, y venta de repuestos originales en Santa Fe Capital (+25 años de trayectoria).
+Plataforma web de última generación con **Single Page Application (SPA) camuflada de Multi Page Application (MPA)** para **Saba Multiservice**, servicio técnico especializado y multimarca de Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras y electrodomésticos, y venta del catálogo oficial de repuestos en Santa Fe Capital (+25 años de trayectoria).
+
+> 📖 **Fuente Única de Verdad de Servicios:** Consulta el documento maestro [`SERVICIOS_Y_CATALOGO.md`](file:///c:/Dev/saba-multiservice/SERVICIOS_Y_CATALOGO.md) para la lista completa de fallas atendidas, políticas de taller y guía de actualización para futuros servicios.
 
 ---
 

@@ -244,11 +244,11 @@ export default function Home() {
         <title>Saba Multiservice | Servicio Técnico Oficial y Repuestos en Santa Fe Capital</title>
         <meta
           name="description"
-          content="Servicio técnico especializado en reparación de Smart TV, microondas y pequeños electrodomésticos en Santa Fe Capital. Venta de repuestos originales con garantía escrita. +30 años de trayectoria."
+          content="Servicio técnico especializado en Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras y electrodomésticos en Santa Fe Capital. Venta de repuestos en catálogo web con garantía escrita. +30 años de trayectoria."
         />
         <link rel="canonical" href="https://www.saba-multiservice.com/" />
         <meta property="og:title" content="Saba Multiservice | Servicio Técnico Oficial en Santa Fe" />
-        <meta property="og:description" content="Reparaciones especializadas con diagnóstico sin cargo y garantía escrita por 3 meses en Catamarca 3420, Santa Fe." />
+        <meta property="og:description" content="Reparación de Smart TV, microondas, centrifugadoras y electrodomésticos con presupuesto sin cargo y garantía escrita por 3 meses en Catamarca 3420, Santa Fe." />
         <meta property="og:url" content="https://www.saba-multiservice.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />

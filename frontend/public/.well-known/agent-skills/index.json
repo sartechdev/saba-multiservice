@@ -6,7 +6,7 @@
       "type": "skill-md",
       "description": "Permite a agentes de IA solicitar presupuestos y cotizaciones de reparación técnica en Saba Multiservice (Santa Fe Capital).",
       "url": "https://www.saba-multiservice.com/.well-known/agent-skills/solicitar-cotizacion/SKILL.md",
-      "digest": "sha256:b0f228e7e929535d6abdc62961f82856656391c5f7b2e497253ca75a7acf8a96"
+      "digest": "sha256:4a4c5e202114624d1eeb3c27a8df615140034391739d6c3ba8835ade385aa474"
     },
     {
       "name": "consultar-repuestos",

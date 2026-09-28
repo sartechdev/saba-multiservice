@@ -79,7 +79,7 @@
     "/api/quotes": {
       "post": {
         "summary": "Solicitar presupuesto o cotización técnica",
-        "description": "Envía una solicitud de reparación o presupuesto para Smart TV, microondas, hornos eléctricos o pequeños electrodomésticos (Saba Multiservice NO realiza reparación de línea blanca).",
+        "description": "Envía una solicitud de reparación o presupuesto para los 10 servicios oficiales: TV LED/LCD, Microondas, Hornos Eléctricos, Aspiradoras, Lustraspiradoras, Centrifugadoras, Calefacción, Air Fryer, Licuadoras y Procesadoras (Saba Multiservice repara centrifugadoras pero NO realiza reparación de lavarropas automáticos ni heladeras).",
         "operationId": "createQuote",
         "requestBody": {
           "required": true,
@@ -173,7 +173,8 @@
           },
           "appliance_type": {
             "type": "string",
-            "example": "Smart TV"
+            "example": "Smart TV",
+            "description": "Tipo de equipo a reparar (TV LED/LCD, Microondas, Horno Eléctrico, Aspiradora, Lustraspiradora, Centrifugadora, Estufa Eléctrica, Air Fryer, Licuadora, Procesadora. Aclaración: NO se reparan lavarropas automáticos ni heladeras)"
           },
           "brand": {
             "type": "string",
@@ -185,7 +186,7 @@
           },
           "issue_description": {
             "type": "string",
-            "example": "La pantalla enciende con audio pero no da imagen (tiras LED dañadas)."
+            "example": "Tiene círculos blancos en la pantalla / no calienta microondas / ropa húmeda en centrifugadora."
           }
         }
       },

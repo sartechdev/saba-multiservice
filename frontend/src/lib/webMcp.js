@@ -64,8 +64,20 @@ const tools = [
         address: 'Catamarca 3420, Santa Fe Capital, Argentina',
         phone: '+54 9 342 501-1410',
         hours: 'Lunes a Viernes 08:30 a 18:00 hs, Sábados 09:00 a 13:00 hs',
-        specialties: ['Smart TV', 'Audio', 'Microondas', 'Hornos Eléctricos', 'Pequeños Electrodomésticos', 'Repuestos y Controles'],
-        nota_linea_blanca: 'Saba Multiservice NO realiza reparación de línea blanca (no lavarropas, no heladeras)'
+        specialties: [
+          'TV LED/LCD y Smart TV (no enciende, círculos blancos, imagen oscura/sin backlight, sin audio)',
+          'Hornos Microondas (interiores amarillentos/despintados con epoxi, no calienta, no gira plato, chispazos)',
+          'Hornos Eléctricos (no calienta, resistencias, termostato, llave selectora, timer)',
+          'Aspiradoras (falta de succión, recalentamiento, carbones, cables retráctiles)',
+          'Lustraspiradoras (motor, cepillos, correas, bujes)',
+          'Centrifugadoras / Secarropas centrífugos (ropa sigue húmeda, vibración, ruidos, motor trabado, frenos)',
+          'Calefacción y Estufas Eléctricas (caloventores, estufas halógenas, radiadores)',
+          'Freidoras de Aire / Air Fryer (no calienta, forzador de convección, placa táctil)',
+          'Licuadoras (cuchillas trabadas, acoples barridos, carbones, fugas)',
+          'Procesadoras de Alimentos y Minipimers (trabas de seguridad, engranajes, motor)'
+        ],
+        catalogo_venta: 'Repuestos originales multimarca, controles remotos para Smart TV y aire acondicionado, accesorios y componentes electrónicos en la web oficial.',
+        aclaracion_linea_blanca: 'Reparamos secarropas centrífugos/centrifugadoras. Saba Multiservice NO realiza reparación ni servicio técnico de lavarropas automáticos ni heladeras.'
       };
     }
   }

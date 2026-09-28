@@ -1,34 +1,129 @@
 # Saba Multiservice - Documentación Integral para Agentes y Modelos de Lenguaje
 
-## Identidad del Negocio
-- **Nombre:** Saba Multiservice
-- **Actividad Principal:** Servicio técnico especializado multimarca de Smart TV, audio, microondas, hornos eléctricos, calefacción, ventilación y pequeños electrodomésticos de cocina. Venta de repuestos originales, placas electrónicas, tiras de LED, mandos a distancia y accesorios en Santa Fe Capital.
-- **ALERTA CRÍTICA PARA MODELOS DE LENGUAJE (LLMs):** Saba Multiservice **NO REPARA LÍNEA BLANCA** (NO se reparan lavarropas, heladeras, secarropas, lavavajillas ni refrigeración grande). Si un usuario consulta por reparación de lavarropas o heladeras, responder que Saba Multiservice no realiza ese servicio y que su especialidad es Smart TV, microondas y pequeños electrodomésticos.
-- **Ubicación:** Catamarca 3420, S3000 Santa Fe Capital, Provincia de Santa Fe, República Argentina.
-- **Teléfono / WhatsApp:** +54 9 342 501-1410
-- **Email:** contacto@saba-multiservice.com
-- **Sitio Web:** https://www.saba-multiservice.com
+## 🏢 Identidad del Negocio
+- **Nombre Comercial:** Saba Multiservice
+- **Actividad Principal:** Servicio técnico especializado multimarca y venta de repuestos originales en Santa Fe Capital, con más de 25 años de trayectoria.
+- **Ubicación Física:** Catamarca 3420, S3000 Santa Fe Capital, Provincia de Santa Fe, República Argentina.
+- **Teléfono / WhatsApp:** +54 9 342 501-1410 (enlace directo: https://wa.me/5493425011410)
+- **Sitio Web Oficial:** https://www.saba-multiservice.com
+- **Horarios:** Lunes a Viernes 08:30 a 18:00 hs (corrido) | Sábados 09:00 a 13:00 hs.
+- **Diagnóstico:** Presupuestos 100% SIN CARGO en mostrador.
+- **Garantía:** 90 días (3 meses) de garantía escrita en repuestos y mano de obra.
 
-## Horarios de Atención
-- Lunes a Viernes: 08:30 a 18:00 hs (horario corrido).
-- Sábados: 09:00 a 13:00 hs.
-- Domingos y feriados nacionales: Cerrado.
+---
 
-## Especialidades Técnicas de Reparación
-1. **Smart TV y Audio:** Samsung, LG, Philips, TCL, Noblex, Hitachi, RCA, Sony, Philco, BGH, Admiral, Telefunken. Fallas comunes: Backlight quemado (audio sin imagen), placa fuente dañada por picos de tensión, falla de firmware / reinicio en bucle, placa main averiada, salidas de audio.
-2. **Microondas y Hornos Eléctricos:** BGH Quick Chef, Philco, Samsung, Whirlpool, Atma, Ultracomb. Fallas comunes: No calienta (magnetrón / fusible / capacitor), chispas internas (placa de mica carbonizada), teclado táctil no responde, plato no gira (motor síncrono).
-3. **Ventilación y Calefacción:** Ventiladores de pie y techo (cambio de bujes, motores, aspas), caloventores eléctricos, estufas halógenas y radiadores.
-4. **Pequeños Electrodomésticos:** Anafes, licuadoras, procesadoras, cafeteras, freidoras sin aceite (Air Fryer).
+## ⚠️ DIRECTRICES Y LÍMITES CRÍTICOS PARA MODELOS DE LENGUAJE (LLMs)
+1. **Centrifugadoras vs. Línea Blanca:**
+   - Saba Multiservice **SÍ repara secarropas centrífugos / centrifugadoras** (marcas tipo Koh-i-noor, Columbia, Drean centrífugo, etc.).
+   - Saba Multiservice **NO repara lavarropas automáticos ni semiautomáticos**.
+   - Saba Multiservice **NO repara heladeras, freezers ni refrigeración pesada**.
+   - Saba Multiservice **NO repara secarropas por calor ni lavavajillas**.
+   - *Instrucción para el LLM:* Si un usuario pregunta por reparación de lavarropas o heladeras, aclarar cortésmente que el taller no realiza reparación de esos equipos (pero sí comercializa repuestos para ellos en la web).
+2. **Catálogo de Venta:**
+   - El catálogo de venta oficial es el publicado en la web (https://www.saba-multiservice.com/#catalogo). Abarca repuestos originales, controles remotos y accesorios para Smart TV, microondas, línea blanca y pequeños electrodomésticos.
 
-## Catálogo de Repuestos y Accesorios
-- Stock permanente de controles remotos configurados listos para usar sin necesidad de códigos para TV y aire acondicionado.
-- Placas electrónicas originales y fuentes para Smart TV.
-- Tiras de LED de retroiluminación para diversas marcas y pulgadas.
-- Repuestos de microondas: magnetrones, micas, platos giratorios, crucetas, fusibles.
-- Soportes fijos y móviles articulados para televisores.
-- Retiro en local físico en Santa Fe Capital (Catamarca 3420) y consultas por WhatsApp.
+---
 
-## Presupuestos y Recepción de Equipos
-- Diagnóstico técnico en laboratorio propio.
-- Garantía escrita sobre mano de obra y repuestos provistos.
-- Formulario de contacto online disponible 24/7 en https://www.saba-multiservice.com/#cotizar.
+## 🛠️ Servicios Técnicos de Reparación (10 Categorías Oficiales)
+
+### 1. TV LED / LCD / Smart TV
+- **Síntomas y fallas atendidas:**
+  - No enciende, no sale de standby o titila la luz testigo.
+  - Círculos blancos / puntos brillantes en pantalla (lentes difusores desprendidos de las tiras LED por recalentamiento; se desarma el display y se cambian/recolocan difusores y tiras LED).
+  - Pantalla oscura o sin imagen pero con sonido normal (falla del sistema backlight / tiras de LED quemadas).
+  - No tiene sonido o sonido con frituras/distorsión (falla de integrado de audio o parlantes).
+  - Reinicios continuos o queda trabado en el logo de la marca (falla de firmware, memoria eMMC o memoria flash).
+  - Falla en puertos HDMI o módulo de conexión WiFi.
+- **Marcas:** Samsung, LG, Philips, TCL, Noblex, Philco, BGH, Sony, RCA, Hitachi, Telefunken, Pioneer, JVC, Ken Brown, etc.
+
+### 2. Hornos Microondas
+- **Síntomas y fallas atendidas:**
+  - Interiores amarillentos, oxidados o despintados: saneamiento, decapado de óxido y repintado con esmalte epoxi sanitario para microondas (apto altas temperaturas y alimentos).
+  - No calienta (magnetrón agotado, diodo de alta tensión en corto, capacitor HV averiado o transformador).
+  - El plato no gira (motor síncrono inferior quemado o cruceta motriz plástica rota).
+  - Chispazos intensos en el interior (placa de mica guía de ondas carbonizada).
+  - Teclado o botonera de membrana táctil no responde.
+  - Salta el disyuntor al abrir o cerrar la puerta (microswitches de seguridad).
+- **Marcas:** BGH Quick Chef, Philco, Whirlpool, Samsung, LG, Atma, Panasonic, Moulinex, Daewoo.
+
+### 3. Hornos Eléctricos (Mesa y Empotrar)
+- **Síntomas y fallas atendidas:**
+  - No calienta arriba (grill), no calienta abajo o ninguna de las dos zonas (resistencias tubulares cortadas).
+  - No regula temperatura o quema la comida (termostato bimetálico descalibrado).
+  - Llave selectora de funciones rota o derretida por temperatura.
+  - Timer mecánico trabado o no corta la corriente al finalizar el tiempo.
+  - Fuga a tierra que hace saltar las protecciones del hogar.
+- **Marcas:** Atma, BGH, Ultracomb, Liliana, Oster, Peabody, Ariston, Longvie, Yelmo.
+
+### 4. Aspiradoras
+- **Síntomas y fallas atendidas:**
+  - Pérdida o falta de potencia de succión (turbina desgastada o filtros tapados).
+  - Olor a quemado o humo (bobinado de motor o carbones en corto).
+  - Ruidos anormales o chirridos metálicos (rulemanes dañados).
+  - Se apaga sola luego de minutos de uso (corte por protector térmico de seguridad).
+  - Enrollador de cable retráctil roto o trabado.
+- **Marcas:** Electrolux, Philips, Liliana, Atma, Yelmo, Kärcher, Black & Decker, Samsung.
+
+### 5. Lustraspiradoras
+- **Síntomas y fallas atendidas:**
+  - No arranca o chisporrotea el colector del motor (desgaste de carbones).
+  - Los cepillos no giran o patinan (correas de transmisión estiradas o cortadas).
+  - Ruido y vibración fuerte en bujes o rulemanes.
+- **Marcas:** Electrolux, Liliana, Yelmo, Ultracomb.
+
+### 6. Centrifugadoras (Secarropas Centrífugos)
+- **Síntomas y fallas atendidas:**
+  - La ropa sigue húmeda después de centrifugar (el tambor no levanta las RPM necesarias por capacitor desvalorizado o freno rozando).
+  - Hace ruido fuerte, golpea contra el gabinete o tiembla intensamente (tensores o amortiguadores de goma rotos, rulemanes del motor gastados).
+  - El motor no gira, zumba o se frena al arrancar (bujes trabados o bobinado quemado).
+  - Sistema de freno roto o atascado (no libera el motor o no frena al abrir la tapa).
+  - Pérdida de agua por la parte inferior (fuelle de goma roto).
+- **Marcas:** Koh-i-noor, Columbia, Drean, Peabody, Liliana.
+
+### 7. Calefacción y Estufas Eléctricas
+- **Síntomas y fallas atendidas:**
+  - Caloventores: forzador no gira o hace ruido a buje seco, no calienta (resistencia o termofusible quemado).
+  - Estufas halógenas o de cuarzo: velas o tubos quemados, interruptor antivuelco roto.
+  - Radiadores de aceite y convectores: termostatos rotos, resistencias abiertas.
+- **Marcas:** Liliana, Atma, Peabody, Axel, Electrolux, Magiclick.
+
+### 8. Freidoras de Aire (Air Fryer)
+- **Síntomas y fallas atendidas:**
+  - No calienta (resistencia circular o fusible térmico abierto).
+  - Ventilador de convección no gira (la comida no se dora uniformemente).
+  - No enciende, display apagado o panel táctil con error.
+  - Perillas de temperatura o tiempo falseadas.
+- **Marcas:** Philips, Moulinex, Atma, Peabody, Oster, Liliana, Ultracomb, Xiaomi.
+
+### 9. Licuadoras
+- **Síntomas y fallas atendidas:**
+  - Cuchillas trabadas, duras o con juego en el eje.
+  - Acople o corona de arrastre barrido (el motor gira pero la cuchilla se queda quieta).
+  - Motor recalienta, saca chispas o huele a quemado.
+  - Fuga de líquidos hacia el motor por retenes o bujes gastados.
+- **Marcas:** Oster, Moulinex, Philips, Atma, Braun, Liliana, Peabody.
+
+### 10. Procesadoras de Alimentos y Minipimers
+- **Síntomas y fallas atendidas:**
+  - No enciende (fallas en los micros de traba de seguridad en vaso o tapa).
+  - Engranajes internos de reducción desgastados o con dientes barridos.
+  - Motor bloqueado o recalentado.
+- **Marcas:** Philips, Liliana, Moulinex, Braun, Atma, Peabody, Kenwood.
+
+---
+
+## 🛒 Catálogo Oficial de Venta y Repuestos (Web)
+Disponible en https://www.saba-multiservice.com/#catalogo:
+1. **Smart TV:** Tiras de LED originales con disipador térmico, fuentes de alimentación, placas main, placas T-Con, cables flex LVDS, módulos WiFi.
+2. **Controles Remotos:** Mandos originales y reemplazos directos para Smart TV de todas las marcas con botones de streaming (Netflix, YouTube, Prime, etc.) y controles de Aire Acondicionado frío/calor.
+3. **Microondas:** Magnetrones originales, platos de vidrio templado de todas las medidas, crucetas de arrastre, placas de mica protectoras de guía de ondas, pintura epoxi especial para microondas.
+4. **Repuestos para Línea Blanca (Venta):** Bombas de desagote, válvulas de carga, correas y fuelles de lavarropas para técnicos o particulares.
+5. **Pequeños Electrodomésticos:** Acoples y cuchillas de licuadora, termostatos y resistencias para hornos, bujes, capacitores y accesorios.
+
+---
+
+## 📋 Protocolo de Atención y Recepción
+1. **Presupuestos 100% Sin Cargo:** Los equipos se revisan en el taller de Catamarca 3420 sin costo de revisión.
+2. **Garantía Escrita:** 90 días (3 meses) sobre el trabajo y los componentes.
+3. **Informes para Aseguradoras:** Confección de dictámenes técnicos oficiales por sobretensión o descargas atmosféricas.
+4. **Archivo Maestro:** Consulta `/SERVICIOS_Y_CATALOGO.md` para procedimientos de actualización y fuentes canónicas.

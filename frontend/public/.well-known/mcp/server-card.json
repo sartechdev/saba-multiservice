@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "serverInfo": {
     "name": "saba-multiservice-mcp",
-    "version": "1.0.0",
-    "description": "Servidor MCP oficial de Saba Multiservice en Santa Fe Capital. Permite a agentes de IA consultar el catálogo de repuestos de Smart TV, audio y microondas, solicitar presupuestos técnicos para Smart TV, microondas y pequeños electrodomésticos (ACLARACIÓN: Saba Multiservice NO repara línea blanca), y verificar el estado de órdenes de reparación."
+    "version": "1.1.0",
+    "description": "Servidor MCP oficial de Saba Multiservice en Santa Fe Capital. Permite a agentes de IA consultar el catálogo oficial de repuestos web (Smart TV, microondas, controles y componentes), solicitar presupuestos de reparación técnica (Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras, estufas, freidoras de aire, licuadoras y procesadoras; con aclaración de que NO se reparan lavarropas automáticos ni heladeras) y consultar información del local."
   },
   "endpoint": "https://www.saba-multiservice.com/api/mcp",
   "transport": {
@@ -14,17 +14,17 @@
     "tools": [
       {
         "name": "consultar_catalogo_repuestos",
-        "description": "Busca repuestos, controles remotos y accesorios disponibles en el inventario de Saba Multiservice por texto o categoría.",
+        "description": "Busca repuestos, controles remotos y accesorios disponibles en el inventario web de Saba Multiservice por texto o categoría.",
         "inputSchema": {
           "type": "object",
           "properties": {
             "query": {
               "type": "string",
-              "description": "Término de búsqueda, p. ej. 'control samsung', 'magnetron philco', 'tira led lg'"
+              "description": "Término de búsqueda, p. ej. 'control samsung', 'magnetron philco', 'tira led lg', 'bomba lavarropas'"
             },
             "categoria": {
               "type": "string",
-              "enum": ["todos", "smart-tv", "microondas", "controles-remotos", "audio"]
+              "enum": ["todos", "smart-tv", "microondas", "controles-remotos", "linea-blanca", "pequenos-electro"]
             }
           },
           "required": ["query"]
@@ -32,7 +32,7 @@
       },
       {
         "name": "solicitar_presupuesto_reparacion",
-        "description": "Envía una solicitud de presupuesto para reparación técnica en nuestro taller en Santa Fe Capital (Nota: No se repara línea blanca/lavarropas/heladeras).",
+        "description": "Envía una solicitud de presupuesto para reparación técnica en nuestro taller en Santa Fe Capital. Equipos atendidos: TV, Microondas, Hornos Eléctricos, Aspiradoras, Lustraspiradoras, Centrifugadoras, Calefacción, Air Fryer, Licuadoras, Procesadoras. (Aclaración: NO se reparan lavarropas automáticos ni heladeras).",
         "inputSchema": {
           "type": "object",
           "properties": {
@@ -46,15 +46,15 @@
             },
             "tipo_artefacto": {
               "type": "string",
-              "description": "Tipo de equipo: Smart TV, Microondas, Horno Eléctrico, Audio, Ventilación (NO línea blanca)"
+              "description": "Tipo de equipo: Smart TV, Microondas, Horno Eléctrico, Aspiradora, Lustraspiradora, Centrifugadora, Estufa Eléctrica, Air Fryer, Licuadora, Procesadora (Aclaración: NO se reparan lavarropas automáticos ni heladeras)"
             },
             "marca": {
               "type": "string",
-              "description": "Marca del equipo, p. ej. Samsung, LG, Philips, BGH"
+              "description": "Marca del equipo, p. ej. Samsung, LG, Philips, BGH, Koh-i-noor, Liliana, Oster"
             },
             "falla": {
               "type": "string",
-              "description": "Descripción detallada del problema o falla"
+              "description": "Descripción detallada del problema (ej. círculos blancos en TV, interior oxidado microondas, no calienta horno, ropa húmeda en centrifugadora, etc.)"
             }
           },
           "required": ["nombre", "telefono", "tipo_artefacto", "falla"]
@@ -62,7 +62,7 @@
       },
       {
         "name": "consultar_informacion_local",
-        "description": "Devuelve dirección física, horarios de atención, números de WhatsApp y cobertura de Saba Multiservice en Santa Fe Capital.",
+        "description": "Devuelve dirección física (Catamarca 3420), horarios de atención, números de WhatsApp y cobertura de Saba Multiservice en Santa Fe Capital.",
         "inputSchema": {
           "type": "object",
           "properties": {}
@@ -80,13 +80,13 @@
         "uri": "saba://servicios/tarifas-base",
         "name": "Guía de Diagnóstico y Reparación",
         "mimeType": "text/markdown",
-        "description": "Guía con términos de garantía, tiempos estimados de reparación y proceso de recepción."
+        "description": "Guía con términos de garantía, tiempos estimados de reparación y proceso de recepción sin cargo."
       }
     ],
     "prompts": [
       {
         "name": "asistir_cliente_electrodomesticos",
-        "description": "Guía al usuario para identificar el repuesto correcto o diagnosticar preliminarmente la falla de su electrodoméstico."
+        "description": "Guía al usuario para identificar el repuesto correcto o diagnosticar preliminarmente la falla de su televisor o electrodoméstico."
       }
     ]
   }

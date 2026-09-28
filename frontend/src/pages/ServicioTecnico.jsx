@@ -5,39 +5,12 @@ import { fadeInUp, staggerContainer } from '../lib/motionVariants';
 import { Link } from 'react-router-dom';
 
 import { WhatsAppModal } from '../components/shared/WhatsAppModal';
+import { REPAIR_SERVICES, TALLER_POLICIES } from '../data/serviciosConfig';
 import servicioTecnicoBg from '../assets/wppSV.webp';
 import '../styles/ServicioTecnico.css';
 
 export const ServicioTecnico = () => {
   const [isWaModalOpen, setIsWaModalOpen] = useState(false);
-
-  const applianceTypes = [
-    {
-      icon: '📺',
-      title: 'TV y Smart TV',
-      desc: 'Fallas en placa de fuente, tiras led, salida de audio, sintonizador, findware, etc.'
-    },
-    {
-      icon: '⚡',
-      title: 'Microondas y Hornos',
-      desc: 'Cambio de magnetrón por falta de calentamiento, reparación de teclado o membrana táctil, placas electrónicas y platos giratorios.'
-    },
-    {
-      icon: '🔥',
-      title: 'Calefacción y Caloventores',
-      desc: 'Mantenimiento de estufas halógenas, caloventores eléctricos y radiadores de aceite.'
-    },
-    {
-      icon: '🌀',
-      title: 'Ventilación de Pie y Techo',
-      desc: 'Cambio de bujes y recambio de motor, botoneras de velocidad y cambio de aspas metálicas o plásticas.'
-    },
-    {
-      icon: '☕',
-      title: 'Pequeños Electro de Cocina',
-      desc: 'Anafes, licuadoras, procesadoras, cariliteras y freidoras sin aceite (Air Fryer).'
-    }
-  ];
 
   const processSteps = [
     {
@@ -60,14 +33,14 @@ export const ServicioTecnico = () => {
   return (
     <div className="service-landing-wrapper">
       <Helmet>
-        <title>Servicio Técnico Oficial de Electrodomésticos en Santa Fe | Saba Multiservice</title>
+        <title>Servicio Técnico Oficial en Santa Fe | Saba Multiservice</title>
         <meta
           name="description"
-          content="Reparación especializada de Smart TV, microondas, calefacción y electrodomésticos en Santa Fe. Diagnóstico sin cargo y garantía escrita en Catamarca 3420."
+          content="Reparación de Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras y electrodomésticos en Santa Fe Capital. Presupuesto sin cargo y 90 días de garantía."
         />
         <link rel="canonical" href="https://www.saba-multiservice.com/servicio-tecnico" />
         <meta property="og:title" content="Servicio Técnico Oficial en Santa Fe | Saba Multiservice" />
-        <meta property="og:description" content="Reparación especializada de electrodomésticos y Smart TV con diagnóstico gratuito y garantía escrita." />
+        <meta property="og:description" content="Reparación especializada de Smart TV, microondas, centrifugadoras y electrodomésticos con presupuesto sin cargo y garantía escrita." />
         <meta property="og:url" content="https://www.saba-multiservice.com/servicio-tecnico" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.saba-multiservice.com/og.png" />
@@ -76,7 +49,7 @@ export const ServicioTecnico = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Reparación de Electrodomésticos y Smart TV",
+            "serviceType": "Reparación de Smart TV, Microondas, Centrifugadoras y Pequeños Electrodomésticos",
             "provider": {
               "@type": "LocalBusiness",
               "name": "Saba Multiservice",
@@ -92,7 +65,7 @@ export const ServicioTecnico = () => {
               "@type": "AdministrativeArea",
               "name": "Santa Fe, Argentina"
             },
-            "description": "Diagnóstico sin cargo, informes técnicos para aseguradoras y reparación con repuestos originales."
+            "description": "Diagnóstico y presupuestos 100% sin cargo en mostrador. Reparación de Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras, estufas, freidoras de aire, licuadoras y procesadoras con garantía de 90 días."
           })}
         </script>
       </Helmet>
@@ -120,7 +93,7 @@ export const ServicioTecnico = () => {
               Diagnóstico profesional y presupuestos sin cargo en taller
             </h1>
             <p className="service-hero-desc">
-              Especialistas en la reparación de televisores Smart TV, microondas, y pequeños electrodomésticos. Atención presencial en nuestro local con repuestos originales y 90 días de garantía.
+              Especialistas en la reparación de televisores Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras y electrodomésticos de cocina. Atención presencial en nuestro local con repuestos originales y 90 días de garantía.
             </p>
             <div className="service-hero-actions">
               <a href="#proceso-presupuesto" className="service-btn-primary">
@@ -136,25 +109,43 @@ export const ServicioTecnico = () => {
       <section className="service-types-section">
         <div className="container">
           <div className="section-header-center">
-            <h2 className="section-heading">¿Qué equipos reparamos en nuestro local?</h2>
+            <span className="section-eyebrow">Diagnóstico Profesional</span>
+            <h2 className="section-heading">¿Qué equipos y fallas reparamos en nuestro local?</h2>
             <p className="section-subtext">
-              Contamos con repuestos originales, garantizados para resolver diversas fallas.
+              Presupuestos 100% sin cargo en mostrador en Catamarca 3420. Contamos con repuestos garantizados para resolver las fallas más complejas.
             </p>
           </div>
 
           <div className="service-types-grid">
-            {applianceTypes.map((item, idx) => (
+            {REPAIR_SERVICES.map((item, idx) => (
               <motion.div
-                key={idx}
-                className="service-type-card"
+                key={item.id}
+                className="type-bento-card"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
               >
-                <div className="service-type-icon">{item.icon}</div>
-                <h3 className="service-type-title">{item.title}</h3>
-                <p className="service-type-desc">{item.desc}</p>
+                <div className="type-icon-box">{item.icon}</div>
+                <h3 className="type-card-title">{item.title}</h3>
+                <p className="type-card-desc">{item.desc}</p>
+                
+                <div style={{ marginTop: '10px' }}>
+                  <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--color-black)', display: 'block', marginBottom: '6px' }}>
+                    Fallas atendidas:
+                  </span>
+                  <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '0.8125rem', color: 'var(--color-gray-medium)', lineHeight: '1.45' }}>
+                    {item.symptoms.slice(0, 4).map((sym, sIdx) => (
+                      <li key={sIdx} style={{ marginBottom: '3px' }}>{sym}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {item.notaEspecial && (
+                  <div style={{ marginTop: '10px', padding: '6px 10px', background: '#fff3cd', border: '1px solid #ffeeba', borderRadius: '6px', fontSize: '0.75rem', color: '#856404' }}>
+                    ℹ️ <strong>Importante:</strong> {item.notaEspecial}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

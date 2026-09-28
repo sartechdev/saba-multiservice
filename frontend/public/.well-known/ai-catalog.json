@@ -11,9 +11,10 @@
       "type": "application/mcp-server-card+json",
       "url": "https://www.saba-multiservice.com/.well-known/mcp/server-card.json",
       "representativeQueries": [
-        "consultar reparacion de televisor o electrodomesticos en Santa Fe",
-        "buscar repuestos de smart tv o lavarropas en saba multiservice",
-        "pedir presupuesto tecnico de microondas en Santa Fe",
+        "consultar reparacion de smart tv, microondas, hornos o centrifugadoras en Santa Fe",
+        "buscar repuestos originales y controles en catalogo web saba multiservice",
+        "fallas tv circulos blancos, microondas despintado o centrifugadora ropa humeda",
+        "pedir presupuesto tecnico sin cargo en Santa Fe Catamarca 3420",
         "contacto y horarios de servicio tecnico saba"
       ]
     },

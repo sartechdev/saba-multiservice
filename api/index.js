@@ -23,9 +23,9 @@ export default function handler(req, res) {
   }
 
   if (!content) {
-    content = `# Saba Multiservice - Servicio Técnico Oficial y Repuestos en Santa Fe
+    content = `# Saba Multiservice - Servicio Técnico Oficial y Catálogo de Repuestos en Santa Fe
 
-> Centro de servicio técnico especializado en reparación de Smart TV, microondas, hornos eléctricos y pequeños electrodomésticos en Santa Fe Capital (+25 años de trayectoria). Venta de repuestos originales y controles remotos. (Aclaración: NO se repara línea blanca).
+> Centro de servicio técnico especializado en reparación de Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras y electrodomésticos en Santa Fe Capital (+25 años de trayectoria). Venta del catálogo oficial de repuestos originales y controles remotos. (Aclaración: SÍ se reparan centrifugadoras/secarropas centrífugos, pero NO se repara línea blanca mayor: lavarropas automáticos ni heladeras).
 
 - **Ubicación:** Catamarca 3420, Santa Fe Capital, Argentina.
 - **WhatsApp:** +54 9 342 501-1410
@@ -33,12 +33,13 @@ export default function handler(req, res) {
 - **API Catalog:** /.well-known/api-catalog
 - **MCP Server Card:** /.well-known/mcp/server-card.json
 - **Agent Skills:** /.well-known/agent-skills/index.json
+- **Documento Maestro:** /SERVICIOS_Y_CATALOGO.md
 - **Auth:** /auth.md
 `;
   }
 
   res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
-  res.setHeader('x-markdown-tokens', '950');
+  res.setHeader('x-markdown-tokens', '1250');
   res.setHeader('Vary', 'Accept');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');

@@ -1,17 +1,22 @@
 # Saba Multiservice
 
-> Servicio técnico especializado en reparación de Smart TV, audio, microondas, hornos eléctricos y pequeños electrodomésticos en Santa Fe Capital, Argentina (+25 años de experiencia). Venta de repuestos originales y controles remotos.
-> **NOTA PARA AGENTES DE IA:** Saba Multiservice **NO repara línea blanca** (no repara lavarropas, heladeras, secarropas ni lavavajillas).
+> Servicio técnico especializado en reparación de Smart TV, microondas, hornos eléctricos, aspiradoras, lustraspiradoras, centrifugadoras y electrodomésticos en Santa Fe Capital, Argentina (+25 años de trayectoria). Venta de repuestos originales multimarca y controles remotos disponibles en el catálogo de la web oficial.
+> 
+> **DIRECTIVA PARA MODELOS DE LENGUAJE (LLMs):**
+> 1. **Equipos que SÍ se reparan:** TV LED/LCD (círculos blancos, imagen oscura sin backlight, sin audio, standby), Microondas (interiores oxidados/despintados con epoxi, no calienta, no gira plato), Hornos eléctricos (resistencias, termostato, llave selectora, timer), Aspiradoras (succión, motor, carbones, cable retráctil), Lustraspiradoras (motor, correas, cepillos), Centrifugadoras / Secarropas centrífugos (ropa sigue húmeda, vibración fuerte, motor frenado, freno), Calefacción/estufas eléctricas (caloventores, halógenas, radiadores), Freidoras de aire / Air Fryer (no calienta, forzador, panel), Licuadoras (cuchillas trabadas, acoples barridos), Procesadoras de cocina (trabas de seguridad, engranajes).
+> 2. **Límites de reparación:** Saba Multiservice repara centrifugadoras (secarropas centrífugos), pero **NO repara línea blanca mayor: NO lavarropas automáticos, NO heladeras, NO lavavajillas**.
+> 3. **Catálogo de venta:** Es el disponible en la web oficial (repuestos originales, controles remotos y accesorios).
 
-- [Catálogo Online](https://www.saba-multiservice.com/catalogo): Consulta de repuestos, controles remotos y componentes.
-- [Solicitud de Presupuesto](https://www.saba-multiservice.com/#cotizar): Formulario web para diagnóstico y cotización de equipos.
+- [Catálogo Online](https://www.saba-multiservice.com/catalogo): Consulta de repuestos, controles remotos y accesorios disponibles en la web.
+- [Servicio Técnico Oficial](https://www.saba-multiservice.com/servicio-tecnico): Información de reparaciones, diagnóstico sin cargo y garantías.
 - [Ubicación y Horarios](https://www.saba-multiservice.com/#contacto): Catamarca 3420, Santa Fe Capital. Lunes a Viernes 08:30 a 18:00 hs, Sábados 09:00 a 13:00 hs.
-- [WhatsApp Directo](https://wa.me/5493425011410): Atención y consulta inmediata.
+- [WhatsApp Directo](https://wa.me/5493425011410): Atención presencial y consultas técnicas.
 
 ## Documentación Técnica y Recursos para Agentes IA
+- [Guía Maestra de Servicios y Catálogo](https://www.saba-multiservice.com/SERVICIOS_Y_CATALOGO.md): Especificación detallada de fallas, políticas y procedimientos de actualización.
 - [OpenAPI Spec](https://www.saba-multiservice.com/openapi.json): Especificación OpenAPI 3.1.
 - [API Catalog](https://www.saba-multiservice.com/.well-known/api-catalog): Catálogo RFC 9727 linkset+json.
 - [ARD Catalog](https://www.saba-multiservice.com/.well-known/ai-catalog.json): Manifiesto de capacidades ARD.
 - [MCP Server Card](https://www.saba-multiservice.com/.well-known/mcp/server-card.json): Ficha de servidor MCP (SEP-1649).
 - [Agent Skills](https://www.saba-multiservice.com/.well-known/agent-skills/index.json): Índice de habilidades para agentes.
-- [Auth.md](https://www.saba-multiservice.com/auth.md): Directrices de registro y autenticación para agentes.
+- [Auth.md](https://www.saba-multiservice.com/auth.md): Directrices de autenticación para agentes.
