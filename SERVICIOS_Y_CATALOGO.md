@@ -23,23 +23,23 @@ Saba Multiservice cuenta con laboratorio propio en Catamarca 3420 para el diagn�
 
 ### 1. TV LED / LCD / Smart TV
 * **Fallas y Síntomas Frecuentes:**
-  - **No enciende / Standby trabado:** La luz piloto titila o no reacciona al encendido; problemas en fuente de alimentación o placa main.
-  - **Círculos o puntos blancos en la pantalla:** Lentes difusores desprendidos de las tiras de LED por degradación térmica del pegamento original (se desarma panel óptico y se reemplazan/recolocan los lentes difusores y tiras LED).
-  - **Imagen oscura / Pantalla negra con sonido:** Falla del sistema de retroiluminación (backlight). Se escucha el canal o el streaming pero la imagen no se ve o solo se aprecia iluminando con una linterna.
-  - **No tiene sonido / Audio mudo o distorsionado:** Falla del circuito integrado de amplificación de audio en placa main o parlantes dañados.
+  - **No enciende / Standby trabado:** La luz piloto titila o no reacciona al encendido; problemas en la fuente de alimentación o placa main.
+  - **Círculos o puntos blancos en la pantalla:** Lentes difusores desprendidos de las tiras de LED por degradación térmica del pegamento original (se desarma el panel óptico y se reemplazan/recolocan los lentes difusores y tiras LED).
+  - **Imagen oscura / Pantalla negra con sonido:** Falla del sistema de retroiluminación (backlight). Se escucha el canal o el streaming, pero la imagen no se ve o solo se aprecia iluminando con una linterna.
+  - **No tiene sonido / Audio mudo o distorsionado:** Falla del circuito integrado de amplificación de audio en la placa main o parlantes dañados.
   - **Reinicio en bucle (Bootloop):** El televisor muestra el logo de la marca (Samsung, LG, Philips, etc.) y se apaga o reinicia continuamente (corrupción de memoria eMMC / firmware).
-  - **Fallas en puertos HDMI / WiFi:** Falla de módulos de conectividad o puertos quemados por sobretensión o descargas atmosféricas.
+  - **Fallas en puertos HDMI / WiFi:** Falla en módulos de conectividad o puertos quemados por sobretensión o descargas atmosféricas.
 * **Marcas atendidas:** Samsung, LG, Philips, TCL, Noblex, Philco, BGH, Sony, RCA, Hitachi, Telefunken, Pioneer, JVC, Ken Brown, etc.
 
 ---
 
 ### 2. Hornos Microondas
 * **Fallas y Síntomas Frecuentes:**
-  - **Interiores amarillentos, oxidados o despintados:** Pérdida de la capa protectora interna en cavidad por vapores y grasas. Realizamos decapado, tratamiento anticorrosivo y **esmaltado con pintura epoxi especial para microondas (apta para contacto indirecto de alimentos y altas temperaturas)** para evitar chispazos y corrosión perforante.
-  - **No calienta:** El microondas enciende la luz, gira el plato y cuenta el tiempo, pero la comida sale fría (falla en magnetrón, capacitor de alta tensión, diodo de alta tensión o fusible de HV).
+  - **Interiores amarillentos, oxidados o despintados:** Pérdida de la capa protectora interna en la cavidad por vapores y grasas. Realizamos decapado, tratamiento anticorrosivo y **esmaltado con pintura epoxi especial para microondas (apta para contacto indirecto de alimentos y altas temperaturas)** para evitar chispazos y corrosión perforante.
+  - **No calienta:** El microondas enciende la luz, gira el plato y cuenta el tiempo, pero la comida sale fría (falla en el magnetrón, capacitor de alta tensión, diodo de alta tensión o fusible de HV).
   - **El plato no gira:** Motor sincrónico inferior dañado, cruceta de arrastre motriz quebrada o engranaje gastado.
-  - **Chispas en el interior:** Placa de mica o guía de ondas quemada/carbonizada, o despintado en la cavidad interior.
-  - **Teclado o panel táctil (membrana) no responde:** Falla de pistas de carbón o contactos en la membrana frontal; reparación o recambio de panel.
+  - **Chispas en el interior:** Placa de mica o guía de ondas quemada/carbonizada, o despintado de la cavidad interior.
+  - **Teclado o panel táctil (membrana) no responde:** Falla de pistas de carbón o contactos en la membrana frontal; reparación o recambio del panel.
   - **Salta el disyuntor o fusible al cerrar la puerta:** Microswitches de puerta trabados o defectuosos.
 * **Marcas atendidas:** BGH, Philco, Whirlpool, Samsung, LG, Atma, Panasonic, Moulinex, Daewoo, etc.
 
@@ -60,7 +60,7 @@ Saba Multiservice cuenta con laboratorio propio en Catamarca 3420 para el diagn�
 * **Fallas y Síntomas Frecuentes:**
   - **Falta o pérdida de succión:** Filtros HEPA saturados, turbina desgastada, obstrucción interna o fisuras en mangueras.
   - **Olor a quemado o recalentamiento:** Bobinado del motor dañado, carbones gastados o falta de refrigeración.
-  - **Ruido anormal o chirrido metálico:** Rulemanes de motor gastados o turbina rozando la carcasa.
+  - **Ruido anormal o chirrido metálico:** Rulemanes del motor gastados o turbina rozando la carcasa.
   - **Se apaga sola a los pocos minutos:** Activación del sensor o protector térmico de seguridad por exceso de calor.
   - **Enrollador de cable retráctil roto:** Resorte espiral partido o trabado, pistas de contacto con falso contacto.
 * **Marcas atendidas:** Electrolux, Philips, Liliana, Atma, Yelmo, Kärcher, Black & Decker, Samsung, etc.
@@ -71,7 +71,7 @@ Saba Multiservice cuenta con laboratorio propio en Catamarca 3420 para el diagn�
 * **Fallas y Síntomas Frecuentes:**
   - **No arranca o tiene chispazos:** Desgaste en los carbones del motor, colector sucio o dañado.
   - **Los cepillos no giran o patinan:** Correas de transmisión cortadas, estiradas o poleas barridas.
-  - **Ruido excesivo o vibración:** Bujes o rulemanes desgastados en el eje motor o en los porta-cepillos.
+  - **Ruido excesivo o vibración:** Bujes o rulemanes desgastados en el eje motor o en los portacepillos.
   - **Pérdida de fuerza:** Bobinado con espiras en cortocircuito.
 * **Marcas atendidas:** Electrolux, Liliana, Yelmo, Ultracomb, etc.
 
@@ -81,20 +81,20 @@ Saba Multiservice cuenta con laboratorio propio en Catamarca 3420 para el diagn�
 > ⚠️ **ACLARACIÓN CRÍTICA:** Se reparan **secarropas centrífugos / centrifugadoras** (tipo Koh-i-noor, Columbia, etc.).  
 > **NO se realizan reparaciones de lavarropas automáticos ni de heladeras.**
 * **Fallas y Síntomas Frecuentes:**
-  - **La ropa sigue húmeda después de centrifugar:** El tambor no alcanza las RPM adecuadas (problemas en bobinado del motor, capacitor de arranque desvalorizado o freno parcialmente rozando).
+  - **La ropa sigue húmeda después de centrifugar:** El tambor no alcanza las RPM adecuadas (problemas en el bobinado del motor, capacitor de arranque desvalorizado o freno parcialmente rozando).
   - **Hace ruido fuerte, golpea o vibra intensamente:** Amortiguadores / tensores de goma cortados o vencidos, rulemanes del motor gastados o tambor desbalanceado.
   - **El motor no gira, zumba o se frena:** Motor trabado, bujes desgastados, bobinado cortado o capacitor agotado.
   - **Sistema de freno atascado o roto:** El cable de freno conectado a la manija/tapa no libera la zapata al accionar el encendido o no frena al abrir la tapa.
-  - **Pérdida de agua por la base del motor:** Fuelle o junta de desagüe dañada, requiriendo recambio urgente para no quemar el motor.
+  - **Pérdida de agua por la base del motor:** Fuelle o junta de desagüe dañados, requiriendo recambio urgente para no quemar el motor.
 * **Marcas atendidas:** Koh-i-noor, Columbia, Drean, Peabody, Liliana, etc.
 
 ---
 
 ### 7. Calefacción y Estufas Eléctricas
 * **Fallas y Síntomas Frecuentes:**
-  - **Caloventores:** El ventilador no gira o hace ruido a buje seco, no tira aire caliente (resistencia cortada), corte por fusible térmico.
+  - **Caloventores:** El ventilador no gira o hace ruido de buje seco, no tira aire caliente (resistencia cortada), corte por fusible térmico.
   - **Estufas halógenas / de cuarzo:** Velas o tubos quemados, interruptor de selección de potencia dañado, interruptor de seguridad antivuelco/anticaída trabado.
-  - **Radiadores de aceite y paneles convectores:** Falla de termostato, resistencias internas abiertas, interruptores luminosos con falso contacto.
+  - **Radiadores de aceite y paneles convectores:** Falla del termostato, resistencias internas abiertas, interruptores luminosos con falso contacto.
 * **Marcas atendidas:** Liliana, Atma, Peabody, Axel, Electrolux, Magiclick, etc.
 
 ---
@@ -103,8 +103,8 @@ Saba Multiservice cuenta con laboratorio propio en Catamarca 3420 para el diagn�
 * **Fallas y Síntomas Frecuentes:**
   - **No calienta:** Resistencia circular superior abierta o termofusible de seguridad quemado por sobrecalentamiento.
   - **El ventilador / forzador no gira:** Motor trabado por grasa acumulada en bujes o capacitor dañado; la comida no se dora ni cocina uniformemente.
-  - **No enciende / Panel táctil o display apagado:** Falla en la fuente conmutada de la placa electrónica o microswitch de canasto mal posicionado.
-  - **Perillas de tiempo o temperatura rotas:** Vástago de potenciómetro o timer mecánico quebrado.
+  - **No enciende / Panel táctil o display apagado:** Falla en la fuente conmutada de la placa electrónica o microswitch del canasto mal posicionado.
+  - **Perillas de tiempo o temperatura rotas:** Vástago del potenciómetro o timer mecánico quebrado.
 * **Marcas atendidas:** Philips, Moulinex, Atma, Peabody, Oster, Liliana, Ultracomb, Xiaomi, etc.
 
 ---
@@ -112,7 +112,7 @@ Saba Multiservice cuenta con laboratorio propio en Catamarca 3420 para el diagn�
 ### 9. Licuadoras
 * **Fallas y Síntomas Frecuentes:**
   - **Cuchillas trabadas o con holgura:** Bujes del vaso gastados, entrada de líquido al mecanismo.
-  - **Acople o corona de arrastre barrido:** El engranaje de goma o plástico entre la jarra y el motor se desgasta y gira en falso sin mover las cuchillas.
+  - **Acople o corona de arrastre barridos:** El engranaje de goma o plástico entre la jarra y el motor se desgasta y gira en falso sin mover las cuchillas.
   - **Olor a quemado o chispas:** Carbones gastados o rotor en cortocircuito.
   - **Fuga de líquidos:** Empaquetaduras, sellos y juntas de goma resecas o rajadas.
 * **Marcas atendidas:** Oster, Moulinex, Philips, Atma, Braun, Liliana, Peabody, etc.
@@ -121,8 +121,8 @@ Saba Multiservice cuenta con laboratorio propio en Catamarca 3420 para el diagn�
 
 ### 10. Procesadoras de Alimentos y Minipimers
 * **Fallas y Síntomas Frecuentes:**
-  - **No acciona / No enciende:** Traba o sistema de seguridad de vaso/tapa no pulsa el microswitch interno.
-  - **Engranajes y poleas desgastadas:** El motor gira pero el disco de corte o cuchilla se frena al encontrar resistencia.
+  - **No acciona / No enciende:** Traba o sistema de seguridad del vaso/tapa no pulsa el microswitch interno.
+  - **Engranajes y poleas desgastados:** El motor gira, pero el disco de corte o cuchilla se frena al encontrar resistencia.
   - **Motor recalentado:** Sobrecarga por amasado o picado excesivo; fusible térmico quemado.
   - **Juego en el brazo o acople motriz.**
 * **Marcas atendidas:** Philips, Liliana, Moulinex, Braun, Atma, Peabody, Kenwood, etc.
@@ -142,11 +142,11 @@ El catálogo de venta disponible en la tienda web (`https://www.saba-multiservic
 
 1. **Repuestos para Smart TV:**
    - Tiras de LED completas (nuevas sobre base de aluminio para disipación térmica).
-   - Placas Main y Fuentes de Alimentación.
+   - Placas Main y fuentes de alimentación.
    - Cables Flex LVDS, placas T-Con, módulos WiFi/Bluetooth.
 2. **Controles Remotos:**
    - Mandos originales y compatibles de alta calidad para Smart TV de todas las marcas (con botones de Netflix, YouTube, Prime Video, Disney+).
-   - Controles remotos para Aire Acondicionado frío/calor.
+   - Controles remotos para aire acondicionado frío/calor.
 3. **Repuestos para Microondas:**
    - Magnetrones originales (varias potencias y anclajes).
    - Platos giratorios de vidrio templado (todas las medidas y encastres).
